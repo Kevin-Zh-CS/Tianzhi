@@ -1,0 +1,38 @@
+:global{
+  .resultOverview{
+    margin-top: 32px;
+    .data{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 80px;
+      margin-top: 12px;
+      background: url("~@/assets/riskControl/resultOverview.png") 0 0 no-repeat;
+      background-size: 100% 100%;
+      div:nth-child(1){
+        margin-left: 23px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 16px;
+      }
+      .riskNum {
+        margin-left: 82px;
+        color: rgba(255, 255, 255, 0.7);
+
+        & > span {
+          position: relative;
+          display: flex;
+          align-items: center;
+        }
+
+        .num {
+          margin: 0 10px 0 12px;
+          color: #FC5757;
+          font-weight: 500;
+          font-size: 32px;
+          font-family: Orbitron;
+          text-shadow: 0 0 1.62602px rgba(245, 109, 109, 0.6);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import '~@/variable.less';
+
+.resourceChartWrap {
+  height: 362px;
+  margin-top: 14px;
+  background: #fff;
+
+  .chartTitle {
+    height: 22px;
+    margin: 5px 0 0 32px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .tabBarExtraContent {
+    & > span {
+      display: inline-block;
+      height: 22px;
+      padding: 0 12px;
+      color: #595959;
+      font-weight: 600;
+      line-height: 22px;
+      cursor: pointer;
+      &.selected {
+        color: @primary-color;
+      }
+      &:hover {
+        background: rgba(0, 118, 217, 0.1);
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import '~@/variable.less';
+
+.orgCard {
+  display: flex;
+  align-items: center;
+  width: 240px;
+  height: 80px;
+  padding: 12px;
+  overflow: hidden;
+  span {
+    display: block;
+  }
+  .title {
+    display: block;
+    width: 164px;
+    margin-bottom: 4px;
+    overflow: hidden;
+    color: @text-color;
+    font-weight: @font-weight-bold;
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .body {
+    margin-right: 8px;
+    color: @text-color-tertiary;
+  }
+}
+.divider {
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  margin: 0 12px;
+  background-color: rgba(196, 196, 196, 0.2);
+}
+.active {
+  background-color: @primary-color-tag-border;
+}
+.hoverCard {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  width: 330px;
+  padding: 16px;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(31, 31, 31, 0.08), 0 9px 28px rgba(31, 31, 31, 0.05),
+    0 12px 48px rgba(31, 31, 31, 0.05);
+  img {
+    margin-right: 8px;
+  }
+  .title {
+    color: @text-color;
+    font-weight: @font-weight-bold;
+    word-break: break-all;
+  }
+  .desc {
+    width: 240px;
+    margin-top: 8px;
+    margin-bottom: 22px;
+    color: @text-color-secondary;
+    font-size: @font-size-1;
+  }
+  .tail {
+    display: flex;
+    color: @text-color-tertiary;
+    font-size: @font-size-1;
+    div:nth-child(1) {
+      margin-right: 30px;
+    }
+    .num {
+      display: block;
+      color: @text-color;
+      font-size: @font-size-2;
+    }
+  }
+}

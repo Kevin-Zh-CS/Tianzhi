@@ -1,0 +1,229 @@
+@import '~@/variable.less';
+
+.account {
+  :global {
+    .quanta-control-page-header {
+      left: 0;
+    }
+    .container-card {
+      padding-bottom: 240px;
+    }
+  }
+  .accountCard {
+    width: 58%;
+    margin: auto;
+  }
+  .name {
+    span {
+      padding-bottom: 8px;
+      color: @text-color-title;
+      font-size: @font-size-4;
+      line-height: @font-line-height-3;
+    }
+  }
+  .private {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+  .upload {
+    position: absolute;
+    top: 64px;
+    right: 32px;
+  }
+}
+
+.accountWrap {
+  //position: fixed;
+  //top: 50px;
+  //right: 20px;
+  //z-index: 1000;
+  width: 320px;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(31, 31, 31, 0.08), 0 9px 28px rgba(31, 31, 31, 0.05),
+    0 12px 48px rgba(31, 31, 31, 0.05);
+
+  .header {
+    //margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(
+      199.97deg,
+      rgba(36, 84, 255, 0.2) 5.02%,
+      rgba(0, 118, 217, 0) 72.76%
+    );
+    border-bottom: 1px solid #e7e7e7;
+    .userIcon {
+      width: 48px;
+      height: 48px;
+      background: #fff;
+    }
+
+    .userTxt {
+      margin-top: 2px;
+      margin-bottom: 8px;
+      color: @text-color-title;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .orgTxt {
+      color: #888;
+    }
+  }
+
+  .content {
+    padding: 20px 20px 12px 20px;
+    border-bottom: 1px solid #e7e7e7;
+
+    .price {
+      color: #ffad32;
+    }
+
+    :global {
+      .quanta-descriptions-item-content {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .footer {
+    height: 48px;
+    color: #888;
+    line-height: 48px;
+    text-align: center;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.priceStep {
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+
+  :global {
+    .antd-pro-components-step-index-stepWrap .antd-pro-components-step-index-stepPartWrap {
+      height: 60px;
+      padding-top: 18px;
+    }
+    .antd-pro-components-step-index-stepWrap .antd-pro-components-step-index-borderTop::before {
+      height: 0;
+    }
+  }
+}
+
+.accountPrice {
+  width: 58%;
+  margin: auto;
+  background: #fff;
+
+  .header {
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
+  .priceContent {
+    padding: 20px 32px 40px 32px;
+
+    .alert {
+      margin-bottom: 8px;
+    }
+
+    .priceBg {
+      display: flex;
+      margin-bottom: 20px;
+      padding: 12px 23px;
+      background: url('../../assets/default/price-bg.png') no-repeat;
+      background-size: 100% auto;
+
+      .two {
+        margin-left: 72px;
+      }
+
+      .label {
+        padding: 4px 0;
+        color: #888;
+        font-size: 16px;
+      }
+
+      .priceValue,
+      .value {
+        color: #595959;
+        font-size: 24px;
+        line-height: 32px;
+
+        .extra {
+          font-size: 16px;
+        }
+      }
+
+      .priceValue {
+        color: #ffad32;
+      }
+    }
+
+    :global {
+      .quanta-descriptions-view {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.createModalTree {
+  :global {
+    .ant-select-tree {
+      color: #595959;
+    }
+    .ant-tree-select-dropdown .ant-select-tree-list-holder-inner .ant-select-tree-treenode {
+      padding-bottom: 0;
+    }
+    .ant-select-tree .ant-select-tree-treenode {
+      padding: 0;
+      transition: all 0.3s, border 0s, line-height 0s, box-shadow 0s;
+      &:hover {
+        background: #f9f9f9;
+      }
+    }
+    .ant-select-tree .ant-select-tree-node-content-wrapper,
+    .ant-select-tree-switcher,
+    .ant-select-tree {
+      line-height: 32px;
+    }
+    .ant-select-tree .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected {
+      background: #e5f1fb;
+      .antd-pro-pages-manage-component-create-user-modal-index-title {
+        .iconfont {
+          display: block;
+        }
+      }
+    }
+    .ant-select-tree-treenode-selected {
+      color: #121212;
+      font-weight: 500;
+      background: #e5f1fb !important;
+    }
+  }
+  .title {
+    position: relative;
+    :global {
+      .iconfont {
+        position: absolute;
+        top: 0;
+        right: 8px;
+        display: none;
+        color: #888;
+      }
+    }
+  }
+}
+
+.emptyBox {
+  padding: 9px 0 9px 12px;
+  color: #888;
+}

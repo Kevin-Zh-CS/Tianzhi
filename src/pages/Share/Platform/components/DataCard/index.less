@@ -1,0 +1,62 @@
+@import '~@/variable.less';
+
+.dataCard {
+  display: flex;
+  margin-bottom: 12px;
+  padding: 16px 20px;
+  .main {
+    flex: auto;
+    margin: 0 100px 0 12px;
+    .title {
+      color: @text-color;
+      font-size: @font-size-3;
+      line-height: 40px;
+      word-break: break-all;
+    }
+    .desc {
+      /* autoprefixer: off */
+      -webkit-box-orient: vertical;
+
+      /* autoprefixer: on */
+      display: -webkit-box;
+      height: 40px;
+      margin-bottom: 8px;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      color: @text-color-secondary;
+      font-size: @font-size-1;
+      word-break: break-all;
+    }
+    .tail_head {
+      color: #888;
+      font-size: @font-size-1;
+    }
+    .topic {
+      margin-right: 4px;
+    }
+    .tail {
+      margin-left: 20px;
+      color: #888;
+      font-size: @font-size-1;
+    }
+  }
+  .aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    .type {
+      color: @text-color-tertiary;
+    }
+  }
+
+  .statusText {
+    margin-top: 18px;
+    margin-bottom: 20px;
+    color: #888;
+    font-weight: 600;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 24px;
+  }
+}

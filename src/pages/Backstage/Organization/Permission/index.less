@@ -1,0 +1,76 @@
+.permissionPage {
+  .tabPaneWrap {
+    padding: 20px;
+    background: #fff;
+  }
+  .tableName {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    padding-left: 23px;
+    background: #f6f6f6;
+    cursor: pointer;
+
+    :global {
+      .quanta-icon {
+        transition: all 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+      }
+    }
+  }
+}
+
+.detailPage {
+  height: calc(100vh - 148px);
+  padding: 20px;
+  overflow-y: scroll;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+
+  :global {
+    .quanta-checkbox-wrapper {
+      color: #292929;
+      font-weight: 600;
+    }
+
+    .quanta-checkbox + span {
+      padding-left: 6px;
+    }
+    .quanta-descriptions-item-content {
+      padding-right: 12px;
+    }
+  }
+}
+
+.checkboxItem {
+  margin-top: 12px;
+
+  &Txt {
+    margin-top: 4px;
+    padding-left: 22px;
+    color: #888;
+  }
+}
+
+.configItem {
+  :global {
+    .quanta-form-item-control-input-content {
+      padding-top: 6px;
+    }
+  }
+}
+
+.configDetail {
+  padding: 20px;
+  padding-top: 8px;
+  border: 1px solid #d0d0d0;
+
+  .checkboxItem {
+    color: #292929;
+    font-weight: 600;
+
+    &Txt {
+      padding-left: 0;
+      font-weight: 400;
+    }
+  }
+}

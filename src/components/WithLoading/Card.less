@@ -1,0 +1,23 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 291px;
+  height: 215px;
+  margin: 0 12px 12px 0;
+  padding: 16px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+  :global {
+    .ant-skeleton-header {
+      vertical-align: middle;
+    }
+  }
+  .bottom {
+    display: flex;
+    .bottomItem {
+      flex: 1;
+      padding: 0 20px;
+    }
+  }
+}

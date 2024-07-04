@@ -1,0 +1,62 @@
+.baseDetail {
+  width: 926px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #e7e7e7;
+  :global {
+    .quanta-descriptions-item-label {
+      width: 80px;
+    }
+  }
+}
+
+:global {
+  .dark-modal {
+    .quanta-modal-content {
+      height: calc(100vh - 200px);
+      background: #282f41;
+    }
+    .quanta-modal-header {
+      background: #282f41;
+    }
+
+    .quanta-modal-header .quanta-modal-title {
+      color: #fff;
+      background: #282f41;
+    }
+
+    .quanta-alert-error {
+      margin-bottom: 15px;
+      background: rgba(229, 59, 67, 0.1);
+    }
+    .quanta-alert-success {
+      margin-bottom: 15px;
+      background: rgba(8, 203, 148, 0.1);
+    }
+    .quanta-alert-message {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .quanta-tabs-nav .quanta-tabs-tab {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .quanta-tabs-tab {
+      border-bottom: 1px solid rgba(255, 255, 255, 0);
+    }
+    .quanta-tabs-nav .quanta-tabs-tab-active,
+    .quanta-tabs-nav .quanta-tabs-tab:hover {
+      background: #282f41 !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .quanta-tabs-top > .quanta-tabs-nav::before {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .quanta-tabs-top > .quanta-tabs-nav .quanta-tabs-ink-bar {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .react-codemirror2 {
+      height: calc(100vh - 420px);
+    }
+  }
+}

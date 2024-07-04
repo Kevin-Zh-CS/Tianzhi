@@ -1,0 +1,431 @@
+:global {
+  .riskControlDropdown {
+    color: #e5e0c4;
+    background: #252019;
+
+    .quanta-select-item-option-selected:not(.quanta-select-item-option-disabled) {
+      color: #fef9da !important;
+      background: #3a362c !important;
+    }
+
+    .quanta-select-item-option-active:not(.quanta-select-item-option-disabled) {
+      color: #e5e0c4;
+      background: #302b23;
+    }
+
+    .quanta-select-item-option {
+      color: #b3af99;
+      background: #252019;
+    }
+  }
+
+  .riskControlTooltip {
+    .quanta-tooltip-inner {
+      background: #504d42;
+    }
+
+    .quanta-tooltip-arrow-content {
+      background: #504d42;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .riskControlMessage {
+    color: #fef9da;
+
+    .quanta-message-notice-content {
+      background: #504d42;
+    }
+  }
+
+  .taskConfigDate {
+    .quanta-picker-panel-container .quanta-picker-panel {
+      background: #242019;
+      box-shadow: 0 3px 6px -4px rgba(31, 31, 31, 0.12), 0 6px 12px rgba(31, 31, 31, 0.08),
+      0 8px 24px 8px rgba(31, 31, 31, 0.06);
+    }
+
+    .quanta-picker-header {
+      border-bottom-color: rgba(80, 77, 66, 0.6);
+    }
+
+    .quanta-picker-panel .quanta-picker-footer {
+      border-top-color: rgba(80, 77, 66, 0.6);
+    }
+
+    .quanta-picker-panel {
+      border-color: #242019;
+    }
+
+    .quanta-picker-content th,
+    .quanta-picker-header {
+      color: #fef9da;
+    }
+
+    .quanta-picker-cell {
+      color: #504d42;
+    }
+
+    .quanta-picker-cell-in-view {
+      color: #e5e0c4;
+    }
+
+    .quanta-picker-cell-in-view.quanta-picker-cell-today .quanta-picker-cell-inner::before {
+      border-color: #7d6b3c;
+    }
+
+    .quanta-picker-cell-today {
+      color: #7d6b3c;
+    }
+
+    .quanta-picker-cell-in-view.quanta-picker-cell-selected .quanta-picker-cell-inner {
+      color: #fef9da;
+      background: #7d6b3c;
+    }
+
+    .quanta-picker-cell:hover:not(.quanta-picker-cell-in-view) .quanta-picker-cell-inner,
+    .quanta-picker-cell:hover:not(.quanta-picker-cell-selected):not(.quanta-picker-cell-range-start):not(.quanta-picker-cell-range-end):not(.quanta-picker-cell-range-hover-start):not(.quanta-picker-cell-range-hover-end)
+    .quanta-picker-cell-inner {
+      color: #bc9d51;
+      background: rgba(254, 249, 218, 0.05);
+    }
+
+    .quanta-picker-header button {
+      color: #827e6d;
+    }
+
+    .quanta-picker-today-btn {
+      color: #bc9d51;
+    }
+  }
+
+  .taskConfigTime {
+    .quanta-picker-panel-container {
+      background: #242019;
+      box-shadow: 0 3px 6px -4px rgba(31, 31, 31, 0.12), 0 6px 12px rgba(31, 31, 31, 0.08),
+      0 8px 24px 8px rgba(31, 31, 31, 0.06);
+    }
+
+    .quanta-picker-time-panel-column
+    > li.quanta-picker-time-panel-cell
+    .quanta-picker-time-panel-cell-inner {
+      padding-left: 20px;
+      color: #e5e0c4;
+    }
+
+    .quanta-picker-time-panel-column
+    > .quanta-picker-time-panel-cell-selected
+    .quanta-picker-time-panel-cell-inner {
+      color: #fef9da;
+    }
+
+    .quanta-picker-time-panel-column
+    > li.quanta-picker-time-panel-cell-selected
+    .quanta-picker-time-panel-cell-inner {
+      background: rgba(254, 249, 218, 0.1);
+    }
+
+    .quanta-picker-time-panel-column:not(:first-child) {
+      border-color: rgba(80, 77, 66, 0.6);
+    }
+
+    .quanta-picker-time-panel-column
+    > li.quanta-picker-time-panel-cell
+    .quanta-picker-time-panel-cell-inner:hover {
+      background: rgba(254, 249, 218, 0.05);
+    }
+
+    .quanta-picker-panel {
+      border-bottom-color: #242019;
+    }
+
+    .quanta-picker-panel .quanta-picker-footer {
+      border-top-color: rgba(80, 77, 66, 0.6);
+    }
+
+    .ant-btn-primary {
+      color: #fff;
+      background: #7d6b3c;
+      border: none;
+    }
+
+    .quanta-picker-now a {
+      color: #bc9d51;
+    }
+
+    .quanta-picker-time-panel-column {
+      &::-webkit-scrollbar-corner,
+      &::-webkit-scrollbar:hover,
+      &::-webkit-scrollbar {
+        width: 4px;
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #827e6d;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+.taskForm {
+  margin-top: 20px;
+  padding: 0 110px;
+
+  :global {
+    .quanta-form-item-label > label {
+      color: #b3af99;
+      font-size: 14px;
+    }
+
+    input {
+      background: transparent;
+      border: 1px solid #504d42;
+
+      &:hover {
+        border: 1px solid #b3af99;
+      }
+    }
+
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder {
+      color: #504d42;
+    }
+
+    input:-moz-placeholder,
+    textarea:-moz-placeholder {
+      color: #504d42;
+    }
+
+    input::-moz-placeholder,
+    textarea::-moz-placeholder {
+      color: #504d42;
+    }
+
+    input:-ms-input-placeholder,
+    textarea:-ms-input-placeholder {
+      color: #504d42;
+    }
+
+    .quanta-input-group-addon {
+      border: 1px solid #504d42;
+      border-left: none;
+    }
+
+    .quanta-input-group-addon .quanta-select {
+      background: #171512;
+    }
+
+    .quanta-select-open .quanta-select-selector {
+      border: 1px solid #b3af99 !important;
+    }
+
+    .quanta-input-group-addon
+    .quanta-select.quanta-select-single:not(.quanta-select-customize-input)
+    .quanta-select-selector {
+      background: #171512;
+      border: 1px solid #504d42;
+
+      &:hover {
+        border: 1px solid #b3af99;
+      }
+    }
+
+    .quanta-select-selection-item {
+      color: #e5e0c4;
+    }
+
+    .quanta-radio {
+      line-height: 22px;
+    }
+
+    .quanta-radio-group {
+      display: flex;
+    }
+
+    .quanta-radio-wrapper {
+      color: #e5e0c4;
+      font-size: 14px;
+    }
+
+    .quanta-radio-inner {
+      background: transparent !important;
+      border-color: #504d42;
+    }
+
+    .quanta-radio-wrapper:not(.quanta-radio-checked):hover .quanta-radio-inner,
+    .quanta-radio:not(.quanta-radio-checked):hover .quanta-radio-inner,
+    .quanta-radio-checked .quanta-radio-inner {
+      border: 1px solid #b3af99;
+    }
+
+    .quanta-radio-inner::after {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      background-color: #bc9d51;
+    }
+
+    .quanta-input {
+      color: #e5e0c4 !important;
+    }
+
+    input:-internal-autofill-selected {
+      background: transparent;
+    }
+
+    .quanta-input:focus {
+      border-color: #b3af99 !important;
+    }
+
+    .quanta-form-item-has-error .quanta-input,
+    .quanta-form-item-has-error .quanta-input-affix-wrapper,
+    .quanta-form-item-has-error .quanta-input:hover,
+    .quanta-form-item-has-error .quanta-input-affix-wrapper:hover {
+      background: transparent;
+    }
+
+    .quanta-picker-suffix {
+      .iconfont {
+        font-size: 20px;
+      }
+
+      .iconCalendar {
+        color: #827e6d;
+      }
+
+      .iconTime {
+        color: #7d6b3c;
+      }
+    }
+
+    .quanta-picker-focused,
+    .quanta-picker:hover {
+      border-color: #b3af99 !important;
+    }
+
+    .quanta-form-item-has-error .quanta-select:not(.quanta-select-disabled):not(.quanta-select-customize-input) .quanta-select-selector {
+      border-color: #504d42 !important;
+    }
+
+    .quanta-form-item-label {
+      width: 98px !important;
+    }
+
+    .quanta-form-item-has-error :not(.quanta-input-disabled):not(.quanta-input-borderless).quanta-input, .quanta-form-item-has-error :not(.quanta-input-affix-wrapper-disabled):not(.quanta-input-affix-wrapper-borderless).quanta-input-affix-wrapper, .quanta-form-item-has-error :not(.quanta-input-disabled):not(.quanta-input-borderless).quanta-input:hover, .quanta-form-item-has-error :not(.quanta-input-affix-wrapper-disabled):not(.quanta-input-affix-wrapper-borderless).quanta-input-affix-wrapper:hover {
+      background: transparent;
+    }
+  }
+
+  .taskType {
+    margin-bottom: 0;
+    padding: 0;
+
+    .taskTypeItem {
+      position: relative;
+      display: flex;
+      padding: 12px 8px 10px 14px;
+      border: 1px solid #504d42;
+      cursor: pointer;
+
+      .left {
+        color: #b3af99;
+        font-size: 18px;
+      }
+
+      .right {
+        margin-left: 10px;
+
+        p:nth-child(1) {
+          color: #e5e0c4;
+          font-size: 14px;
+        }
+
+        p:nth-last-child(1) {
+          margin-top: 6px;
+          color: #827e6d;
+          font-size: 12px;
+        }
+      }
+
+      .activeIcon {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 14px;
+        height: 14px;
+      }
+
+      &:hover {
+        border: 1px solid #b3af99;
+      }
+    }
+
+    .taskTypeItem + .taskTypeItem {
+      margin-top: 8px;
+    }
+
+    .active {
+      background: rgba(238, 218, 146, 0.1);
+      border: 1px solid #b3af99;
+    }
+  }
+
+  .tooltipIcon {
+    color: #504d42;
+    font-size: 20px;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    z-index: 99;
+    color: #827e6d;
+    font-size: 22px;
+    pointer-events: none;
+  }
+
+  .beginTime {
+    display: flex;
+
+    :global {
+      .quanta-picker {
+        background: transparent;
+        border-color: #504d42;
+
+        .quanta-picker-input {
+          > input {
+            color: #e5e0c4;
+            border: none;
+          }
+        }
+      }
+
+      .quanta-picker + .quanta-picker {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+
+  :global {
+    .quanta-btn {
+      width: 96px;
+      height: 32px;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}

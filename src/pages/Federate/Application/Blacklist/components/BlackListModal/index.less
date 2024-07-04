@@ -1,0 +1,149 @@
+@import '~@/variable.less';
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.blackModal {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  z-index: 100;
+  width: 940px;
+  height: 760px;
+  padding: 20px 32px;
+  border-top: 4px solid #1a84b0;
+  transform: translateX(-50%);
+
+  .back {
+    position: absolute;
+    top: -20px;
+    left: -48px;
+  }
+  .titleItem {
+    margin-bottom: 24px;
+    font-size: 18px;
+    .title {
+      position: relative;
+      color: #1db5f4;
+      font-weight: 600;
+    }
+    .subTitle {
+      position: relative;
+      color: #176383;
+    }
+  }
+  .closeIcon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+  .filter {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: #176383;
+    .input {
+      width: 200px;
+      color: #bbe9fc;
+      background: transparent;
+      border: 1px solid #176383;
+      &:hover {
+        border-color: #154356;
+      }
+      &:active,
+      &:focus {
+        border-color: #1a84b0 !important;
+      }
+    }
+    :global {
+      .quanta-input::placeholder {
+        color: #154356;
+      }
+    }
+    .select {
+      width: 200px;
+      svg {
+        fill: #176383;
+      }
+      // Select 组件样式覆盖
+      :global {
+        .quanta-select-selector {
+          color: #bbe9fc;
+          background: transparent;
+          border: 1px solid #176383;
+        }
+        .quanta-select:not(.quanta-select-disabled):hover .quanta-select-selector {
+          border-color: #154356;
+        }
+        .quanta-select:not(.quanta-select-disabled):active .quanta-select-selector,
+        .quanta-select:not(.quanta-select-disabled):focus .quanta-select-selector,
+        .quanta-select-focused:not(.quanta-select-disabled).quanta-select-single:not(.quanta-select-customize-input)
+          .quanta-select-selector {
+          border-color: #1a84b0;
+        }
+        .quanta-select-selection-placeholder {
+          color: #154356;
+        }
+      }
+    }
+    .button {
+      color: rgba(29, 181, 244, 1);
+      background: rgba(29, 181, 244, 0.1);
+      border: 1px solid #1a84b0;
+      &:hover {
+        background: rgba(29, 181, 244, 0.08);
+        border-color: #176383;
+      }
+      &:active,
+      &:focus {
+        background: rgba(29, 181, 244, 0.1);
+        border-color: #154356;
+      }
+    }
+  }
+
+  :global {
+    .quanta-alert-info {
+      background: rgba(0, 118, 217, 0.1);
+    }
+    .quanta-alert-message {
+      color: #8edaf9;
+    }
+    .quanta-tabs-tab {
+      border-bottom: none;
+    }
+    .quanta-tabs-top > .quanta-tabs-nav .quanta-tabs-ink-bar,
+    .quanta-tabs-bottom > .quanta-tabs-nav .quanta-tabs-ink-bar,
+    .quanta-tabs-top > div > .quanta-tabs-nav .quanta-tabs-ink-bar,
+    .quanta-tabs-bottom > div > .quanta-tabs-nav .quanta-tabs-ink-bar {
+      display: none;
+    }
+  }
+}
+.hash {
+  width: 145px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+:global {
+  .blacklistDropdown {
+    background-color: #0c1f2f;
+    .quanta-select-item-option-selected:not(.quanta-select-item-option-disabled),
+    .quanta-select-item {
+      color: #bbe9fc;
+    }
+    .quanta-select-item-option-active:not(.quanta-select-item-option-disabled) {
+      color: #e8f8fe;
+      background-color: rgba(29, 181, 244, 0.06);
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@import '~@/variable.less';
+
+.actionOpt {
+  display: inline-block;
+  padding: 5px 20px;
+  color: @text-color-tertiary;
+  svg {
+    margin-right: 8px;
+    margin-bottom: 2px;
+    vertical-align: text-bottom;
+  }
+
+  &:hover {
+    color: #595959;
+    background: #f6f6f6;
+
+    svg {
+      color: #292929;
+    }
+  }
+
+  &:active,
+  &:focus {
+    color: #595959;
+    background: #e7e7e7;
+
+    svg {
+      color: #292929;
+    }
+  }
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 289px;
+  height: 240px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  .titleWrap {
+    padding: 16px;
+    .titleFirst {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .titlePrimary {
+        height: 24px;
+        margin-right: 12px;
+        overflow: hidden;
+        color: @text-color;
+        font-size: 16px;
+        line-height: 24px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+    .titleSecond {
+      /* autoprefixer: off */
+      -webkit-box-orient: vertical;
+
+      /* autoprefixer: on */
+      display: -webkit-box;
+      height: 34px;
+      -webkit-line-clamp: 2;
+      margin-top: 8px;
+      overflow: hidden;
+      color: @text-color-tertiary;
+      font-size: 12px;
+      line-height: 20px;
+      word-break: break-all;
+    }
+  }
+  .vertical {
+    height: 93px;
+    background: url('../../../../assets/qfl/vartical-card.png') no-repeat;
+    background-size: contain;
+  }
+  .cross {
+    height: 93px;
+    background: url('../../../../assets/qfl/cross-card.png') no-repeat;
+    background-size: contain;
+  }
+  .footerWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    padding-bottom: 0;
+    .logoShow {
+      position: relative;
+      height: 24px;
+      img {
+        position: absolute;
+        top: 0;
+        border: 1px solid #e7e7e7;
+        border-radius: 13px;
+      }
+    }
+  }
+
+  :global {
+    .quanta-card-actions > li {
+      margin: 7px 0;
+    }
+
+    .disabled-style {
+      color: @disabled-color;
+      svg {
+        color: @disabled-color;
+      }
+
+      &:hover {
+        background: @disabled-bg;
+      }
+    }
+  }
+}

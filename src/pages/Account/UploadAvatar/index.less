@@ -1,0 +1,74 @@
+@import '~antd/es/modal/style/index.css';
+@import '~antd/es/slider/style/index.css';
+@import '~@/variable.less';
+
+.hoverAvatar {
+  overflow: hidden;
+  .changeAvatar {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 104px;
+    height: 0;
+    overflow: hidden;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 500ms;
+  }
+  &:hover {
+    .changeAvatar {
+      height: 32px;
+      opacity: 1;
+    }
+  }
+}
+:global {
+  .ant-modal-close-x {
+    width: 28px;
+    height: 34px;
+    font-size: 12px;
+    line-height: 34px;
+  }
+  .ant-modal-header {
+    padding: 24px 32px;
+    border-top: 4px @primary-color solid;
+    border-bottom: transparent;
+  }
+  .ant-modal-body {
+    padding: 4px 32px;
+  }
+  .ant-modal-footer {
+    padding: 20px 32px;
+    border-top: transparent;
+    button {
+      box-shadow: none;
+    }
+    .ant-btn-primary {
+      background-color: @btn-primary-background;
+      &:hover {
+        background-color: @btn-primary-hover-background;
+        box-shadow: @btn-primary-hover-shadow;
+      }
+      &:active,
+      &:focus {
+        background-color: @btn-primary-focus-background;
+      }
+    }
+    .ant-btn:not(.ant-btn-primary) {
+      color: @text-color-secondary;
+      &:hover {
+        background-color: @btn-dashed-disabled-background;
+        border-color: transparent;
+      }
+      &:active,
+      &:focus {
+        background-color: @btn-dashed-focus-background;
+        border-color: transparent;
+      }
+    }
+  }
+}

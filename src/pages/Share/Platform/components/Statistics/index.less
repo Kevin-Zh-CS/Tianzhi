@@ -1,0 +1,75 @@
+@import '~@/variable.less';
+
+.container {
+  //margin-top: 12px;
+  padding: 20px;
+}
+.statistics {
+  display: flex;
+  margin-left: 12px;
+  .context {
+    display: flex;
+    flex: auto;
+    align-items: center;
+    .number {
+      margin-top: 8px;
+      color: @primary-color-text;
+      font-weight: @font-weight-bolder;
+      font-size: @font-size-6;
+      font-family: Orbitron, sans-serif;
+      line-height: @font-line-height-3;
+    }
+    span {
+      display: block;
+      margin-left: 12px;
+    }
+
+    .numberContext {
+      color: @text-color-primary;
+      font-size: 12px;
+    }
+  }
+  .divider {
+    width: 1px;
+    height: 56px;
+    margin-right: 40px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+.open {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+
+  :global {
+    .quanta-icon {
+      margin-left: 3px;
+    }
+  }
+}
+.descContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+  .descCard {
+    flex: 1;
+    margin-left: 8px;
+    padding: 20px 16px;
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+    .title {
+      text-align: center;
+      span {
+        margin-left: 8px;
+        color: @text-color;
+        font-size: @font-size-lg;
+      }
+    }
+    .body {
+      display: inline-block;
+      margin-top: 8px;
+      color: @text-color-secondary;
+    }
+  }
+}

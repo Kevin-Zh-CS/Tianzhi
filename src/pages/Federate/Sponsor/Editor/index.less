@@ -1,0 +1,446 @@
+@import '~@/variable.less';
+
+.editorWrap {
+  position: relative;
+  height: calc(100vh - 50px);
+  margin-top: -58px;
+  padding: 16px 20px;
+  padding-top: 9px;
+  overflow: auto;
+  background-color: #282f41;
+
+  .intro,
+  .introTitle {
+    margin-bottom: 8px;
+  }
+
+  .introTitle {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .desc {
+    margin-bottom: 2px;
+  }
+  .sub_intro {
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .paramTable {
+    margin-bottom: 12px;
+    .tableThead {
+      height: 48px;
+      margin-top: 6px;
+      padding-left: 12px;
+      font-weight: 600;
+    }
+    .tableTr {
+      padding: 12px;
+      border-bottom: 1px solid #e7e7e7;
+    }
+  }
+  .paramTable1 {
+    margin-top: -10px;
+    .tableThead {
+      height: 48px;
+      padding-left: 12px;
+    }
+    .tableTr {
+      height: 48px;
+      padding-left: 12px;
+      border-bottom: 1px solid #e7e7e7;
+    }
+  }
+
+  .border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: @primary-color;
+  }
+  .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+  }
+  .rightIcon {
+    display: flex;
+    align-items: center;
+  }
+  .iconCenter,
+  .disabledIconCenter,
+  .iconSave,
+  .disabledIconSave {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .applyIcon,
+  .disableApplyIcon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    padding: 4px 5px;
+    color: #888;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .applyIcon {
+    &:hover,
+    &:focus,
+    &:active {
+      color: rgba(255, 255, 255, 0.9);
+      border: 1px solid #fff;
+    }
+
+    &:focus,
+    &:active {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .iconSave {
+    &:hover,
+    &:focus,
+    &:active {
+      color: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.06);
+    }
+  }
+
+  .disableApplyIcon,
+  .disabledIconSave {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: not-allowed;
+    :global {
+      .quanta-icon {
+        cursor: not-allowed;
+      }
+    }
+  }
+  .disabledIconSave {
+    color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0);
+  }
+  .title {
+    color: @white-color-title;
+    font-weight: @font-weight-blod;
+    font-size: @font-size-4;
+  }
+
+  .button {
+    color: rgba(255, 255, 255, 0.7);
+    border-color: rgba(255, 255, 255, 0.2);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: rgba(255, 255, 255, 0.9);
+      border-color: #fff;
+    }
+
+    &:focus,
+    &:active {
+      background: rgba(255, 255, 255, 0.1) !important;
+    }
+  }
+  .body {
+    display: flex;
+    margin-top: 9px;
+    .left {
+      flex: 1 0 auto;
+      width: 240px;
+      padding: 20px 0;
+      background-color: #1f273a;
+      .active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      .title {
+        padding: 0 20px;
+        font-size: @font-size-3;
+      }
+      .modelName {
+        position: relative;
+        padding: 9px 10px;
+        color: @white-color-primary;
+        font-size: @font-size-2;
+        transition: all 300ms;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.05);
+        }
+      }
+      .subTitle {
+        padding: 9px 20px;
+        color: @white-color-title;
+        font-weight: @font-weight-blod;
+        font-size: @font-size-2;
+      }
+    }
+    .middle {
+      flex: auto;
+      width: 800px;
+      margin: 0 12px;
+      .detail {
+        display: flex;
+        justify-content: space-between;
+        padding: 7px 20px;
+        color: @white-color-primary;
+        font-size: @font-size-2;
+        background-color: #232733;
+      }
+    }
+    .right {
+      flex: 1 0 auto;
+      width: 312px;
+      height: calc(100vh - 128px);
+      padding-right: 16px;
+      overflow: auto;
+      .title,
+      .outputTitle {
+        margin-bottom: 20px;
+        color: @white-color-title;
+        font-weight: bold;
+        font-size: @font-size-3;
+      }
+
+      .outputTitle {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+        margin-bottom: 2px;
+
+        :global {
+          .iconfont {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 20px;
+
+            &:hover,
+            :active,
+            :focus {
+              color: #fff;
+            }
+          }
+        }
+      }
+      .subTitle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 14px;
+        margin-bottom: 8px;
+        color: @white-color-title;
+        font-size: @font-size-2;
+      }
+      .emptyParams {
+        padding-top: 14px;
+        color: @text-color-disabled;
+        text-align: center;
+      }
+      .output {
+        height: 227px;
+        padding: 5px 12px;
+        overflow: scroll;
+        color: @white-color-disabled;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        &::-webkit-scrollbar-corner,
+        &::-webkit-scrollbar:hover,
+        &::-webkit-scrollbar {
+          width: 4px;
+          height: 4px;
+          background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: rgba(29, 181, 244, 0.1);
+          border-radius: 2px;
+        }
+
+        pre {
+          height: auto;
+          margin-bottom: 0;
+          overflow: visible;
+        }
+      }
+    }
+  }
+  :global {
+    .quanta-btn[disabled] {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    .quanta-select-disabled {
+      background-color: rgba(255, 255, 255, 0.1);
+      .quanta-select-selector {
+        border-color: rgba(255, 255, 255, 0.1) !important;
+      }
+    }
+    .quanta-input,
+    .quanta-select:not(.quanta-select-customize-input) .quanta-select-selector {
+      color: @white-color-primary;
+      background-color: transparent;
+      //border-color: #d0d0d0;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .quanta-input:hover,
+    .quanta-select:not(.quanta-select-customize-input) .quanta-select-selector:hover {
+      border-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .quanta-input::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.3);
+    }
+    .quanta-input::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: rgba(255, 255, 255, 0.3);
+    }
+    .quanta-input::-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: rgba(255, 255, 255, 0.3);
+    }
+    .icontongyongxing_baocunx {
+      margin-right: 4px;
+      font-size: 20px;
+    }
+
+    .ant-collapse {
+      width: 420px;
+      background: #282f41;
+
+      .ant-collapse-header {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+    .ant-collapse-content > .ant-collapse-content-box {
+      color: rgba(255, 255, 255, 0.5);
+      background: #282f41;
+    }
+
+    .quanta-tooltip-disabled-compatible-wrapper {
+      &:active,
+      &:focus {
+        background: rgba(255, 255, 255, 0);
+      }
+      .quanta-btn[disabled] {
+        background: rgba(255, 255, 255, 0.1) !important;
+      }
+    }
+  }
+}
+
+.drawerTitle {
+  color: @btn-default-background;
+  font-size: @font-size-3;
+}
+.spin {
+  position: absolute;
+  top: 216px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.darkDropdown {
+  :global {
+    .quanta-dropdown-menu {
+      background: #151c2c;
+    }
+    .quanta-dropdown-menu-item {
+      color: white;
+      &-disabled {
+        color: #b7b7b7;
+      }
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}
+
+.modelSelect {
+  color: rgba(255, 255, 255, 0.7);
+  background: #1f273a;
+  box-shadow: 0 3px 6px -4px rgba(31, 31, 31, 0.12), 0 6px 12px rgba(31, 31, 31, 0.08),
+    0 8px 24px 8px rgba(31, 31, 31, 0.06);
+
+  :global {
+    .quanta-select-item-option {
+      color: rgba(255, 255, 255, 0.7);
+      background: #1f273a;
+      box-shadow: 0 3px 6px -4px rgba(31, 31, 31, 0.12), 0 6px 12px rgba(31, 31, 31, 0.08),
+        0 8px 24px 8px rgba(31, 31, 31, 0.06);
+    }
+    .quanta-select-item-option-active:not(.quanta-select-item-option-disabled) {
+      color: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+.drawer {
+  :global {
+    .ant-drawer-body {
+      background: #282f41;
+    }
+    .quanta-descriptions-item-label {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .quanta-descriptions-item-content {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .quanta-table-thead > tr > th {
+      color: #fff;
+      background: #3d4454;
+    }
+    .quanta-table-tbody,
+    .quanta-table-tbody > tr.quanta-table-row:hover > td {
+      color: rgba(255, 255, 255, 0.9);
+      background-color: #282f41;
+    }
+    .quanta-table-tbody > tr > td,
+    .quanta-table-thead > tr > th {
+      border-bottom: 1px solid #3d4454;
+    }
+
+    .quanta-pagination-simple-pager input {
+      color: rgba(255, 255, 255, 0.7);
+      background: #282f41;
+      border: 1px solid #d0d0d0;
+    }
+    .quanta-pagination-simple-pager {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .quanta-pagination-simple-pager .quanta-pagination-slash {
+      color: #888;
+    }
+  }
+}
+
+.textRight {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.emptyBox {
+  color: #888;
+}
+
+.outputAlert {
+  :global {
+    .quanta-alert-error {
+      background: rgba(229, 59, 67, 0.1);
+    }
+    .quanta-alert-success {
+      background: rgba(8, 203, 148, 0.1);
+    }
+    .quanta-alert-message {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+}

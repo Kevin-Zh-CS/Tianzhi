@@ -1,0 +1,48 @@
+@import '~@/variable.less';
+
+.box1 {
+  position: absolute;
+  top: 60px;
+  right: 90px;
+  display: inline-block;
+  padding: 4px;
+  color: rgba(8, 203, 148, 0.4);
+  border: 3px solid rgba(8, 203, 148, 0.2);
+  transform: rotate(7deg);
+  .box2 {
+    padding: 4px;
+    border: 1px dashed rgba(8, 203, 148, 0.2);
+    .box3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 6px;
+      border: 1px solid rgba(8, 203, 148, 0.2);
+      .title {
+        font-weight: @font-weight-medium;
+        font-size: @font-size-6;
+      }
+      .divider {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        .line {
+          width: 55px;
+          border-top: 1px solid rgba(8, 203, 148, 0.2);
+        }
+        .square {
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border: 1px solid rgba(8, 203, 148, 0.2);
+          transform: rotate(45deg);
+        }
+      }
+      .bitxmesh {
+        display: block;
+        font-size: @font-size-1;
+      }
+    }
+  }
+}

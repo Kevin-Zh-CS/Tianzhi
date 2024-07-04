@@ -1,0 +1,106 @@
+@import '~@/variable.less';
+
+.tableFilterWrap {
+  padding: 16px 20px 0 30px;
+  background: #fff;
+
+  :global {
+    .quanta-form-item {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.contentWrap {
+  margin: 0 20px;
+  margin-top: 12px;
+  padding: 20px;
+  padding-bottom: 40px;
+  background: #fff;
+
+  :global {
+    .operate {
+      margin-right: 24px;
+    }
+  }
+}
+
+.btnContainer {
+  margin-left: auto;
+  padding-bottom: 20px;
+}
+
+.hashItem {
+  width: 290px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.titleItem {
+  width: 270px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.hideBreadcrumb {
+  position: absolute;
+  z-index: -1;
+  display: inline-block;
+  visibility: hidden;
+}
+
+.menuWidth {
+  max-width: 300px;
+  overflow: hidden;
+  //color: @primary-color;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.breadcrumb {
+  //display: inline-block;
+  width: 600px;
+  margin-bottom: 10px;
+  cursor: default;
+  span {
+    font-size: 12px;
+  }
+  :global {
+    .ant-breadcrumb {
+      overflow: hidden;
+      //color: @primary-color;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      a {
+        color: @primary-color;
+      }
+    }
+    .ant-breadcrumb-overlay-link .anticon-down {
+      display: none;
+    }
+  }
+}
+
+.newFolder {
+  :global {
+    .quanta-icon {
+      vertical-align: text-bottom;
+    }
+  }
+}
+
+.emptyData {
+  color: #888;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.btnContainer1 {
+  display: flex;
+  margin-left: auto;
+  padding-right: -3px;
+  padding-bottom: 20px;
+  text-align: right;
+}

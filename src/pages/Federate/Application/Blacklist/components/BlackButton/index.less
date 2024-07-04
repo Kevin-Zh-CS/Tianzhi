@@ -1,0 +1,44 @@
+@import '~@/variable.less';
+
+@button-height: 182px;
+@button-width: 32px;
+.button {
+  img {
+    position: absolute;
+    top: -70px;
+    width: @button-width;
+    height: @button-height;
+    opacity: 0;
+    transition: opacity 300ms;
+    &:nth-child(1) {
+      opacity: 1;
+    }
+  }
+  &:hover {
+    img:nth-child(2) {
+      opacity: 1;
+    }
+    img:nth-child(1) {
+      opacity: 0;
+    }
+  }
+  &:active {
+    img:nth-child(3) {
+      opacity: 1;
+    }
+    img:nth-child(2) {
+      opacity: 0;
+    }
+    img:nth-child(1) {
+      opacity: 0;
+    }
+  }
+}
+.disabled {
+  img {
+    position: absolute;
+    top: -70px;
+    width: @button-width;
+    height: @button-height;
+  }
+}

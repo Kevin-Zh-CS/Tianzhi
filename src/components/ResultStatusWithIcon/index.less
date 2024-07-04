@@ -1,0 +1,66 @@
+@import '../../variable.less';
+
+.resultStatusWithIcon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 44px;
+  margin-bottom: 20px;
+  // position: relative;
+
+  > div {
+    display: inline-block;
+
+    > span:first-child {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    > div {
+      color: @text-color-secondary;
+
+      > a {
+        margin-left: 10px;
+        color: @primary-color;
+      }
+    }
+  }
+
+  .iconWrap {
+    position: absolute;
+    top: -5px;
+    left: -83px;
+  }
+
+  .success {
+    color: @success-color;
+  }
+
+  .error {
+    color: @error-color;
+  }
+
+  .waiting {
+    color: @warning-color;
+  }
+}
+
+.resultStatusButton {
+  margin-top: 15px;
+  text-align: center;
+
+  button {
+    border-radius: 0;
+  }
+
+  button.upload {
+    font-size: 14px;
+    line-height: unset;
+  }
+
+  button:last-child {
+    margin-left: 10px;
+  }
+}

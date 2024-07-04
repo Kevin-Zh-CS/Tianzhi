@@ -1,0 +1,34 @@
+@import '~@/variable.less';
+
+.statusCard {
+  display: flex;
+  align-items: center;
+  padding: 20px 32px;
+  .img {
+    margin-right: 12px;
+  }
+  .title {
+    color: @text-color-black;
+    font-size: @font-size-5;
+    line-height: @font-line-height-5;
+  }
+  .desc {
+    margin-top: 4px;
+    color: @text-color-secondary;
+  }
+}
+.warning {
+  background-color: @warning-color-tag-bg;
+}
+.success {
+  background-color: @success-color-tag-bg;
+}
+.error {
+  background-color: @error-color-tag-bg;
+}
+.info {
+  background-color: @primary-color-tag-bg;
+}
+.delete {
+  background-color: @border-color-base;
+}

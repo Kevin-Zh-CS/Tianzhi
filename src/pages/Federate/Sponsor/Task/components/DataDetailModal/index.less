@@ -1,0 +1,78 @@
+@import '~@/variable.less';
+
+.funcItemWrap {
+  width: 100%;
+  .funcName {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    padding-left: 23px;
+    background: #f6f6f6;
+    cursor: pointer;
+    &.open {
+      :global {
+        .quanta-icon {
+          transform: rotate(45deg);
+        }
+      }
+    }
+    :global {
+      .quanta-icon {
+        transition: all 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+      }
+    }
+  }
+}
+
+.parameters {
+  width: 100%;
+  margin-top: 12px;
+
+  .desc {
+    margin-bottom: 2px;
+    color: #888;
+  }
+  .sub_intro {
+    margin-bottom: 6px;
+    color: #292929;
+  }
+}
+
+.paramTable {
+  padding-bottom: 8px;
+  :global {
+    .columnItem {
+      width: 120px;
+    }
+  }
+}
+
+.intro {
+  margin-bottom: 8px;
+  color: #888;
+}
+
+.collpase {
+  width: 80%;
+  background-color: @disabled-bg;
+  border: 0;
+  :global {
+    .ant-collapse-content,
+    .ant-collapse-item {
+      border: 0;
+    }
+    .ant-collapse-content-box {
+      padding: 0;
+      padding-top: 12px;
+    }
+  }
+}
+
+.luaPanel {
+  margin-bottom: 20px;
+}
+
+.codeWrap {
+  height: calc(100% - 140px);
+  margin-top: 12px;
+}

@@ -1,0 +1,30 @@
+.divider {
+  width: calc(100% - 24px);
+  height: 1px;
+  margin: 8px auto 20px auto;
+  border-bottom: 1px dashed #e7e7e7;
+}
+
+.configText {
+  margin-left: 8px;
+  color: #b7b7b7;
+}
+
+.configTitle {
+  margin-bottom: 12px;
+  padding-left: 12px;
+  color: #121212;
+  font-weight: 600;
+}
+
+.detailDescriptions {
+  :global {
+    .color-progress,
+    .color-progress2 {
+      flex-direction: row;
+      .colorContent {
+        justify-content: start;
+      }
+    }
+  }
+}

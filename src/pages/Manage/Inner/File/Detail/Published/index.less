@@ -1,0 +1,111 @@
+@import '~@/variable.less';
+
+.contentWrap {
+  min-height: calc(100vh - 168px);
+  padding: 20px;
+  padding-bottom: 40px;
+  background: #fff;
+
+  .divider {
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border-top: 1px dashed #e7e7e7;
+  }
+}
+
+.companyWrap {
+  display: flex;
+  margin-top: 10px;
+
+  .company {
+    margin-right: 4px;
+    padding: 2px 8px;
+    color: #595959;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    background: #f6f6f6;
+    border: 1px solid #d0d0d0;
+  }
+}
+
+.topicWrap {
+  display: flex;
+
+  .topic {
+    margin-right: 10px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+
+.floatModal {
+  position: fixed;
+  top: 108px;
+  right: 20px;
+  z-index: 998;
+  width: 40vw;
+  height: calc(100vh - 168px);
+  overflow: scroll;
+  background: #fff;
+  border-top: 4px solid @primary-color;
+  box-shadow: 0 6px 16px rgba(31, 31, 31, 0.08), 0 9px 28px rgba(31, 31, 31, 0.05),
+    0 12px 48px rgba(31, 31, 31, 0.05);
+  opacity: 1;
+  transition: transform 0.3s cubic-bezier(0.7, 0.3, 0.1, 1),
+    box-shadow 0.3s cubic-bezier(0.7, 0.3, 0.1, 1), opacity 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+  // -webkit-transform .3s cubic-bezier(.7,.3,.1,1),
+  // -webkit-box-shadow .3s cubic-bezier(.7,.3,.1,1);
+  // -webkit-opacity .3s cubic-bezier(.7,.3,.1,1);
+
+  &.hidden {
+    transform: translate(calc(40vw - 20px), calc(168px - 100vh));
+    opacity: 0;
+  }
+
+  .btn {
+    position: absolute;
+    top: 24px;
+    right: 14px;
+    display: flex;
+    align-items: center;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    .horizontal {
+      width: 14px;
+      height: 2px;
+      background-color: #888;
+    }
+  }
+
+  .title {
+    padding: 28px 0 0 32px;
+    color: #121212;
+    font-size: 18px;
+  }
+
+  .nameWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    padding: 0 32px;
+  }
+  //
+  //.itemFlex{
+  //  display: flex;
+  //}
+
+  .fileWrap {
+    height: calc(100% - 140px);
+    margin-top: 12px;
+    padding: 0 32px;
+    overflow: scroll;
+  }
+}
+
+.dropdownTooltip {
+  padding: 5px 5px;
+  background-color: #fff;
+  border: 1px solid #d0d0d0;
+}

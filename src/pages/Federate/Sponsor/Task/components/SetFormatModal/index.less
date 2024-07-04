@@ -1,0 +1,51 @@
+@import '~@/variable.less';
+
+.tableBody,
+.tableHeader,
+.tableList {
+  display: flex;
+}
+
+.plusItem {
+  width: 36px;
+  margin-top: 3px;
+  text-align: center;
+}
+
+.tableList {
+  .tableListLabel {
+    width: 86px;
+    margin-right: 12px;
+    text-align: left;
+  }
+}
+.tableTr {
+  width: 150px;
+}
+.tableHeader {
+  width: 636px;
+  height: 48px;
+  line-height: 48px;
+  background: #fafafa;
+
+  .tableTr {
+    padding-left: 8px;
+  }
+}
+
+.tableInput {
+  width: 142px;
+}
+
+.tableBody {
+  margin-top: 8px;
+  border-bottom: 1px solid #e7e7e7;
+  :global {
+    //.ant-space-item {
+    //  margin-right: 0 !important;
+    //}
+    .quanta-form-item {
+      margin-bottom: 8px;
+    }
+  }
+}

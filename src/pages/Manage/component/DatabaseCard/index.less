@@ -1,0 +1,179 @@
+@import '~@/variable.less';
+
+.create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 288px;
+  height: 190px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+}
+
+.actionOpt {
+  display: inline-block;
+  padding: 5px 20px;
+  color: @text-color-tertiary;
+  svg {
+    margin-right: 8px;
+    margin-bottom: 2px;
+    vertical-align: text-bottom;
+  }
+
+  &:hover {
+    color: #595959;
+    background: #f6f6f6;
+
+    svg {
+      color: #292929;
+    }
+  }
+
+  &:active,
+  &:focus {
+    color: #595959;
+    background: #e7e7e7;
+
+    svg {
+      color: #292929;
+    }
+  }
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 288px;
+  height: 190px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+
+  &:hover {
+    box-shadow: 0 8px 24px 8px rgba(31, 31, 31, 0.06), 0 6px 12px 0 rgba(31, 31, 31, 0.08),
+      0 3px 6px -4px rgba(31, 31, 31, 0.12);
+  }
+
+  .content {
+    display: flex;
+    padding: 21px 32px;
+    cursor: pointer;
+    .logoIcon {
+      width: 40px;
+      margin-top: 8px;
+      margin-right: 20px;
+      i {
+        font-size: 40px;
+      }
+      :global {
+        .iconPostgreSQL {
+          color: rgb(66, 102, 141);
+        }
+        .iconOracle1 {
+          color: rgb(201, 36, 39);
+        }
+        .iconMongoDB {
+          color: rgb(68, 156, 52);
+        }
+        .iconMySQL {
+          color: rgb(2, 104, 152);
+        }
+      }
+    }
+
+    .titleWrap {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      width: 0;
+
+      .title {
+        height: 24px;
+        overflow: hidden;
+        color: #121212;
+        font-size: 16px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .descWrap {
+        display: flex;
+        margin-top: 16px;
+        font-size: 12px;
+        line-height: 20px;
+        .label {
+          color: #b7b7b7;
+        }
+        .value {
+          color: #888;
+        }
+      }
+    }
+  }
+
+  .footerWrap {
+    display: flex;
+    align-items: center;
+    height: 52px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    .footerOpt {
+      position: relative;
+      display: inline-block;
+      width: calc(100% / 2);
+      padding: 10px 0;
+      text-align: center;
+      cursor: pointer;
+
+      &::after {
+        position: absolute;
+        top: 12px;
+        right: 0;
+        width: 1px;
+        height: 22px;
+        background-color: rgba(0, 0, 0, 0.05);
+        content: '';
+      }
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+
+      :global {
+        .quanta-icon {
+          color: #888;
+        }
+        .disabled-style {
+          cursor: not-allowed;
+          &:hover {
+            color: #b7b7b7;
+
+            :global {
+              .quanta-icon {
+                cursor: not-allowed;
+                svg {
+                  color: #b7b7b7;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &Disabled {
+      cursor: not-allowed;
+      &:hover {
+        > span {
+          color: inherit;
+        }
+      }
+    }
+  }
+}

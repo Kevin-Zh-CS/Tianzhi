@@ -1,0 +1,106 @@
+@page-cls: quanta-control-page;
+@quanta-page-header: quanta-page-header;
+@quanta-alert-cls: quanta-alert;
+@quanta-tag-cls: quanta-tag;
+
+:global {
+  .quanta-control-page {
+    min-width: 200px !important;
+  }
+  .quanta-table-pagination.quanta-pagination {
+    margin-bottom: 0;
+  }
+
+  .@{page-cls} {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+
+    &-header {
+      position: absolute;
+      top: 50px;
+      left: 200px;
+      z-index: 999;
+      width: calc(100vw - 200px);
+      min-width: 1240px;
+      //width: calc(100vw - 200px);
+      padding: 7px 20px;
+      background: #f6f6f6;
+      // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: none !important;
+      transition: all 0.2s;
+    }
+
+    &-without-header {
+      margin-top: -58px;
+      padding: 20px;
+    }
+
+    .@{quanta-alert-cls} {
+      &-info {
+        border: none;
+      }
+    }
+
+    .@{quanta-page-header}-heading {
+      height: 24px;
+
+      &-title {
+        font-weight: 600;
+        .quanta-icon-show-hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .@{quanta-page-header}-heading-extra {
+      display: flex;
+      align-items: center;
+
+      .@{quanta-tag-cls} {
+        margin-right: 0;
+      }
+
+      > .quanta-dropdown-trigger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &-main {
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+    }
+
+    &:not(.@{page-cls}-no-content-layout) &-content {
+      flex: 1;
+      padding: 20px;
+      padding-bottom: 40px;
+      overflow: hidden;
+      background: #fff;
+      // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+    }
+
+    .@{page-cls}-header + .@{page-cls}-main {
+      // min-height: calc(100vh - 100px);
+
+      .@{page-cls}-content {
+        height: 100%;
+      }
+
+      .@{quanta-alert-cls} {
+        // margin-bottom: 20px;
+      }
+    }
+
+    &.@{page-cls}-sider-collapsed {
+      .@{page-cls}-header {
+        left: 64px;
+        width: calc(100vw - 64px);
+      }
+    }
+  }
+}

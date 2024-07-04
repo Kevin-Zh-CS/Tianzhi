@@ -1,0 +1,138 @@
+@import '~@/variable.less';
+
+.tableFilterWrap {
+  padding: 16px 20px 0 30px;
+  background: #fff;
+
+  :global {
+    .quanta-form-item {
+      margin-bottom: 16px;
+    }
+  }
+}
+.contentWrap {
+  margin: 0 20px;
+  margin-top: 12px;
+  padding: 16px 20px 20px 20px;
+  padding-bottom: 40px;
+  background: #fff;
+
+  //:global {
+  //  .operate {
+  //    margin-right: 24px;
+  //  }
+  //}
+}
+.hideBreadcrumb {
+  position: absolute;
+  z-index: -1;
+  display: inline-block;
+  visibility: hidden;
+}
+
+.menuWidth {
+  max-width: 300px;
+  overflow: hidden;
+  //color: @primary-color;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.breadcrumb {
+  //display: inline-block;
+  width: 600px;
+  margin-bottom: 10px;
+  cursor: default;
+  span {
+    font-size: 12px;
+  }
+  :global {
+    .ant-breadcrumb {
+      overflow: hidden;
+      //color: @primary-color;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      a {
+        color: @primary-color;
+      }
+    }
+    .ant-breadcrumb-overlay-link .anticon-down {
+      display: none;
+    }
+  }
+}
+
+.newFolder {
+  display: flex;
+  align-items: center;
+
+  :global {
+    .quanta-icon {
+      vertical-align: text-bottom;
+    }
+  }
+}
+
+.tableItem {
+  display: flex;
+  align-items: center;
+
+  .textItem {
+    display: inline-block;
+    width: 170px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.hashItem {
+  width: 310px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.emptyData {
+  color: @text-color-tertiary;
+}
+
+.errorInput {
+  border-color: #e63b43 !important;
+}
+
+.btnContainer {
+  display: flex;
+  margin-left: auto;
+  padding-right: -3px;
+  padding-bottom: 20px;
+  text-align: right;
+}
+
+.operateItem {
+  :global {
+    .quanta-dropdown-menu-item-pop span {
+      height: 36px;
+      padding-top: 0;
+      padding-left: 11px;
+      line-height: 36px;
+      //padding: 11px 7px;
+    }
+  }
+}
+
+.operator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  .left {
+    display: flex;
+  }
+  .right {
+    display: flex;
+    button + button {
+      margin-left: 8px;
+    }
+  }
+}

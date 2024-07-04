@@ -1,0 +1,61 @@
+@import '~@/variable.less';
+
+.RadioCard {
+  position: relative;
+  display: flex;
+  width: 280px;
+  padding: 12px 8px;
+  border: 1px solid @text-color-border;
+  .title {
+    display: block;
+    color: @text-color-title;
+    font-weight: @font-weight-blod;
+  }
+  .desc {
+    margin-top: 4px;
+    color: @text-color-tertiary;
+    font-size: 12px;
+  }
+  :global {
+    .iconfont {
+      color: #888;
+    }
+  }
+}
+
+.active {
+  background-color: @primary-color-tag-bg;
+  border: 1px solid @primary-color;
+  .tag {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-right-color: @primary-color;
+    border-bottom-color: @primary-color;
+  }
+  .icon {
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    svg {
+      font-size: 10px;
+    }
+  }
+}
+
+.disabledCard {
+  color: #888;
+  background: rgba(208, 208, 208, 0.3);
+
+  .title {
+    display: block;
+    color: @text-color-tertiary;
+  }
+
+  .desc {
+    color: @text-color-disabled;
+  }
+}

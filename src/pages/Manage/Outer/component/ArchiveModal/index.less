@@ -1,0 +1,39 @@
+@import '~@/variable.less';
+.archiveModal {
+  :global {
+    .quanta-modal {
+      &-header {
+        padding: 24px 0 20px 32px;
+      }
+      &-title {
+        color: #121212;
+        font-size: 18px;
+      }
+      &-body {
+        padding: 0 32px;
+      }
+    }
+  }
+  .fileFormItem {
+    :global {
+      .quanta-form-item-control-input-content {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.createBtn {
+  height: 36px;
+  padding: 0 11px;
+  color: @primary-color;
+  line-height: 36px;
+  background: #ebf6ff;
+  cursor: pointer;
+  :global {
+    .quanta-icon {
+      vertical-align: text-bottom;
+    }
+  }
+}

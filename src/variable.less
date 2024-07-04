@@ -1,0 +1,598 @@
+/******************  antd 主题变量   ******************/
+// https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+
+// @ant-prefix: quanta;
+
+// font
+@font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+  Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  'Noto Color Emoji';
+
+// colors
+@primary-color: #0076d9;
+@error-color: #e63b43;
+@success-color: #08cb94;
+@warning-color: #ffad32;
+@info-color: #0076d9;
+@highlight-color: #e63b43;
+
+// text
+@text-color: #121212;
+@text-color-secondary: #595959;
+@line-height-base: 22px;
+@original-line-height-base: 1.5715;
+@font-size-base: 14px;
+@font-size-lg: 16px;
+@font-size-sm: 12px;
+
+// border
+@border-radius-base: 0;
+@border-color-base: #e7e7e7;
+@border-color-split: #e9e9e9;
+
+// disabled
+@disabled-color: #b7b7b7;
+@disabled-bg: #f6f6f6;
+
+// item
+@item-active-bg: rgba(@primary-color, 0.08);
+@item-hover-bg: #f9f9f9;
+
+// iconfont
+@iconfont-css-prefix: quanta-icon;
+
+// button
+@btn-font-size-lg: 16px;
+@btn-font-size-sm: 12px;
+@btn-height-base: 32px;
+@btn-height-lg: 40px;
+@btn-height-sm: 24px;
+@btn-padding-horizontal-base: 20px;
+@btn-padding-horizontal-lg: 23px;
+@btn-padding-horizontal-sm: 12px;
+
+// radio
+@radio-button-checked-bg: rgba(@primary-color, 0.08);
+
+// table
+@table-cell-height: 48px;
+@table-padding-vertical: 12px;
+@table-padding-horizontal: 12px;
+@table-header-bg: #f6f6f6;
+@table-row-hover-bg: #f9f9f9;
+@table-header-color: #111;
+
+// pagination
+@pagination-item-size: 32px;
+
+// control
+@control-padding-horizontal: 11px;
+
+// select
+@select-dropdown-vertical-padding: 7px;
+@select-item-selected-bg: rgba(@primary-color, 0.08);
+@select-item-active-bg: #f9f9f9;
+@select-not-found-content-display: flex;
+@select-not-found-content-flex-direction: column;
+@select-not-found-content-align-items: center;
+@select-not-found-content-margin: 21px 0;
+
+// cascader
+@cascader-not-found-content-display: flex;
+@cascader-not-found-content-flex-direction: column;
+@cascader-not-found-content-align-items: center;
+@cascader-not-found-content-margin: 21px 0;
+
+// modal
+@modal-confirm-body-padding: 0;
+@modal-header-padding: 24px 32px 0 32px;
+@modal-body-padding: 32px 32px 20px 32px;
+@modal-footer-padding: 20px 32px;
+@modal-header-close-size: 46px;
+
+// link
+@link-hover-color: #6592fc;
+
+// input
+@input-hover-border-color: #6592fc;
+@input-placeholder-color: @disabled-color;
+@input-height-lg: 40px;
+@input-height-base: 32px;
+@input-height-sm: 24px;
+@input-padding-horizontal: 12px;
+@input-padding-horizontal-base: 12px;
+@input-padding-horizontal-sm: 12px;
+@input-padding-horizontal-lg: 12px;
+@input-padding-vertical-base: 5px;
+@input-padding-vertical-sm: 3px;
+@input-padding-vertical-lg: 8px;
+@input-addon-bg: #f9f9f9;
+
+// alert
+@alert-success-border-color: rgba(@success-color, 0.4);
+@alert-success-bg-color: rgba(@success-color, 0.08);
+@alert-info-border-color: rgba(@info-color, 0.4);
+@alert-info-bg-color: rgba(@info-color, 0.08);
+@alert-warning-border-color: rgba(@warning-color, 0.4);
+@alert-warning-bg-color: rgba(@warning-color, 0.08);
+@alert-error-border-color: rgba(@error-color, 0.4);
+@alert-error-bg-color: rgba(@error-color, 0.08);
+@alert-message-color: @text-color;
+
+// message
+@message-notice-content-padding: 10px 16px;
+
+// notification
+@notification-padding-vertical: 16px;
+@notification-padding-horizontal: 28px;
+@notification-padding: @notification-padding-vertical @notification-padding-horizontal;
+
+// tooltip
+@tooltip-max-width: 320px;
+@tooltip-bg: #333;
+
+// popover
+@popover-padding-horizontal: 12px;
+// @popover-min-width: 320px;
+
+// page-header
+@page-header-padding-vertical: 16px;
+@page-header-padding: @page-header-padding-vertical 20px;
+
+// tabs
+@tabs-bar-margin: 0 0 20px 0;
+@tabs-horizontal-margin: 0 20px 0 0;
+@tabs-horizontal-padding: 8px 12px 7px 12px;
+@tabs-hover-color: #6592fc;
+@tabs-active-color: #284ec9;
+
+// badge
+@badge-height: 16px;
+
+// menu
+@menu-collapsed-width: 64px;
+@menu-inline-toplevel-item-height: 42px;
+@menu-item-height: 42px;
+@menu-item-boundary-margin: 0;
+@menu-item-vertical-margin: 0;
+@menu-icon-size: @icon-size;
+
+@menu-dark-color: rgba(#fff, 0.6);
+@menu-dark-highlight-color: rgba(#fff, 0.6);
+@menu-dark-bg: #333;
+@menu-dark-item-hover-bg: #464646;
+@menu-dark-item-active-bg: transparent;
+@menu-dark-selected-item-icon-color: @primary-color;
+@menu-dark-selected-item-text-color: @primary-color;
+
+// steps
+@steps-icon-size: 22px;
+@steps-icon-top: -2px;
+@finish-title-color: @text-color-secondary;
+@finish-description-color: #999;
+@finish-tail-color: @border-color-split;
+@process-title-color: @text-color;
+@process-description-color: #999;
+@process-tail-color: @border-color-split;
+@wait-title-color: #999;
+@wait-description-color: #999;
+@wait-tail-color: @border-color-split;
+
+// card
+@card-head-padding: 12px;
+@card-padding-base: 20px;
+
+// form
+@form-font-height: 22px;
+@form-item-margin-bottom: 28px;
+@form-item-with-help-margin-bottom: @form-item-margin-bottom - 22;
+@form-error-bg-color: #fef7f8;
+
+// layout
+@layout-header-height: 50px;
+@layout-header-padding: 0 20px;
+@layout-header-color: rgba(#fff, 0.6);
+@layout-header-background: #262626;
+@layout-footer-padding: 20px 20px;
+@layout-sider-background: #333;
+@layout-trigger-background: @layout-sider-background;
+@layout-trigger-height: 50px;
+
+// tag
+@tag-default-bg: #f9f9f9;
+
+/******************  quanta-design 自定义通用变量   ******************/
+
+/******************     colors 色彩 亮色模式    ******************/
+
+// 中性色 / Grey / 灰
+@text-color-black: #111;
+@text-color-title: #121212; // Color-Text-Title
+@text-color-primary: #292929; // Color-Text-Primary
+@text-color-secondary: #595959; // Color-Text-Secondary
+@text-color-tertiary: #888888; // Color-Text-Tertiary
+@text-color-disabled: #b7b7b7; // Color-Text-Disabled
+@text-color-border: #d0d0d0; // Color-Border
+@text-color-divider: #e7e7e7; // Color-Dividers
+@text-color-background: #f6f6f6; // Color-Background
+@text-color-table-header: #fafafa; // Color-Table Header
+
+@white-color-title: rgba(255, 255, 255, 1);
+@white-color-primary: rgba(255, 255, 255, 0.9);
+@white-color-secondary: rgba(255, 255, 255, 0.7);
+@white-color-tertiary: rgba(255, 255, 255, 0.5);
+@white-color-disabled: rgba(255, 255, 255, 0.3);
+@white-color-border: rgba(255, 255, 255, 0.2);
+@white-color-divider: rgba(255, 255, 255, 0.1);
+
+// Function / 功能
+// 强调色（提示色）
+@primary-color-default: #0076d9; // Color-Blue1-Default
+@primary-color-hover: #0085f2; // Color-Blue1-Hover
+@primary-color-active: #006fcc; // Color-Blue1-Active
+@primary-color-focus: #006fcc; // Color-Blue1-Focus
+@primary-color-tag-border: #e5f1fb; // Color-Blue1-Tag-Border
+@primary-color-tag-bg: #f2f8fd; // Color-Blue1-Tag-Bg
+
+// 辅助色1（成功色）
+@success-color-default: #08cb94; // Color-Green1-Default
+@success-color-hover: #09d99e; // Color-Green1-Hover
+@success-color-active: #07b382; // Color-Green1-Active
+@success-color-focus: #07b382; // Color-Green1-Focus
+@success-color-tag-border: rgba(8, 203, 148, 0.25); // Color-Green1-Tag-Border
+@success-color-tag-bg: #e6f9f4; // Color-Green1-Tag-Bg
+
+// 辅助色2（警告色）
+@warning-color-default: #ffad32; // Color-Orange1-Default
+@warning-color-hover: #ffb84d; // Color-Orange1-Hover
+@warning-color-active: #e69c2d; // Color-Orange1-Active
+@warning-color-focus: #e69c2d; // Color-Orange1-Focus
+@warning-color-tag-border: rgba(255, 173, 50, 0.25); // Color-Orange1-Tag-Border
+@warning-color-tag-bg: #fff6ea; // Color-Orange1-Tag-Bg
+
+// 辅助色3（错误色）
+@error-color-default: #e63b43; // Color-Red1-Default
+@error-color-hover: #f23e47; // Color-Red1-Hover
+@error-color-active: #cc343c; // Color-Red1-Active
+@error-color-focus: #cc343c; // Color-Red1-Focus
+@error-color-tag-border: rgba(230, 59, 67, 0.24); // Color-Red1-Tag-Border
+@error-color-tag-bg: #fcebec; // Color-Red1-Tag-Bg
+
+/******************     字体    ******************/
+
+// Font 字体
+@font-family-zh: 'PingFang SC Regular';
+@font-family-en: 'Helvetica';
+@font-family-number: 'Helvetica Neue';
+@font-family-code: 'Helvetica';
+
+// FontWeight 字重
+@font-weight-normal: 400;
+@font-weight-medium: 500;
+@font-weight-blod: 600;
+
+// 字号 & 行高组合
+@font-size-1: 12px;
+@font-line-height-1: 20px;
+@font-size-2: 14px;
+@font-line-height-2: 22px;
+@font-size-3: 16px;
+@font-line-height-3: 24px;
+@font-size-4: 18px;
+@font-line-height-4: 26px;
+@font-size-5: 20px;
+@font-line-height-5: 28px;
+@font-size-6: 24px;
+@font-line-height-6: 32px;
+@font-size-7: 30px;
+@font-line-height-7: 38px;
+@font-size-8: 38px;
+@font-line-height-8: 46px;
+@font-size-9: 48px;
+@font-line-height-9: 56px;
+
+/******************     分割线 & 投影    ******************/
+
+// 投影
+@shadow-card-default: 0px 1px 3px 0px rgba(31, 31, 31, 0.1); // 用于卡片默认投影
+@shadow-card-hover: 0px 3px 6px -4px rgba(31, 31, 31, 0.12); // 用于卡片悬停投影
+@shadow-dialog-default: 0px 6px 16px -8px rgba(31, 31, 31, 0.08); // 用于弹窗、浮窗投影
+@shadow-tooltip-default: 0px 3px 6px -4px rgba(31, 31, 31, 0.12); // 用于文字提示弹窗投影
+
+// container
+// input
+@input-default-border: 1px solid #d0d0d0; // 用于次级按钮或input默认样
+@input-hover-border: 1px solid #292929; // 用于input悬停样式
+@input-hover-border-color: #292929; // 用于input悬停样式
+@input-focus-border: 1px solid #0076d9; // 用于input选中样式
+@input-focus-border-color: #0076d9; // 用于input选中样式
+@input-error-border: 1px solid #e63b43; // 用于input错误提示样式
+@input-error-background: rgba(230, 59, 67, 0.04); // 用于input错误提示样式
+@input-success-border: 1px solid #08cb94; // 用于input成功提示样式
+@input-warning-border: 1px solid #ffad32; // 用于input警告提示样式（不常用）
+@input-disabled-border: 1px solid #e7e7e7; // 用于input、按钮的不可点击、失效样式
+@input-disabled-background: #f6f6f6; // 用于input、按钮的不可点击、失效样式
+
+// buttons
+// 主按钮
+@btn-primary-background: @primary-color-default; // 用于主按钮的默认样式
+@btn-primary-hover-background: @primary-color-hover; // 用于主按钮的悬停样式
+@btn-primary-hover-shadow: 0px 2px 4px 0px rgba(0, 118, 217, 0.25); // 用于主按钮的悬停样式
+@btn-primary-focus-background: @primary-color-focus; // 用于主按钮的长按样式
+// 次级按钮
+@btn-default-border: 1px solid #d0d0d0; // 用于次级按钮或input默认样
+@btn-default-background: #ffffff; // 用于次级按钮或input默认样
+@btn-default-hover-border: 1px solid #292929; // 用于次级按钮或图标按钮悬停样式
+@btn-default-hover-background: #fafafa; // 用于次级按钮或图标按钮悬停样式
+@btn-default-focus-border: 1px solid #292929; // 用于次级按钮或图标按钮长按样式
+@btn-default-focus-background: #e7e7e7; // 用于次级按钮或图标按钮长按样式
+// 虚线按钮
+@btn-dashed-default-border: 1px dashed #d0d0d0; // 用于虚线按钮的默认样式
+@btn-dashed-default-background: #ffffff; // 用于虚线按钮的默认样式
+@btn-dashed-hover-border: 1px dashed #292929; // 用于虚线按钮悬停样式
+@btn-dashed-hover-background: #fafafa; // 用于虚线按钮悬停样式
+@btn-dashed-focus-border: 1px dashed #292929; // 用于虚线按钮长按样式
+@btn-dashed-focus-background: #e7e7e7; // 用于虚线按钮长按样式
+@btn-dashed-disabled-border: 1px dashed #e7e7e7; // 用于虚线按钮长按样式
+@btn-dashed-disabled-background: #f6f6f6; // 用于input、按钮的不可点击、失效样式
+
+// 危险主按钮
+@btn-error-primary-background: @error-color-default; // 用于危险主按钮的默认样式
+@btn-error-primary-hover-background: @error-color-hover; // 用于危险主按钮的悬停样式
+@btn-error-primary-focus-background: @error-color-focus; // 用于危险主按钮的长按样式
+// 危险次级按钮
+@btn-error-default-border: 1px solid @error-color-tag-border; // 用于危险次级按钮或input默认样
+@btn-error-default-background: #ffffff; // 用于危险次级按钮或input默认样
+@btn-error-default-hover-border: 1px solid @error-color-hover; // 用于危险次级按钮或图标按钮悬停样式
+@btn-error-default-hover-background: rgba(230, 59, 67, 0.04); // 用于危险次级按钮或图标按钮悬停样式
+@btn-error-default-focus-border: 1px solid @error-color-focus; // 用于危险次级按钮或图标按钮长按样式
+@btn-error-default-focus-background: rgba(204, 52, 60, 0.08); // 用于危险次级按钮或图标按钮长按样式
+
+// icon
+@icon-default-background: #f6f6f6; // 浅色背景指示控件响应区样式
+
+// tabs
+@tabs-radio-button-border: 1px solid rgba(0, 118, 217, 0.45); // Container1/Light/Radio.Button-选中样式
+@tabs-radio-button-background: rgba(0, 118, 217, 0.06); // Container1/Light/Radio.Button-选中样式
+
+// Timeline时间轴
+@timeline-primary-border: 2px solid @primary-color-default; // 时间轴正在进行或其他默认样式
+@timeline-error-border: 2px solid @error-color-default; // 时间轴告警或错误状态样式
+@timeline-success-border: 2px solid @success-color-default; // 时间轴已完成、成功样式
+@timeline-disabled-border: 2px solid #e7e7e7; // 时间轴未完成或失效样式
+
+/****************** quanta-design 自定义通用变量 END ******************/
+
+/******************  自定义变量   ******************/
+// font
+@font-family-bold: 'PingFangSC-Semibold, PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol', 'Noto Color Emoji';
+@font-weight-bold: 600;
+@font-weight-bolder: 700;
+@line-height-lg: 24px;
+@line-height-sm: 20px;
+// colors
+@text-color-hint: #999; // 提示文字信息颜色
+// @text-color-disabled: #B7B7B7; // 失效文字颜色
+@primary-color-hover: #0085f2; // 主题色hover颜色
+@primary-color-text: #0076d9;
+@primary-color-active: #006fcc; // 主题色点击效果颜色
+@primary-color-focus: #006fcc; // 主题色focus颜色
+@error-color-hover: #f23e47; // 失败色hover颜色
+@error-color-active: #cc343c; // 失败色点击效果颜色
+@error-color-focus: #cc343c; // 失败色focus颜色
+@warning-color-hover: #ffb84d; // 警告色hover颜色
+@warning-color-active: #e69c2d; // 警告色点击效果颜色
+@warning-color-focus: #e69c2d; // 警告色focus颜色
+@success-color-hover: #09d99e; // 成功色hover颜色
+@success-color-active: #07b382; // 成功色点击效果颜色
+@success-color-focus: #07b382; // 成功色focus颜色
+
+// icon
+@icon-size: 20px;
+@icon-color-base: #999;
+@icon-with-hover-background-size: 28px;
+@icon-with-hover-background-color: @text-color-background;
+@icon-with-active-background-color: @text-color-divider;
+
+// buttons
+@btn-height-xs: 24px; // xs按钮高度
+@btn-font-size-xs: 12px; // xs按钮字体
+@btn-padding-horizontal-xs: 11px; // xs按钮左右padding
+@btn-padding-vertical-xs: 1px; // xs按钮上下padding
+@btn-padding-vertical-base: 5px; // 正常按钮上下padding
+@btn-padding-vertical-lg: 8px; // lg按钮上下padding
+@btn-padding-vertical-sm: 2px; // sm按钮上下padding
+@btn-line-height-xs: 1.6667; // xs按钮行高
+@btn-line-height-base: @line-height-base; // 正常按钮行高
+@btn-line-height-lg: @line-height-base; // lg按钮行高
+@btn-line-height-sm: @line-height-base - 2; // sm按钮行高
+@btn-icon-span-margin: 2px; // 若按钮内包含图标，图标与文字的间距
+@btn-icon-only-width: 32px; // 若按钮只含图标，按钮大小
+@btn-icon-only-padding: 5px; // 若按钮只含图标，padding 大小
+
+// checkbox
+@checkbox-label-padding-right: 4px; // checkbox label 右 padding
+@checkbox-label-padding-left: 4px; // // checkbox label 左 padding
+
+// radio
+@radio-label-padding-right: 8px; // radio label 右 padding
+@radio-label-padding-left: 8px; // // radio label 左 padding
+
+// pagination
+@pagination-item-height: 32px;
+@pagination-item-min-width: 24px;
+@pagination-item-input-padding-horizontal: 11px;
+@pagination-item-input-padding-vertical: 2px;
+@pagination-item-select-padding-left: 11px; // 分页器下拉选框的 左 padding
+@pagination-item-select-padding-right: 4px; // 分页器下拉选框的 右 padding
+@pagination-item-select-selection-item-padding-right: 24px; // 分页器下拉选框的文本 右 padding
+
+// select
+@select-single-padding-right: 8px; // 单选框的右 padding
+@select-multiple-padding-horizontal: 11px; // 多选框的水平padding
+@select-multiple-padding-vertical: 2px; // 多选框的上下padding，tag 上下 margin为2
+
+// modal
+@modal-confirm-icon-size: 36px;
+@modal-confirm-icon-margin-right: 12px;
+@modal-confirm-title-font-size: 16px;
+@modal-confirm-btns-margin-top: 28px;
+@modal-confirm-content-margin-top: 0;
+@modal-waiting-icon-size: 60px;
+
+// alert
+@alert-font-size: 14px;
+@alert-line-height: 22px;
+@alert-padding-vertical: 9px;
+@alert-padding-left: 12px;
+@alert-icon-margin-right: 4px;
+@alert-padding: @alert-padding-vertical @alert-padding-left @alert-padding-vertical
+  @alert-padding-left + @icon-size + @alert-icon-margin-right;
+@alert-no-icon-padding: @alert-padding-vertical @alert-padding-left;
+@alert-close-right: 8px;
+@alert-with-description-icon-size: 24px;
+@alert-with-description-message-margin-bottom: 8px;
+@alert-with-description-padding-vertical: 16px;
+@alert-with-description-padding-horizontal: 20px;
+@alert-with-description-padding: @alert-with-description-padding-vertical
+  @alert-with-description-padding-horizontal+ @alert-with-description-icon-size+6;
+@alert-message-color: @text-color-primary;
+@alert-description-color: @text-color-secondary;
+@alert-background-color-info: @primary-color-tag-border;
+@alert-background-color-warning: @warning-color-tag-bg;
+@alert-background-color-error: @error-color-tag-bg;
+@alert-background-color-success: @success-color-tag-bg;
+
+// message
+@message-icon-margin-right: 4px;
+@message-notice-content-min-width: 160px;
+
+// notification
+@notification-icon-size: 32px;
+@notification-icon-margin-top: 10px;
+@notification-icon-margin-right: 8px;
+@notification-message-margin-bottom: 4px;
+@notification-description-color: @text-color-primary;
+
+// tooltip
+@tooltip-inner-padding: 7px 12px;
+
+//popover
+@popover-padding-vertical: 12px;
+@popover-title-padding: 12px 12px 0 12px;
+@popover-title-border-bottom: none;
+@popover-with-title-conetnt-padding: 12px;
+@popover-with-title-conetnt-min-width: 180px;
+
+// page-header
+@page-header-back-icon-size: 28px;
+@page-header-back-icon-margin: 0 8px 0 0;
+@page-header-title-margin: 0;
+@page-header-subtitle-margin: 3px 0;
+@page-header-footer-margin-top: 12px;
+
+// tabs
+@tabs-bar-icon-margin-right: 4px;
+@tabs-bar-badge-margin-left: 4px;
+@tabs-bar-padding-horizontal: 20px;
+@tabs-bar-height: 40px;
+@tabs-bar-pane-margin: 0px;
+@tabs-bar-active-ink-width: 20px;
+
+// badge
+@badge-count-padding: 0 4px;
+
+// dropdown
+@dropdown-menu-item-padding: 7px 11px;
+@dropdown-menu-item-icon-margin-right: 4px;
+@dropdown-trigger-padding-left: 8px;
+
+// menu
+@menu-item-icon-margin-right: 6px;
+@menu-item-padding-horizontal: 20px;
+@menu-item-padding: 0 @menu-item-padding-horizontal;
+@menu-icon-transition: none;
+@menu-dark-item-hover-text-color: #fff;
+
+// steps
+@steps-icon-border-width: 1.5px;
+@steps-title-padding: 0 12px 0 0;
+@steps-item-margin-right: 12px;
+@steps-vertical-description-padding: 0;
+@steps-vertical-item-padding: 0 0 40px 0;
+@steps-vertical-content-min-height: 0;
+@steps-navigation-padding-top: 18px;
+@steps-navigation-padding-bottom: 6px;
+
+// card
+@card-no-border-box-shadow: 0px 1px 3px 0px rgba(31, 31, 31, 0.1);
+@card-no-border-box-shadow-hover: 0px 8px 24px 8px rgba(31, 31, 31, 0.06),
+  0px 6px 12px 0px rgba(31, 31, 31, 0.08), 0px 3px 6px -4px rgba(31, 31, 31, 0.12);
+@card-body-padding-vertical: 16px;
+@card-body-padding-horizontal: 20px;
+
+// layout
+@layout-trigger-border: 1px solid #222;
+
+// tag
+@tag-line-height: 20px;
+@tag-line-height-sm: 16px;
+@tag-icon-size: 16px;
+@tag-padding-vertical: 0px;
+@tag-padding-horizontal: 8px;
+@tag-has-icon-padding-horizontal: 6px;
+@tag-icon-margin-right: 2px;
+@tag-padding-horizontal-sm: 4px;
+
+// popconfirm
+@popconfirm-message-color: #333;
+@popconfirm-message-icon-size: 20px;
+@popconfirm-message-icon-top: 4px;
+@popconfirm-button-padding: 3px 15px;
+@popconfirm-inner-content-padding: 16px 20px;
+
+// progress
+@progress-text-color: #7f7f7f;
+@progress-outer-text-below-margin-right: 0;
+@progress-outer-text-below-padding-right: 0;
+@progress-new-text-padding-right: 0;
+@progess-text-below-margin-left: 0;
+@progress-default-color: @primary-color;
+
+// result
+@result-text-align: left;
+@result-padding-left: 68px;
+@result-icon-margin-bottom: 0;
+@result-icon-font-size: 54px;
+@result-icon-float: left;
+@result-title-font-size: 20px;
+@result-title-line-height: 28px;
+@result-title-margin-top: 6px;
+@result-subtitle-font-size: 14px;
+@result-extra-margin-top: 21px;
+@result-extra-clear: both;
+@result-extra-botton-margin-right: 12px;
+
+// timeline
+@timeline-item-padding-bottom: 40px;
+// slider
+@slider-margin: 14px 6px 10px;
+@slider-height: 12px;
+@slider-track-height: 6px;
+@slider-handle-height: 20px;
+@slider-handle-width: 16px;
+@slider-handle-tag-left: 4px;
+@slider-handle-tag-right: 11px;
+
+// time-picker
+@time-picker-padding: 6px 9px 6px 11px;
+@time-picker-content-height: 252px;
+@time-picker-icon-color: #7f7f7f;
+@time-picker-time-panel-cell-inner-height: 36px;
+@time-picker-time-panel-cell-inner-padding: 8px 0 8px 12px;
+@time-picker-ok-ant-btn-sm-height: 24px;
+@time-picker-ok-ant-btn-sm-line-height: 17px;
+@time-picker-ok-ant-btn-sm-padding: 3px 11px;
+@time-picker-clear-right: 2px;

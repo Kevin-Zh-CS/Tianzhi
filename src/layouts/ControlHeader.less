@@ -1,0 +1,100 @@
+@import '~antd/es/avatar/style/index.css';
+@import '~@/variable.less';
+
+.header {
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .left {
+    display: flex;
+    align-items: center;
+    padding-left: 14px;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+  }
+}
+.menuItem {
+  display: flex;
+  align-items: center;
+  :global {
+    .quanta-icon {
+      margin-right: 4px !important;
+    }
+  }
+}
+:global {
+  .usercenter-dropdown-menu {
+    margin-top: 13px;
+
+    .quanta-dropdown-menu-item {
+      position: relative;
+      padding-right: 44px;
+      padding-left: 20px;
+      color: rgba(#fff, 0.5);
+
+      &:hover {
+        background-color: #464646;
+      }
+    }
+  }
+
+  .control-header-popover {
+    z-index: 2000;
+  }
+}
+
+.backControl {
+  color: rgba(#fff, 0.6);
+
+  &:hover {
+    color: #fff !important;
+  }
+}
+
+.active {
+  color: #fff !important;
+}
+
+.highlight {
+  color: #fff !important;
+
+  &::after {
+    position: absolute;
+    top: 7px;
+    right: 20px;
+    color: #fff;
+    content: '\2713';
+  }
+}
+
+.tallerMenu {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.overlayAccountCard {
+  top: 50px !important;
+  left: calc(100vw - 340px) !important;
+  padding: 0;
+  background: #fff;
+
+  :global {
+    .quanta-tooltip-inner {
+      width: 320px;
+      margin: 0;
+      padding: 0 !important;
+    }
+    .quanta-tooltip-arrow {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .overlayAccountCard {
+    left: 860px !important;
+  }
+}

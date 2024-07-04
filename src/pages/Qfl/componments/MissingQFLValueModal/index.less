@@ -1,0 +1,31 @@
+.modal {
+  display: flex;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.tableContent {
+  width: 714px;
+
+  :global {
+    .quanta-descriptions-item-content {
+      width: 714px;
+    }
+    .quanta-spin-container {
+      width: 100%;
+      overflow: scroll;
+    }
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,113 @@
+@import '~@/variable.less';
+
+.orgInfo {
+  .name {
+    span {
+      padding-bottom: 8px;
+      color: @text-color-title;
+      font-size: @font-size-4;
+      line-height: @font-line-height-3;
+    }
+  }
+  .upload {
+    position: absolute;
+    top: 64px;
+    left: 54%;
+  }
+
+  :global {
+    .quanta-control-page:not(.quanta-control-page-no-content-layout) .quanta-control-page-content {
+      padding-bottom: 310px;
+    }
+    .container-card {
+      padding-top: 28px;
+    }
+  }
+}
+
+.node {
+  //padding-top: 20px;
+  background-image: url('../../../../assets/blacklist/node_bg.png');
+  background-repeat: no-repeat;
+  background-position: right top -15px;
+  background-size: contain;
+
+  :global {
+    .quanta-descriptions-item-content {
+      padding-right: 0;
+    }
+  }
+}
+.nodeContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+  background: linear-gradient(103.17deg, #def0ff 4.02%, rgba(242, 248, 253, 0) 115.82%);
+
+  .title {
+    color: #292929;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  &Info {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 60px;
+      height: 60px;
+      margin-right: 8px;
+    }
+  }
+
+  .nodeDetail {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+
+    &Item {
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        margin-left: 60px;
+      }
+    }
+  }
+}
+
+.infoModal {
+  .infoText {
+    margin-bottom: 20px;
+    color: @text-color-tertiary;
+  }
+  :global {
+    .quanta-modal-body {
+      padding-top: 20px;
+    }
+  }
+}
+
+.itemWrap {
+  display: flex;
+  justify-content: space-between;
+
+  :global {
+    .icontongyongxing_gengduo_shuipingx {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      color: #888;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: center;
+      border: 1px solid #d0d0d0;
+
+      &:hover {
+        color: #292929;
+        background: #fafafa;
+      }
+    }
+  }
+}

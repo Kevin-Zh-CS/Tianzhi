@@ -1,0 +1,84 @@
+@import '~@/variable.less';
+
+.databaseInfoWrap {
+  display: flex;
+  height: 130px;
+  margin-bottom: 12px;
+  padding: 20px 20px 20px 32px;
+  background: #fff;
+}
+
+.btnWrap {
+  display: flex;
+  align-items: center;
+}
+
+.contentWrap {
+  // min-height: calc(100vh - 166px);
+  // padding: 32px;
+  // background: #fff;
+  display: flex;
+
+  .contentLeftWrap {
+    flex: 0 0 280px;
+    height: calc(100vh - 270px);
+    margin-right: 12px;
+    padding: 20px;
+    overflow-y: scroll;
+    background: #fff;
+
+    .title {
+      color: #121212;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .tableName {
+      width: 240px;
+      height: 48px;
+      padding: 0 12px;
+      overflow: hidden;
+      line-height: 48px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      border-bottom: 1px solid #e7e7e7;
+      &.active {
+        background: #f2f8fd;
+      }
+    }
+  }
+  .contentRightWrap {
+    flex: 1;
+    .filterOpt {
+      display: flex;
+      //align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding: 20px 20px 0 20px;
+      background: #fff;
+
+      :global {
+        .quanta-form-item {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .tableWrap {
+      height: calc(100vh - 354px);
+      padding: 20px;
+      overflow-y: scroll;
+      background: #fff;
+      :global {
+        .quanta-table {
+          width: calc(100vw - 572px);
+          overflow-x: scroll;
+          &::-webkit-scrollbar-corner,
+          &::-webkit-scrollbar:hover,
+          &::-webkit-scrollbar {
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+}

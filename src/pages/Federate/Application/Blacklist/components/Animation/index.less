@@ -1,0 +1,375 @@
+@import '~@/variable.less';
+
+.animationContainer {
+  position: relative;
+  width: 440px;
+  height: 440px;
+  margin-top: -435px;
+  margin-left: 782px;
+  img {
+    position: absolute;
+  }
+  .back {
+    width: 440px;
+    height: 440px;
+  }
+  .OrgItem1 {
+    top: 65px;
+    right: 325px;
+  }
+  .OrgItem2 {
+    top: 13px;
+    left: 325px;
+  }
+  .OrgItem3 {
+    right: 325px;
+    bottom: 13px;
+  }
+  .OrgItem4 {
+    bottom: 65px;
+    left: 325px;
+  }
+}
+.orgItemLeft {
+  position: absolute;
+  width: 187px;
+  height: 102px;
+  span {
+    font-size: 10px;
+    font-family: Orbitron, sans-serif;
+  }
+  .orgNode {
+    right: 0;
+  }
+  .orgLine {
+    top: 20px;
+    right: 20px;
+  }
+  .orgId {
+    position: absolute;
+    bottom: 30px;
+    color: #e69c2d;
+    font-weight: 600;
+    opacity: 0.8;
+  }
+  .orgName {
+    position: absolute;
+    bottom: 0;
+    .name {
+      padding: 0 4px;
+      color: #61cbf7;
+      background-color: #091e2c;
+    }
+    .parentheses {
+      color: #154356;
+    }
+  }
+  .orgMask {
+    top: -9px;
+    right: -9px;
+  }
+  .arrow {
+    top: 0;
+    right: -3px;
+  }
+  .computing {
+    top: -1px;
+    right: -1px;
+  }
+  .skeleton {
+    top: 18px;
+    right: 68px;
+  }
+  .fileName {
+    position: absolute;
+    top: 0;
+    right: 58px;
+    color: #1db5f4;
+    font-size: 12px;
+    transform: scale(0.6);
+    transform-origin: right;
+  }
+}
+.orgItemRight {
+  position: absolute;
+  width: 187px;
+  height: 102px;
+  span {
+    font-size: 10px;
+    font-family: Orbitron, sans-serif;
+  }
+  .orgNode {
+    bottom: 0;
+    left: 0;
+  }
+  .orgLine {
+    bottom: 20px;
+    left: 20px;
+  }
+  .orgId {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #e69c2d;
+    font-weight: 600;
+    opacity: 0.8;
+  }
+  .orgName {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    .name {
+      padding: 0 4px;
+      color: #61cbf7;
+      background-color: #091e2c;
+    }
+    .parentheses {
+      color: #154356;
+    }
+  }
+  .orgMask {
+    bottom: -9px;
+    left: -9px;
+  }
+  .arrow {
+    bottom: -1px;
+    left: 1px;
+  }
+  .computing {
+    bottom: -1px;
+    left: -1px;
+  }
+  .skeleton {
+    bottom: 7px;
+    left: 69px;
+    transform: rotateY(180deg);
+  }
+  .fileName {
+    position: absolute;
+    top: 50px;
+    left: 62px;
+    color: #1db5f4;
+    font-size: 12px;
+    transform: scale(0.6);
+    transform-origin: left;
+  }
+}
+// left 和 right 的公共属性
+.orgNode {
+  width: 50px;
+  height: 50px;
+}
+.orgLine {
+  width: 170px;
+  height: 60px;
+}
+.orgMask {
+  width: 172px;
+  height: 68px;
+}
+.arrow {
+  width: 52px;
+  height: 52px;
+}
+.computing {
+  z-index: 1;
+  width: 52px;
+  height: 52px;
+}
+
+.searchTarget {
+  position: absolute;
+  width: 180px;
+  padding: 5px 8px;
+  overflow: hidden;
+  color: #bbe9fc;
+  white-space: nowrap;
+  text-align: center;
+  text-overflow: ellipsis;
+  background-color: #103148;
+  border: 1px solid #1db5f4;
+  transform: scale(0.1);
+  opacity: 0;
+}
+.searching {
+  z-index: 1;
+  .scannering {
+    .background {
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      width: 82px;
+      height: 82px;
+      transform: translate(-50%, -50%);
+    }
+    .scanner {
+      top: 41%;
+      left: 41%;
+      z-index: 2;
+      width: 80px;
+      height: 15px;
+    }
+  }
+  .org {
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+.gethering {
+  .complex {
+    img {
+      top: 41%;
+      left: 41%;
+      width: 80px;
+      height: 80px;
+    }
+  }
+  .org {
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+.result {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 440px;
+  height: 440px;
+  span {
+    color: #e8f8fe;
+  }
+  .text {
+    width: 193px;
+    margin: 4px 0 4px 41px;
+    color: #61cbf7;
+    font-size: 12px;
+    line-height: 18px;
+    transform: scale(0.83);
+  }
+  .singleBox {
+    position: absolute;
+    width: 240px;
+    height: 120px;
+    + div {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+  }
+  .batchBox {
+    position: absolute;
+    width: 267px;
+    height: 146px;
+    + div {
+      z-index: 1;
+      padding: 50px 16px;
+    }
+    .text {
+      margin: -2px 0 8px 46px;
+    }
+    .name {
+      top: 48px;
+      left: 124px;
+    }
+    .id {
+      top: 74px;
+      left: 116px;
+    }
+    .desc {
+      top: 99px;
+      left: 121px;
+    }
+  }
+  .people {
+    width: 48px;
+    height: 59px;
+  }
+}
+.rotate1 {
+  animation: rotate1 5000ms linear infinite;
+}
+.rotate2 {
+  animation: rotate2 5000ms linear infinite;
+}
+.moveLine {
+  animation: scanner linear 2000ms infinite;
+}
+.showMaskL {
+  animation: clipathL linear 1000ms forwards;
+}
+.showMaskR {
+  animation: clipathR linear 1000ms forwards;
+}
+.bubble {
+  animation: bubble 1000ms linear infinite;
+}
+.showSkeleton {
+  animation: clipathL linear 1500ms infinite;
+}
+@keyframes rotate1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes scanner {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(60px);
+  }
+}
+@keyframes clipathL {
+  0% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes clipathR {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes bubble {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+}

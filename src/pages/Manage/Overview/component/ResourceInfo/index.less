@@ -1,0 +1,61 @@
+@import '~antd/es/avatar/style/index.css';
+
+.resourceInfoWrap {
+  display: flex;
+  height: 105px;
+  margin-top: 14px;
+
+  .leftInfoWrap {
+    display: flex;
+    width: 291px;
+    padding: 20px;
+    background: #fff;
+  }
+
+  .contentWrap {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    > span {
+      &:nth-child(1) {
+        color: #121212;
+      }
+      &:nth-child(2) {
+        margin-top: 13px;
+        color: #0084f2;
+        font-weight: 600;
+        font-size: 24px;
+      }
+    }
+  }
+
+  .partWrap {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-around;
+  }
+
+  .rightInfoWrap {
+    display: flex;
+    flex: 1 1 auto;
+    margin-left: 12px;
+    padding: 20px;
+    background: #fff;
+
+    .publishWrap {
+      position: relative;
+      display: flex;
+      width: 208px;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1px;
+        height: 57px;
+        background-color: #c4c4c4;
+        content: '';
+      }
+    }
+  }
+}

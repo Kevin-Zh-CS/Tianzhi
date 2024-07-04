@@ -1,0 +1,31 @@
+@import '~@/variable.less';
+.itemTitle {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 12px;
+  color: @text-color;
+  font-weight: @font-weight-blod;
+  font-size: @font-size-3;
+  line-height: @font-line-height-3;
+
+  &::before {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 4px;
+    height: 16px;
+    background-color: @primary-color;
+    content: '';
+  }
+}
+
+.itemTitleWithExtra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  .itemTitle {
+    margin-bottom: 0;
+  }
+}

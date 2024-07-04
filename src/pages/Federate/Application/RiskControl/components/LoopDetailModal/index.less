@@ -1,0 +1,171 @@
+:global {
+  .riskDetailModal {
+    color: #E5E0C4;
+
+    .quanta-modal {
+      width: 920px !important;
+    }
+
+    .quanta-modal-content {
+      background: linear-gradient(78.01deg, #1C1B18 1.15%, #3C3A33 49.44%, #1B1A1A 97.51%);
+    }
+
+    .quanta-modal-header {
+      background: transparent;
+      border-color: #7D6B3C;
+
+      .quanta-modal-title {
+        color: #E5E0C4;
+        font-weight: normal;
+        font-size: 18px;
+
+        .link {
+          cursor: pointer;
+        }
+
+        .iconfont {
+          margin: 0 11px;
+          color: #888;
+        }
+      }
+
+      .quanta-modal-close {
+        color: #FEF9DA;
+      }
+    }
+
+    .quanta-modal-body {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .badgeTitle {
+      position: relative;
+      padding-left: 12px;
+      color: #E5E0C4;
+      font-size: 16px;
+
+      &::before {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 4px;
+        height: 12px;
+        background: #7D6B3C;
+        content: '';
+      }
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      width: 194px;
+      height: 32px;
+      padding-left: 18px;
+      color: #FEF9DA;
+      font-size: 16px;
+      background: url("~@/assets/riskControl/cardTitleBg.png") 0 0 no-repeat;
+      background-size: 100% 100%;
+
+      i {
+        color: #827E6D;
+        font-size: 20px;
+      }
+
+      span {
+        margin-left: 8px;
+      }
+    }
+
+    .info {
+      display: flex;
+      margin-top: 14px;
+
+      .infoItem + .infoItem {
+        margin-left: 40px;
+      }
+    }
+
+    .infoItem {
+      line-height: 20px;
+
+      span:nth-child(1) {
+        color: #827E6D;
+      }
+
+      span:nth-last-child(1) {
+        color: #E5E0C4;
+      }
+    }
+  }
+
+  .loopDetailModal {
+    .taskDetail {
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .status {
+          display: flex;
+          align-items: center;
+          color: #827E6D;
+
+          .quanta-switch-checked {
+            background: #7D6B3C;
+          }
+
+          .quanta-switch-handle::before {
+            background: #FEF9DA;
+          }
+        }
+      }
+
+      .info {
+        align-items: center;
+        height: 30px;
+        padding-left: 4px;
+        background: rgba(69, 64, 56, 0.2);
+      }
+
+      .record {
+        margin-top: 32px;
+
+        .queryNum {
+          display: flex;
+          margin: 16px 0 8px 0;
+
+          div:nth-child(1) {
+            display: inline-block;
+            height: 24px;
+            color: #827E6D;
+            line-height: 24px;
+          }
+
+          .right {
+            span:nth-child(1) {
+              margin-right: 4px;
+              color: #E9D48B;
+              font-weight: 500;
+              font-size: 24px;
+              font-family: Orbitron;
+              text-shadow: 0 0 8px #AD9643;
+            }
+
+            span:nth-last-child(1) {
+              color: #E9D48B;
+              text-shadow: 0 0 8px #AD9643;
+            }
+          }
+        }
+
+        .hash {
+          width: 224px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}

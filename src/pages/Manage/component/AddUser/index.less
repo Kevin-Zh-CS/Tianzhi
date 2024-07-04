@@ -1,0 +1,183 @@
+.popMemberContainer {
+  top: 100px !important;
+  width: 400px;
+  padding: 0;
+  border-top: 4px solid #0076d9;
+  :global {
+    .quanta-popover-inner-content {
+      padding: 26px 0 0 0;
+    }
+    .quanta-popover-arrow {
+      display: none;
+    }
+  }
+  .popMember {
+    .popMemberHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      .title {
+        color: #121212;
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
+    .memberList {
+      margin-top: 20px;
+      :global {
+        .antd-pro-pages-manage-component-add-user-index-memberList-holder {
+          &::-webkit-scrollbar-corner,
+          &::-webkit-scrollbar:hover,
+          &::-webkit-scrollbar {
+            width: 4px;
+            background: transparent;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: #827e6d;
+            border-radius: 4px;
+          }
+        }
+      }
+      .memberListItem {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 62px;
+        margin: 0;
+        padding: 10px 32px;
+        color: #292929;
+        .left {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .avatar {
+            width: 32px;
+            height: 32px;
+            margin-right: 9px;
+          }
+          .info {
+            p {
+              margin: 0;
+            }
+            .name {
+              span:nth-last-of-type(1) {
+                margin-left: 8px;
+                color: #b7b7b7;
+              }
+            }
+            .permission {
+              max-width: 206px;
+              margin-top: 4px;
+              overflow: hidden;
+              color: #b7b7b7;
+              font-size: 12px;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+        .right {
+          display: flex;
+          align-items: center;
+          min-width: 80px;
+          color: #292929;
+          cursor: pointer;
+          .role {
+            margin-right: 10px;
+            white-space: nowrap;
+          }
+        }
+        .rightDisabled {
+          color: @disabled-color;
+          cursor: not-allowed;
+          &:hover {
+            color: @disabled-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.popAddMemberContainer {
+  width: 336px;
+  padding: 0;
+  :global {
+    .quanta-popover-inner-content {
+      padding: 16px 0 0 0;
+    }
+    .quanta-popover-arrow {
+      display: none;
+    }
+  }
+  .popAddMember {
+    .popAddMemberSearch {
+      margin-bottom: 16px;
+      padding: 0 20px;
+    }
+    .popAddMemberList {
+      :global {
+        .antd-pro-pages-manage-component-add-user-index-popAddMemberList-holder {
+          &::-webkit-scrollbar-corner,
+          &::-webkit-scrollbar:hover,
+          &::-webkit-scrollbar {
+            width: 4px;
+            background: transparent;
+          }
+          &::-webkit-scrollbar-thumb {
+            background: #827e6d;
+            border-radius: 4px;
+          }
+        }
+      }
+      .memberListItemBox {
+        height: 62px;
+        padding: 8px 20px;
+        &:hover {
+          background: #e5f1fb;
+        }
+        .memberListItem {
+          display: flex;
+          align-items: center;
+          .avatar {
+            width: 32px;
+            height: 32px;
+            margin-right: 9px;
+          }
+          .info {
+            flex: 1;
+            p {
+              margin: 0;
+            }
+            .name {
+              color: #292929;
+            }
+            .department {
+              color: #b7b7b7;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .disabled {
+        cursor: not-allowed;
+        &:hover {
+          background: #fff;
+        }
+        .memberListItem {
+          .info {
+            .name {
+              color: #b7b7b7;
+            }
+          }
+        }
+      }
+    }
+    .noData {
+      padding: 0 0 10px 20px;
+      color: #888;
+    }
+  }
+}

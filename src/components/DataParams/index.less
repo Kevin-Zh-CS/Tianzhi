@@ -1,0 +1,34 @@
+@import '~@/variable.less';
+
+.collpase {
+  width: 80%;
+  background-color: @disabled-bg;
+  border: 0;
+  :global {
+    .ant-collapse-content,
+    .ant-collapse-item {
+      border: 0;
+    }
+    .ant-collapse-content-box {
+      padding: 0 20px;
+      padding-top: 12px;
+    }
+  }
+}
+.desc {
+  margin-bottom: 16px;
+  .title {
+    margin-right: 16px;
+    color: @text-color-tertiary;
+  }
+  .content {
+    color: @text-color-primary;
+  }
+}
+.descriptions {
+  :global {
+    .quanta-descriptions-item-content {
+      display: initial;
+    }
+  }
+}

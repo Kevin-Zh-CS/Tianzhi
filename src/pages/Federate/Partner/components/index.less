@@ -1,0 +1,62 @@
+@import '~@/variable.less';
+
+.collpase {
+  width: 80%;
+  background-color: @disabled-bg;
+  border: 0;
+  :global {
+    .ant-collapse-content,
+    .ant-collapse-item {
+      border: 0;
+    }
+    .ant-collapse-content-box {
+      padding: 0;
+      padding-top: 12px;
+    }
+  }
+}
+.modal {
+  .content {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    .select {
+      width: 160px;
+      margin-left: 20px;
+    }
+    .input {
+      width: 160px;
+      margin-left: 10px;
+    }
+    .textarea {
+      width: 280px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.descriptions {
+  :global {
+    .quanta-descriptions-item-container .quanta-descriptions-item-content {
+      width: 100%;
+    }
+  }
+}
+
+.dataDesc {
+  .column {
+    min-width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  :global {
+    .quanta-descriptions-item-content {
+      width: calc(100% - 96px);
+    }
+    .quanta-spin-container {
+      width: 100%;
+      overflow: auto;
+    }
+  }
+}

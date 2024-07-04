@@ -1,0 +1,219 @@
+@import '~@/variable.less';
+
+.dataDetail {
+  display: flex;
+  .left {
+    width: 80%;
+  }
+  .right {
+    width: 20%;
+    margin-left: 12px;
+  }
+}
+.orgInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 30px;
+  .orgTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .orgName {
+    margin-top: 12px;
+    margin-bottom: 7px;
+    font-weight: @font-weight-bold;
+    font-size: 14px;
+  }
+  .orgUpDesc {
+    display: -webkit-box;
+
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+
+    /* autoprefixer: on */
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    color: #595959;
+    font-size: 12px;
+    text-overflow: ellipsis;
+  }
+  .orgDownDesc {
+    display: -webkit-box;
+
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+
+    /* autoprefixer: on */
+    color: #595959;
+    font-size: 12px;
+  }
+  .open {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+  }
+}
+.dataInfo {
+  padding: 20px 32px;
+  padding-bottom: 32px;
+
+  .infoContent {
+    padding-left: 50px;
+  }
+  .titleContent {
+    display: flex;
+    justify-content: space-between;
+  }
+  .title {
+    width: calc(100% - 230px);
+    margin-left: 8px;
+    color: @text-color;
+    font-weight: @font-weight-bold;
+    font-size: @font-size-4;
+    //vertical-align: 12px;
+    word-break: break-all;
+
+    .titleTxt {
+      display: inline-block;
+      width: calc(100% - 40px);
+    }
+
+    :global {
+      .quanta-icon {
+        vertical-align: middle;
+      }
+    }
+  }
+  .time {
+    padding-top: 8px;
+    color: @text-color-tertiary;
+  }
+  .subject {
+    margin-bottom: 10px;
+  }
+  .desc {
+    margin-bottom: 16px;
+    color: #595959;
+    font-weight: normal;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+  }
+  .status {
+    padding: 12px 20px;
+    color: @text-color-secondary;
+    background: url('../../../../assets/share/status_background.png') no-repeat;
+    background-size: 100% auto;
+
+    &Text {
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    &Tip {
+      margin-left: 4px;
+      font-size: 12px;
+    }
+  }
+
+  .validTime {
+    display: flex;
+    margin-top: 12px;
+    .active {
+      color: @primary-color;
+      background: #e5f1fb;
+      border: 1px solid #0076d9;
+    }
+  }
+
+  :global {
+    .quanta-descriptions-view {
+      padding-left: 0;
+    }
+  }
+}
+.dataDesc {
+  margin-top: 12px;
+  padding: 16px 0;
+  .box {
+    height: 16px;
+    margin-top: -20px;
+    //border-top: 1px solid #e7e7e7;
+  }
+  :global {
+    //.quanta-tabs-nav-wrap {
+    //  margin-left: 20px;
+    //}
+    //
+    //.quanta-tabs-top > .quanta-tabs-nav::before {
+    //  border-bottom: 0;
+    //}
+    //.quanta-tabs-tab-btn {
+    //  width: 100%;
+    //}
+    //
+    //.quanta-tabs-nav .quanta-tabs-tab-active::after {
+    //  position: absolute;
+    //  bottom: 0;
+    //  left: 39px;
+    //  width: 20px;
+    //  height: 4px;
+    //  background: #0076d9;
+    //  content: '';
+    //}
+
+    //.quanta-tabs-ink-bar {
+    //  display: none;
+    //}
+
+    .quanta-table-tbody {
+      color: @text-color-primary;
+    }
+  }
+
+  .note {
+    margin: 12px 0;
+    padding: 20px 22px;
+    background-color: @primary-color-tag-bg;
+  }
+}
+.shareSteps {
+  margin-top: 12px;
+  .title {
+    display: flex;
+    height: 24px;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+    background: #fafafa;
+    .stepTitle {
+      margin-top: 4px;
+      margin-bottom: 8px;
+      color: #292929;
+      font-size: 12px;
+    }
+    .stepDesc {
+      margin-bottom: 12px;
+      color: #888;
+      font-size: 14px;
+    }
+  }
+}
+.priceText {
+  color: #ffad32;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+:global {
+  .antd-pro-components-item-title-index-itemTitle {
+    margin-bottom: 16px !important;
+  }
+}

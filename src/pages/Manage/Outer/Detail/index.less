@@ -1,0 +1,174 @@
+.contentWrap {
+  min-height: calc(100vh - 246px);
+  margin: 0 20px;
+  margin-top: 12px;
+  background: #fff;
+
+  .tabPaneWrap {
+    padding: 0 20px;
+    .baseInfoWrap {
+      border-bottom: 1px dashed #e7e7e7;
+    }
+    .overviewWrap {
+      padding-top: 20px;
+      .modulesWrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -20px;
+      }
+    }
+    .btnWrap {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  :global {
+    .quanta-tabs-tab {
+      padding: 15px 20px 14px;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  width: 132px;
+  height: 32px;
+  color: #888;
+  line-height: 32px;
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  cursor: pointer;
+}
+
+.itemWrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 14px;
+  // padding-left: 12px;
+  > div {
+    // display: flex;
+    // &:nth-child(1) {
+    //   flex: 1;
+    // }
+    // &:nth-child(2) {
+    //   flex: 2;
+    // }
+
+    span {
+      display: inline-block;
+      &:nth-child(1) {
+        width: 90px;
+        color: #888;
+      }
+      &:nth-child(2) {
+        color: #292929;
+      }
+    }
+  }
+  :global {
+    .quanta-dropdown-trigger {
+      padding: 0 !important;
+      .quanta-icon-ellipsis {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}
+
+.tableName {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding-left: 23px;
+  background: #f6f6f6;
+  cursor: pointer;
+
+  &.open {
+    :global {
+      .quanta-icon {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  :global {
+    .quanta-icon {
+      transition: all 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+    }
+  }
+}
+
+.tableWrap {
+  padding: 20px;
+  border: 1px solid #f6f6f6;
+}
+
+.message {
+  color: #121212;
+  font-size: 16px;
+}
+
+.messageFont {
+  margin-top: 8px;
+  color: #595959;
+  white-space: pre;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  width: calc((100% - 80px) / 4);
+  max-width: 275px;
+  height: 100px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+  background: #fafafa;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+
+  .iconWrap {
+    position: relative;
+    width: 40px;
+    margin: 0 20px;
+    .iconBackground {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    :global {
+      .quanta-icon {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+    }
+  }
+
+  .contentWrapDetail {
+    span {
+      &:nth-child(1) {
+        margin-right: 10px;
+        color: #888;
+      }
+      &:nth-child(2) {
+        color: #292929;
+      }
+    }
+  }
+}
+
+.resourceInfoDropdown {
+  height: 40px;
+  :global {
+    .quanta-btn {
+      width: 100% !important;
+      padding: 0 !important;
+      border: none;
+    }
+  }
+}

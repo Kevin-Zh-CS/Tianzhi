@@ -1,0 +1,292 @@
+@import '~@/variable.less';
+
+:global {
+  .quanta-control-layout {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .ant-empty-image {
+    margin-bottom: 0;
+  }
+
+  .quanta-layout.quanta-layout-has-sider {
+    .quanta-layout-content {
+      overflow-x: auto;
+    }
+  }
+  .quanta-layout {
+    overflow: auto;
+    background: #f6f6f6 !important;
+
+    &-sider {
+      background: #fff;
+    }
+  }
+
+  .quanta-layout-sider-trigger {
+    position: absolute;
+    background-color: #fff;
+    border: none;
+  }
+  .quanta-menu-inline > .quanta-menu-item,
+  .quanta-menu-inline > .quanta-menu-submenu > .quanta-menu-submenu-title {
+    line-height: inherit;
+  }
+  .quanta-menu-inline.quanta-menu-root .quanta-menu-submenu-title > .quanta-menu-title-content {
+    overflow: visible;
+  }
+  .quanta-menu-item-with-icon > div {
+    height: 42px;
+  }
+  .quanta-menu-item-with-icon > div > .quanta-icon {
+    margin-right: 6px;
+  }
+
+  .quanta-menu-item-with-icon > span > div {
+    display: flex;
+    align-items: center;
+  }
+
+  .quanta-menu-item .quanta-icon,
+  .quanta-menu-submenu-title .quanta-icon {
+    margin-right: 6px;
+  }
+  .quanta-layout-sider-children .quanta-menu-item .quanta-icon + span {
+    margin-left: 0;
+  }
+
+  .quanta-control-main {
+    padding-top: 58px;
+    padding-bottom: 20px;
+
+    .pageLoading {
+      padding-top: 150px;
+      padding-right: 20px;
+    }
+    // > div {
+    //   min-width: 1240px;
+    // }
+  }
+
+  .quanta-menu {
+    color: #595959;
+
+    .quanta-menu-item:hover,
+    .quanta-menu-item-active,
+    .quanta-menu:not(.quanta-menu-inline) .quanta-menu-submenu-open,
+    .quanta-menu-submenu-active,
+    .quanta-menu-submenu-title:hover {
+      color: #121212;
+    }
+  }
+  .quanta-menu-inline-collapsed-tooltip .quanta-tooltip-inner,
+  .quanta-menu-inline-collapsed-tooltip .quanta-tooltip-arrow-content {
+    color: #595959;
+    background-color: #fff;
+  }
+
+  .quanta-sider-menu-item {
+    user-select: none;
+
+    .quanta-menu-inline,
+    .quanta-menu-vertical,
+    .quanta-menu-vertical-left {
+      border-right: none;
+    }
+
+    .quanta-menu-item-selected {
+      color: #121212;
+      background-color: #f6f6f6;
+    }
+
+    .quanta-menu:not(.quanta-menu-horizontal) .quanta-menu-item-selected {
+      color: #121212;
+      background-color: #f6f6f6;
+    }
+
+    .quanta-menu-submenu {
+      &-title {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .quanta-menu-vertical .quanta-menu-item::after,
+    .quanta-menu-vertical-left .quanta-menu-item::after,
+    .quanta-menu-vertical-right .quanta-menu-item::after,
+    .quanta-menu-inline .quanta-menu-item::after {
+      right: auto;
+      left: 0;
+    }
+
+    .quanta-menu-item .quanta-menu:not(.quanta-menu-horizontal) .quanta-menu-item-selected,
+    .quanta-menu-submenu .quanta-menu:not(.quanta-menu-horizontal) .quanta-menu-item-selected {
+      background-color: #f6f6f6;
+    }
+
+    .quanta-menu-sub .quanta-menu-item {
+      padding-left: 60px !important;
+    }
+
+    &-title {
+      padding: 14px 20px;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 600;
+      font-size: 16px;
+      border-bottom: 1px solid #222;
+      transition: all 0.2s;
+    }
+
+    &-title.normalPage {
+      padding: 17px 0 6px 20px;
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 12px;
+      border-bottom: 0;
+    }
+
+    &-back {
+      display: flex;
+      align-items: center;
+      height: 52px;
+      padding-left: 20px;
+      border-bottom: 1px solid #e7e7e7;
+
+      > .quanta-icon-show-hover {
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+
+        &:hover {
+          background: #f6f6f6;
+        }
+      }
+
+      .quanta-select-selection-item {
+        overflow: hidden;
+        color: #292929;
+        font-size: 16px;
+        font-family: @font-family-bold;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      // &-title {
+      //   margin-right: 8px;
+      //   overflow: hidden;
+      //   color: #292929;
+      //   font-size: 16px;
+      //   // font-weight: 600;
+      //   font-family: @font-family-bold;
+      //   white-space: nowrap;
+      //   text-overflow: ellipsis;
+      // }
+    }
+
+    // .chain-list-dropdown-trigger {
+    //   display: flex;
+    //   flex: 1;
+    //   align-items: center;
+    //   justify-content: space-between;
+    //   height: 50px;
+    //   padding: 0 20px 0 10px;
+    //   color: rgba(#fff, 0.5) !important;
+
+    //   &:hover,
+    //   &.quanta-dropdown-open {
+    //     color: #fff !important;
+    //   }
+
+    //   .chain-list-current-chain-name {
+    //     max-width: 130px;
+    //     overflow: hidden;
+    //     font-weight: 600;
+    //     font-family: @font-family-bold;
+    //     white-space: nowrap;
+    //     text-overflow: ellipsis;
+    //   }
+
+    //   .quanta-icon-caret-down {
+    //     margin-right: 10px !important;
+    //   }
+    // }
+
+    .quanta-menu-vertical .quanta-menu-item {
+      font-weight: 600 !important;
+      font-family: @font-family-bold !important;
+    }
+  }
+
+  .quanta-layout-sider-children {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .quanta-layout-sider-collapsed {
+    .quanta-sider-menu-item-title {
+      max-width: 64px;
+      padding: 22px 8px 0 8px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    :global {
+      .quanta-layout-sider-trigger {
+        .quanta-icon {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .chain-list-dropdown-overlay {
+    top: 54px !important;
+    left: 20px !important;
+    width: 240px;
+    max-height: 350px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #262626 !important;
+
+    > .quanta-dropdown-menu {
+      background: #262626 !important;
+    }
+
+    .quanta-dropdown-menu .quanta-dropdown-menu-item {
+      font-weight: 600 !important;
+      font-family: @font-family-bold !important;
+    }
+
+    .quanta-dropdown-menu .quanta-dropdown-menu-item-selected {
+      background-color: #464646 !important;
+    }
+  }
+
+  .quanta-page-header-back {
+    .quanta-icon {
+      width: 24px;
+      height: 24px;
+
+      svg {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .quanta-menu-item .quanta-icon {
+    vertical-align: middle;
+  }
+
+  .quanta-page-header-heading-sub-title {
+    margin: 0;
+  }
+
+  .quanta-page-header-heading-extra {
+    a {
+      height: 24px;
+    }
+  }
+}

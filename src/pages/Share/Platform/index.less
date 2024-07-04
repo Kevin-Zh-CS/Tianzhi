@@ -1,0 +1,319 @@
+@import '~@/variable.less';
+
+.banner {
+  position: relative;
+  flex: auto;
+  height: 160px;
+  margin-bottom: 12px;
+  padding: 40px 80px;
+  background-color: #003bb1;
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  span {
+    display: block;
+  }
+  .title {
+    color: @white-color-title;
+    font-size: @font-size-7;
+    line-height: @font-line-height-7;
+  }
+  .desc {
+    margin-top: 12px;
+    color: @white-color-secondary;
+    font-size: @font-size-3;
+    line-height: @font-line-height-3;
+  }
+  .close {
+    z-index: 5000;
+    width: 15px;
+    height: 15px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+}
+
+.featContainer {
+  display: flex;
+  .feature {
+    display: flex;
+    flex: auto;
+    align-items: center;
+    height: 88px;
+    padding: 14px 32px;
+    background: @primary-color-tag-bg;
+    .title {
+      color: @text-color;
+      font-size: @font-size-lg;
+    }
+    .desc {
+      margin-top: 4px;
+      color: @text-color-secondary;
+      font-size: @font-size-sm;
+    }
+    span {
+      display: block;
+      margin-left: 8px;
+    }
+  }
+}
+.platform {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  margin: auto;
+  .left {
+    height: inherit;
+    margin-right: 12px;
+    background-color: #fff;
+    //box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+    .title {
+      margin-top: 20px;
+      margin-bottom: 15px;
+      padding: 16px;
+      color: #fff;
+      font-weight: @font-weight-bold;
+      font-size: @font-size-4;
+      line-height: @font-line-height-4;
+      text-align: center;
+      background-color: @primary-color;
+    }
+  }
+  .right {
+    flex: auto;
+    margin-top: 20px;
+    .orgCard {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding: 20px;
+      background-color: #e5f1fb;
+      .label {
+        display: block;
+        color: @text-color-tertiary;
+      }
+      .number {
+        display: block;
+        margin-top: 8px;
+      }
+      .container {
+        .info {
+          display: flex;
+          align-items: center;
+          .title {
+            margin: 0 8px;
+            color: @text-color;
+            font-weight: @font-weight-medium;
+            font-size: @font-size-3;
+          }
+          .button {
+            height: 24px;
+            padding: 0 12px;
+          }
+        }
+        .countInfo {
+          display: flex;
+          justify-content: space-between;
+          width: 90%;
+          margin-top: 20px;
+          .label {
+            font-size: @font-size-1;
+          }
+        }
+      }
+      .countContainer {
+        display: flex;
+        .countCard {
+          padding: 12px 20px;
+          background-color: @input-disabled-background;
+        }
+      }
+    }
+    .renderList {
+      display: flex;
+    }
+    .filterCard {
+      margin-bottom: 12px;
+      .title {
+        margin-right: 10px;
+        color: @text-color-tertiary;
+      }
+      .orgCardItem {
+        position: relative;
+        .orgList,
+        .org,
+        .title {
+          float: left;
+
+          .option {
+            float: left;
+          }
+        }
+
+        .orgList,
+        .orgListMore {
+          float: left;
+          //margin-left: 80px;
+          //width: calc(100% - 110px);
+          height: 22px;
+          overflow: hidden;
+          zoom: 1;
+        }
+
+        .orgListMore {
+          height: auto;
+        }
+        .orgValue {
+          //margin-left: 200px;
+          //padding-right: 80px;
+          overflow: hidden;
+        }
+
+        .orgMore {
+          position: absolute;
+          top: 0;
+          right: 10px;
+          color: #888;
+        }
+      }
+
+      .filterCardItem {
+        display: flex;
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .moreCardItem {
+        margin-left: 80px;
+      }
+
+      .filterFirstCardItem {
+        margin-bottom: 20px;
+        .filterCardItem {
+          margin-bottom: 3px;
+        }
+      }
+      .option {
+        //display: inline-block;
+        display: flex;
+        margin-right: 20px;
+        color: @text-color-secondary;
+        cursor: pointer;
+      }
+      .selected {
+        color: @primary-color-hover;
+        font-weight: 600;
+        cursor: pointer;
+
+        &::after {
+          display: block;
+          clear: both;
+          content: '';
+        }
+      }
+    }
+    .filterTerm {
+      display: flex;
+      margin-top: -20px;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      span {
+        margin-right: 10px;
+        color: #888;
+      }
+
+      .tagContainer {
+        flex: 1;
+      }
+      :global {
+        .quanta-tag {
+          height: 24px;
+          margin-bottom: 8px;
+          padding-right: 0;
+          padding-left: 8px;
+          color: #292929;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 22px;
+        }
+        .quanta-btn {
+          margin-bottom: 8px;
+        }
+
+        .quanta-tag-close-icon {
+          margin-right: 6px;
+        }
+      }
+    }
+    .pagination {
+      margin-top: 32px;
+      text-align: center;
+    }
+    .selectedSort {
+      display: flex;
+    }
+    .sort {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      span {
+        color: #888;
+        font-size: 14px;
+      }
+
+      .selected {
+        color: @primary-color-hover;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      :global {
+        .quanta-table-column-sorter-up,
+        .quanta-table-column-sorter-down {
+          line-height: 10px;
+        }
+      }
+    }
+  }
+}
+
+.open {
+  color: #595959;
+  font-size: 14px;
+
+  :global {
+    .quanta-icon {
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+  }
+  &:hover {
+    color: #595959;
+  }
+}
+
+.maxData {
+  max-width: 160px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.maxAmount {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.bannerContainer {
+  position: relative;
+  margin-top: -20px;
+  margin-right: -20px;
+  margin-left: -20px;
+  padding: 20px;
+}

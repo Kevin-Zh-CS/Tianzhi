@@ -1,0 +1,31 @@
+.statusWrap {
+  // display: flex;
+  // flex-direction: column;
+  height: calc(100vh - 166px);
+  margin: 0 20px;
+  padding-top: 60px;
+  background: #fff;
+}
+
+.contentWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 466px;
+  height: 212px;
+  padding: 32px 48px;
+  background: #fafafa;
+
+  .contentItem {
+    display: flex;
+    .label {
+      flex: 0 0 auto;
+      margin-right: 60px;
+    }
+    .value {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

@@ -1,0 +1,604 @@
+.motion {
+  position: relative;
+  width: 100%;
+  height: 680px;
+  color: #FEF9DA;
+  p {
+    margin-bottom: 0;
+  }
+  .motionBgClip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    animation: motionBgClip 500ms linear forwards;
+    .light {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      left: 0;
+      z-index: 4;
+      width: 442px;
+      height: 453px;
+      margin: 0 auto;
+    }
+    .title {
+      position: absolute;
+      top: 34px;
+      right: 0;
+      left: 0;
+      z-index: 2;
+      width: 375px;
+      height: 38px;
+      margin: 0 auto;
+    }
+    .circle {
+      position: absolute;
+      top: 105px;
+      right: 0;
+      left: 0;
+      z-index: 3;
+      width: 360px;
+      height: 360px;
+      margin: 0 auto;
+    }
+    .motionBg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 600px;
+      height: 600px;
+    }
+  }
+  .traceSpotTranslate {
+    position: absolute;
+    z-index: 5;
+    width: 20px;
+    height: 20px;
+  }
+  .nodeTop {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(130, 126, 109, .2);
+    .nodeTopBg {
+      position: absolute;
+      top: 2px;
+      z-index: 1;
+      width: 36px;
+      height: 36px;
+    }
+    .nodeRotate {
+      position: absolute;
+      top: 4px;
+      z-index: 2;
+      width: 32px;
+      height: 32px;
+    }
+  }
+  .motionCenter {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    width: 650px;
+    height: 386px;
+    margin: 0 auto;
+    .orgClipTop {
+      top: 0;
+      left: 387px;
+      .local{
+        margin-left: 12px;
+      }
+    }
+    .orgClipRight {
+      top: 186px;
+      left: 496px;
+      .local{
+        margin-left: 12px;
+      }
+    }
+    .orgClipBottom {
+      top: 293px;
+      left: 91px;
+      .local{
+        margin-right: 12px;
+      }
+    }
+    .orgClipLeft {
+      top: 110px;
+      left: -14px;
+      .local{
+        margin-right: 12px;
+      }
+    }
+    .orgClip {
+      position: absolute;
+      z-index: 3;
+      display: flex;
+      .orgContainer {
+        .org {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 6px;
+          background: rgba(15, 12, 3, 0.8);
+          border: 1px dashed #504D42;
+          .local {
+            width: 36px;
+            height: 42px;
+            padding-top: 10px;
+            line-height: 14px;
+            background: url("@/assets/riskControl/motion/local.png") 0 0 no-repeat;
+            background-size: 100% 100%;
+            p {
+              color: #B3AF99;
+              font-size: 12px;
+              text-align: center;
+              transform: scale(.83);
+            }
+          }
+          .arrowLeft {
+            right: 69px;
+            .orgSpotTranslate {
+              left: 20px;
+            }
+          }
+          .arrowRight {
+            left: 42px;
+            .orgSpotTranslate {
+              left: 0;
+            }
+          }
+          .arrow {
+            position: absolute;
+            .orgArrow {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 27px;
+              height: 8px;
+            }
+            .orgSpotTranslate {
+              position: absolute;
+              top: 2px;
+              width: 10px;
+              height: 10px;
+            }
+          }
+          .node {
+            width: 90px;
+            background: rgba(28, 25, 15, .8);
+            .nodeTop {
+              margin: 4px auto 2px auto;
+            }
+            .bottom {
+              margin-left: -4px;
+              line-height: 20px;
+              p {
+                color: #827E6D;
+                font-size: 12px;
+                text-align: center;
+                transform: scale(.83);
+              }
+            }
+          }
+        }
+        .name {
+          margin-top: 2px;
+          font-size: 12px;
+          line-height: 20px;
+          white-space: nowrap;
+          text-align: center;
+        }
+      }
+      .orgIconLeft {
+        width: 12px;
+        height: 12px;
+        margin: 29px 5px 0 0;
+      }
+      .orgIconRight {
+        width: 12px;
+        height: 12px;
+        margin: 29px 0 0 5px;
+      }
+    }
+    .trace {
+      position: absolute;
+      z-index: 4;
+      height: 150px;
+    }
+    .traceTop {
+      top: 49px;
+      left: 384px;
+    }
+    .traceRight {
+      top: 213px;
+      left: 338px;
+      transform: rotate(90deg);
+    }
+    .traceBottom {
+      top: 174px;
+      left: 170px;
+      transform: rotate(180deg);
+    }
+    .traceLeft {
+      top: 4px;
+      left: 216px;
+      transform: rotate(-90deg);
+    }
+    .traceLightTop, .traceLightBottom, .traceCenterVertical, .traceCenterHorizontal {
+      opacity: 0;
+    }
+    .traceSpotTranslateTop, .traceSpotTranslateBottom, .traceSpotTranslateVertical, .traceSpotTranslateHorizontal, .traceSpot2TranslateRight, .traceSpot2TranslateBottom, .traceSpot2TranslateVertical {
+      top: 9999px;
+    }
+    .traceSpotTranslateRight {
+      top: 240px;
+      left: 440px;
+    }
+    .traceSpotTranslateLeft {
+      top: 110px;
+      left: 184px;
+    }
+    .traceCenter {
+      position: absolute;
+      top: 73px;
+      left: 288px;
+      z-index: 4;
+      height: 222px;
+    }
+    .traceHorizontal {
+      transform: rotate(90deg);
+    }
+    .scanner {
+      position: absolute;
+      top: 129px;
+      left: 257px;
+      z-index: 6;
+      width: 130px;
+      height: 130px;
+      opacity: .8;
+    }
+    .scanLightTranslate {
+      position: absolute;
+      top: 130px;
+      left: 258.5px;
+      z-index: 7;
+      width: 126.83px;
+      height: 23.78px;
+      background: radial-gradient(47.68% 76.67% at 50% 0%, #F2DA84 0%, rgba(242, 218, 132, 0.389062) 40.72%, rgba(242, 218, 132, 0) 100%);
+      transform: matrix(1, 0, 0, -1, 0, 0);
+    }
+    .layer1 {
+      position: absolute;
+      top: 334px;
+      right: -18px;
+      z-index: 2;
+      width: 174px;
+      height: 68px;
+    }
+    .layer2 {
+      position: absolute;
+      top: 108px;
+      right: -18px;
+      z-index: 2;
+      width: 174px;
+      height: 68px;
+    }
+  }
+  .motionInfo {
+    position: absolute;
+    bottom: 68px;
+    left: 20px;
+    height: 70px;
+    .infoItem {
+      position: relative;
+      display: flex;
+      align-items: center;
+      .dataTrace {
+        width: 42px;
+        height: 12px;
+      }
+      .dataTraceSpot {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+      .dataInfo {
+        margin-left: 8px;
+        font-size: 12px;
+        line-height: 20px;
+      }
+      .left{
+        display: flex;
+        justify-content: center;
+        width: 42px;
+      }
+      .nodeTop {
+        transform: scale(.8);
+      }
+    }
+    .infoItem2 {
+      margin-top: 20px;
+    }
+    .infoItem3 {
+      margin-top: 12px;
+    }
+  }
+  .tip {
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    left: 0;
+    width: 381px;
+    height: 38px;
+    margin: 0 auto;
+    line-height: 38px;
+    text-align: center;
+    background: url("@/assets/riskControl/motion/tipBg.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+  }
+
+
+  // 动效
+  .orgClipTop, .orgClipRight {
+    animation: clipathR 1000ms linear forwards;
+  }
+  .orgClipBottom, .orgClipLeft {
+    animation: clipathL 1000ms linear forwards;
+  }
+  .nodeRotate {
+    animation: rotate 2000ms linear infinite;
+  }
+  .orgSpotTranslateLeft {
+    animation: orgSpotTranslateLeft 1000ms linear infinite;
+  }
+  .orgSpotTranslateRight {
+    animation: orgSpotTranslateRight 1000ms linear infinite;
+  }
+  .scanner {
+    animation: hidden 1ms linear 12000ms forwards;
+  }
+  .scanLightTranslate {
+    animation: scanner 1000ms linear infinite, hidden 1ms linear 12000ms forwards;
+  }
+  .dataTraceSpot {
+    animation: dataTraceSpot 1000ms linear infinite;
+  }
+  .traceSpotTranslateLeft {
+    animation: traceSpotTranslateXLeft 2000ms cubic-bezier(.17, .53, .45, .91) 2, traceSpotTranslateYLeft 2000ms linear 2, hidden 1ms linear 4000ms forwards;
+  }
+  .traceSpotTranslateRight {
+    animation: traceSpotTranslateXRight 2000ms cubic-bezier(.17, .53, .45, .91) 2, traceSpotTranslateYRight 2000ms linear 2, hidden 1ms linear 4000ms forwards;
+  }
+  .traceSpotTranslateTop {
+    animation: traceSpotTranslateXTop 2000ms cubic-bezier(.03, .48, .47, .8) 4000ms 2, traceSpotTranslateYTop 2000ms linear 4000ms 2, hidden 1ms linear 8000ms forwards;
+  }
+  .traceSpotTranslateBottom {
+    animation: traceSpotTranslateXBottom 2000ms cubic-bezier(.03, .48, .47, .8) 4000ms 2, traceSpotTranslateYBottom 2000ms linear 4000ms 2, hidden 1ms linear 8000ms forwards;
+  }
+  .traceSpotTranslateVertical {
+    animation: traceSpotTranslateXVertical 2000ms linear 8000ms 2, traceSpotTranslateYVertical 2000ms linear 8000ms 2, hidden 1ms linear 12000ms forwards;
+  }
+  .traceSpotTranslateHorizontal {
+    animation: traceSpotTranslateXHorizontal 2000ms linear 8000ms 2, traceSpotTranslateYHorizontal 2000ms linear 8000ms 2, hidden 1ms linear 12000ms forwards;
+  }
+  .traceSpot2TranslateRight {
+    animation: traceSpotTranslateXRight 2000ms cubic-bezier(.17, .53, .45, .91) 12000ms 1, traceSpotTranslateYRight 2000ms linear 12000ms 1, hidden 1ms linear 14000ms forwards;
+  }
+  .traceSpot2TranslateBottom {
+    animation: traceSpotTranslateXBottom 2000ms cubic-bezier(.03, .48, .47, .8) 12000ms 1, traceSpotTranslateYBottom 2000ms linear 12000ms 1, hidden 1ms linear 14000ms forwards;
+  }
+  .traceSpot2TranslateVertical {
+    animation: traceSpotTranslateXVertical 2000ms linear 12000ms 1, traceSpotTranslateYVertical 2000ms linear 12000ms 1, hidden 1ms linear 14000ms forwards;
+  }
+  .traceLightTop {
+    animation: visible 1ms linear 4000ms forwards, hidden 1ms linear 8000ms forwards;
+  }
+  .traceLightRight {
+    animation: hidden 1ms linear 4000ms forwards, visible 1ms linear 12000ms forwards;
+  }
+  .traceLightBottom {
+    animation: visible 1ms linear 4000ms forwards, hidden 1ms linear 8000ms forwards, visible 1ms linear 12000ms forwards;
+  }
+  .traceLightLeft {
+    animation: hidden 1ms linear 4000ms forwards;
+  }
+  .traceCenterVertical {
+    animation: visible 1ms linear 8000ms forwards;
+  }
+  .traceCenterHorizontal {
+    animation: visible 1ms linear 8000ms forwards, hidden 1ms linear 12000ms forwards;
+  }
+
+  @keyframes motionBgClip {
+    0% {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  @keyframes hidden {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes visible {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes clipathR {
+    0% {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  @keyframes clipathL {
+    0% {
+      clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes orgSpotTranslateLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-1.528vw);
+    }
+  }
+  @keyframes orgSpotTranslateRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(1.25vw);
+    }
+  }
+  @keyframes traceSpotTranslateXLeft {
+    0% {
+      top: 7.639vw;
+    }
+    100% {
+      top: 1.944vw;
+    }
+  }
+  @keyframes traceSpotTranslateYLeft {
+    0% {
+      left: 12.777vw;
+    }
+    100% {
+      left: 22.083vw;
+    }
+  }
+  @keyframes traceSpotTranslateXRight {
+    0% {
+      top: 16.667vw;
+    }
+    100% {
+      top: 22.083vw;
+    }
+  }
+  @keyframes traceSpotTranslateYRight {
+    0% {
+      left: 30.555vw;
+    }
+    100% {
+      left: 21.111vw;
+    }
+  }
+  @keyframes traceSpotTranslateXTop {
+    0% {
+      top: 12.5vw;
+    }
+    100% {
+      top: 3.055vw;
+    }
+  }
+  @keyframes traceSpotTranslateYTop {
+    0% {
+      left: 31.944vw;
+    }
+    100% {
+      left: 26.388vw;
+    }
+  }
+  @keyframes traceSpotTranslateXBottom {
+    0% {
+      top: 11.805vw;
+    }
+    100% {
+      top: 21.388vw;
+    }
+  }
+  @keyframes traceSpotTranslateYBottom {
+    0% {
+      left: 11.527vw;
+    }
+    100% {
+      left: 16.944vw;
+    }
+  }
+  @keyframes traceSpotTranslateXVertical {
+    0% {
+      top: 4.861vw;
+    }
+    100% {
+      top: 19.166vw;
+    }
+  }
+  @keyframes traceSpotTranslateYVertical {
+    0% {
+      left: 23.75vw;
+    }
+    100% {
+      left: 19.861vw;
+    }
+  }
+  @keyframes traceSpotTranslateXHorizontal {
+    0% {
+      top: 10.138vw;
+    }
+    100% {
+      top: 14.027vw;
+    }
+  }
+  @keyframes traceSpotTranslateYHorizontal {
+    0% {
+      left: 14.583vw;
+    }
+    100% {
+      left: 29.027vw;
+    }
+  }
+  @keyframes scanner {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(7.638vw);
+    }
+  }
+  @keyframes dataTraceSpot {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(1.666vw);
+    }
+  }
+}

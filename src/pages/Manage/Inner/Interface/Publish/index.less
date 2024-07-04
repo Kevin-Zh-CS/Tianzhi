@@ -1,0 +1,288 @@
+@import '~@/variable.less';
+
+.stepWrap {
+  padding: 20px;
+  background: #fff;
+  // position: relative;
+}
+.boldTxt {
+  color: #888;
+  //font-weight: bold;
+}
+.contentWrap {
+  padding: 20px;
+  padding-bottom: 40px;
+  background: #fff;
+  .companyWrap {
+    display: flex;
+    margin-top: 10px;
+
+    .company {
+      margin-right: 4px;
+      padding: 2px 8px;
+      color: #595959;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
+      background: #f6f6f6;
+      border: 1px solid #d0d0d0;
+    }
+  }
+
+  .funcItemWrap {
+    width: 816px;
+
+    .myspace {
+      height: 20px;
+      background-color: white !important;
+    }
+
+    .funcName {
+      display: flex;
+      align-items: center;
+      width: 816px;
+      height: 44px;
+      padding-left: 23px;
+      background: #f6f6f6;
+      cursor: pointer;
+
+      &.open {
+        :global {
+          .quanta-icon {
+            transform: rotate(45deg);
+          }
+        }
+      }
+
+      :global {
+        .quanta-icon {
+          transition: all 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+        }
+      }
+    }
+  }
+
+  .parameters {
+    margin-top: 12px;
+    .paramTable {
+      //margin-top: 8px;
+      .tableThead {
+        height: 48px;
+        color: #121212;
+        background: #fafafa;
+        border-bottom: 1px solid #e7e7e7;
+      }
+      .tableTr {
+        padding: 13px 0;
+        color: #121212;
+        border-bottom: 1px solid #e7e7e7;
+      }
+    }
+  }
+
+  .codeEditorWrap {
+    width: 816px;
+  }
+}
+
+.floatModal {
+  position: fixed;
+  top: 108px;
+  right: 20px;
+  z-index: 998;
+  width: 40vw;
+  height: calc(100vh - 168px);
+  overflow: scroll;
+  background: #fff;
+  border-top: 4px solid @primary-color;
+  box-shadow: 0 6px 16px rgba(31, 31, 31, 0.08), 0 9px 28px rgba(31, 31, 31, 0.05),
+    0 12px 48px rgba(31, 31, 31, 0.05);
+  opacity: 1;
+  transition: transform 0.3s cubic-bezier(0.7, 0.3, 0.1, 1),
+    box-shadow 0.3s cubic-bezier(0.7, 0.3, 0.1, 1), opacity 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+
+  &.hidden {
+    transform: translate(calc(40vw - 20px), calc(168px - 100vh));
+    opacity: 0;
+  }
+
+  .btn {
+    position: absolute;
+    top: 24px;
+    right: 14px;
+    display: flex;
+    align-items: center;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    .horizontal {
+      width: 14px;
+      height: 2px;
+      background-color: #888;
+    }
+  }
+
+  .title {
+    padding: 28px 0 0 32px;
+    color: #121212;
+    font-size: 18px;
+  }
+
+  .nameWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    padding: 0 32px;
+  }
+
+  .fileWrap {
+    height: calc(100% - 140px);
+    margin-top: 12px;
+    padding: 0 32px;
+    overflow: scroll;
+  }
+}
+
+.priceContainer {
+  display: flex;
+  width: 580px;
+  height: 48px;
+  margin-bottom: 8px;
+  //padding: 0 14px;
+  color: #121212;
+  line-height: 48px;
+  background: #fafafa;
+
+  .plusItem {
+    width: 35px;
+    padding-left: 8px;
+  }
+
+  .priceItem {
+    width: 260px;
+  }
+}
+
+.input {
+  width: 176px;
+  //margin-right: 8px;
+}
+
+.inputItem {
+  width: 183px;
+  margin-right: 8px;
+}
+
+.statusWrap {
+  // display: flex;
+  // flex-direction: column;
+  height: calc(100vh - 166px);
+  margin: 0 20px;
+  padding-top: 60px;
+  background: #fff;
+}
+
+.successWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 466px;
+  height: 212px;
+  padding: 32px 48px;
+  background: #fafafa;
+
+  .contentItem {
+    display: flex;
+    .label {
+      flex: 0 0 auto;
+      margin-right: 60px;
+    }
+    .value {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+:global {
+  .ant-collapse-content > .ant-collapse-content-box {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .quanta-icon {
+    vertical-align: middle;
+  }
+}
+
+.stepTwo {
+  :global {
+    .quanta-form-item {
+      margin-bottom: 8px;
+    }
+    .cm-s-paraiso-light .CodeMirror-gutters,
+    .cm-s-paraiso-light.CodeMirror {
+      background-color: #f5f5f5;
+    }
+    .ant-collapse-content > .ant-collapse-content-box {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .ant-collapse > .ant-collapse-item,
+    .ant-collapse-content,
+    .ant-collapse {
+      border: 0;
+    }
+    .ant-collapse-header {
+      font-weight: 600;
+    }
+    .quanta-icon {
+      vertical-align: middle;
+    }
+  }
+
+  .spaceContainer {
+    display: flex;
+    width: 816px;
+    margin-top: 8px;
+    padding: 0;
+    border-bottom: 1px solid #e7e7e7;
+
+    :global {
+      .quanta-form-item {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+.stepOnePage {
+  .spaceContainer {
+    display: flex;
+    width: 580px;
+    margin-top: 8px;
+    padding: 0 8px;
+    border-bottom: 1px solid #e7e7e7;
+
+    :global {
+      .quanta-form-item {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+.outputItem {
+  width: 186px;
+  font-weight: 600;
+}
+
+.mypri {
+  width: 240px;
+  height: 36px;
+  margin-top: -2px;
+  margin-left: 6px;
+  background: #fff;
+  border-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

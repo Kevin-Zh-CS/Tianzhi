@@ -1,0 +1,99 @@
+@import '~@/variable.less';
+.canvasProject {
+  display: flex;
+  justify-content: center;
+  min-height: 723px;
+}
+
+.contentWrap {
+  background: #fff;
+}
+
+.pageProject {
+  :global {
+    .container-card {
+      padding-top: 20px;
+    }
+  }
+}
+
+.divider {
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border-top: 1px dashed #e7e7e7;
+}
+
+.lastConfig {
+  margin-top: 12px;
+  padding: 20px;
+  padding-top: 0;
+  background: #fff;
+}
+
+.canvasPage {
+  :global {
+    .antd-pro-components-item-title-index-itemTitleWithExtra {
+      align-items: start;
+      margin-bottom: 0;
+      padding-right: 12px;
+    }
+    .antd-pro-components-item-title-index-itemTitle {
+      margin-bottom: 20px !important;
+    }
+  }
+}
+
+.pannelContent {
+  padding-right: 12px;
+}
+.queue {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  cursor: pointer;
+
+  :global {
+    .iconfont {
+      color: #888;
+      font-size: 20px;
+    }
+  }
+
+  &:hover {
+    color: #292929;
+    background-color: #fafafa;
+    border: 1px solid #292929;
+    :global {
+      .iconfont {
+        color: #292929;
+      }
+    }
+
+    &:focus,
+    &:active {
+      background: #e7e7e7;
+
+      :global {
+        .iconfont {
+          color: #292929;
+        }
+      }
+    }
+  }
+}
+
+.pageCard {
+  position: relative;
+  padding: 20px;
+  padding-bottom: 8px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+
+  :global {
+    .quanta-descriptions-view {
+      padding-left: 12px;
+    }
+  }
+}

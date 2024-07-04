@@ -1,0 +1,22 @@
+.uip-btn-text {
+  height: auto;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: transparent;
+  }
+
+  &[ant-click-animating-without-extra-node='true']::after,
+  &.ant-click-animating-node {
+    outline: none;
+    box-shadow: none;
+    animation: none;
+  }
+}

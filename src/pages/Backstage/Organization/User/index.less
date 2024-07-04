@@ -1,0 +1,83 @@
+@import '~@/variable.less';
+
+.tableFilterWrap {
+  padding: 16px 20px 0 30px;
+  background: #fff;
+
+  :global {
+    .quanta-form-item {
+      margin-right: 26px;
+      margin-bottom: 16px;
+      .quanta-form-item-label {
+        margin-right: -8px;
+      }
+    }
+  }
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .item {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    .label {
+      margin-right: 12px;
+    }
+  }
+}
+.buttonWrap {
+  display: flex;
+  align-items: center;
+  margin: -6px 0 16px 0;
+  button {
+    margin-right: 12px;
+  }
+}
+.pwdWrap {
+  width: 268px;
+  height: 40px;
+  margin-top: 12px;
+  padding: 9px 12px;
+  color: @text-color-primary;
+  background-color: @text-color-background;
+  .label {
+    margin-right: 20px;
+    color: @text-color-tertiary;
+  }
+}
+
+.titleItem {
+  margin-bottom: 6px;
+  color: #121212;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.descItem {
+  margin-bottom: 20px;
+  color: #595959;
+}
+
+.iconItem {
+  margin-right: 10px;
+  vertical-align: text-top;
+}
+
+.emptyData {
+  color: #888;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.btnContainer {
+  display: flex;
+  margin-left: auto;
+  padding-right: -3px;
+  padding-bottom: 20px;
+  text-align: right;
+}

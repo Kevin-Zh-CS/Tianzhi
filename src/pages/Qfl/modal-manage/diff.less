@@ -1,0 +1,273 @@
+.diff {
+  position: relative;
+  min-height: calc(100vh - 148px);
+  padding-top: 68px;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+}
+
+.bg {
+  position: absolute;
+  z-index: 1;
+  width: 50%;
+  height: calc(100% - 68px);
+  background: #fff;
+}
+
+.title {
+  position: absolute;
+  top: 108px;
+  left: 220px;
+  z-index: 9;
+  display: flex;
+  width: calc(100% - 240px);
+  height: 68px;
+  background: #fff;
+  border-bottom: 1px solid #e7e7e7;
+  transition: all 10ms;
+  .titleItem {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .itemContainer {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .avatar {
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      font-weight: 500;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 20px;
+    }
+  }
+  .current {
+    .avatar {
+      background: #0076d9;
+    }
+  }
+  .history {
+    .avatar {
+      background: #b7b7b7;
+    }
+  }
+}
+
+.versionInfo {
+  margin: 4px 0 0 8px;
+  .name {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    color: #121212;
+    font-weight: 500;
+    font-size: 16px;
+    .rotate {
+      transform: rotate(180deg);
+    }
+    :global {
+      .iconfont {
+        margin-left: 11px;
+        color: #888;
+        font-size: 24px;
+        line-height: 24px;
+        transform-origin: center;
+        transition: 0.2s;
+      }
+    }
+  }
+  .time {
+    color: #888;
+    font-size: 12px;
+  }
+}
+
+.config {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  .configItem {
+    position: relative;
+    flex: 1;
+    min-height: 100%;
+    padding: 20px 20px 72px 20px;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 32px;
+      width: calc(100% - 64px);
+      height: 1px;
+      border-bottom: 1px dashed #e7e7e7;
+      content: '';
+    }
+  }
+  .expand {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    :global {
+      .quanta-btn {
+        display: flex;
+        align-items: center;
+      }
+      .iconfont {
+        margin-right: 4px;
+        color: #888;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.detail {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  .detailItem {
+    padding: 20px;
+  }
+}
+
+.column {
+  min-width: 80px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+:global {
+  .qlfDiffDropdown {
+    .quanta-dropdown-menu-item:hover,
+    .quanta-dropdown-menu-submenu-title:hover {
+      background: rgba(0, 118, 217, 0.1);
+    }
+  }
+  .color-progress,
+  .color-progress2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 368px;
+    //height: 10vh
+    .rc-slider-rail {
+      height: 6px;
+    }
+    .rc-slider {
+      margin: 0.7vh 0 1vh;
+    }
+    .rc-slider-rail,
+    .rc-slider-track {
+      height: 6px;
+    }
+    .rc-slider-handle-3 {
+      display: none;
+    }
+    .rc-slider-handle {
+      top: 6px;
+      box-sizing: border-box;
+      width: 12px;
+      height: 12px;
+      border: 2px solid #0076d9;
+    }
+
+    .rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging {
+      border-color: #0076d9;
+      box-shadow: none;
+    }
+
+    .color-slider-contain {
+      display: flex;
+      width: 100%;
+      height: 22px;
+      //margin-bottom: 8px;
+      color: @text-color-tertiary;
+
+      .color-slider-label {
+        //display: flex;
+        //align-items: center;
+        text-align: center;
+      }
+    }
+
+    .colorContent {
+      display: flex;
+      justify-content: end;
+      width: 100%;
+    }
+
+    .colorItem {
+      margin-left: 20px;
+    }
+    .colorTxt {
+      margin-left: 8px;
+      color: @text-color-tertiary;
+    }
+
+    .colorBox {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+    }
+
+    .color1 {
+      background: #0076d9;
+    }
+    .color2 {
+      background: #08cb94;
+    }
+    .color3 {
+      background: #ffad32;
+    }
+  }
+
+  .color-progress2 .rc-slider-handle-2 {
+    display: none;
+  }
+
+  .detail-progress {
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    &-range {
+      width: 368px;
+    }
+    .colorContent {
+      align-items: start;
+      width: 368px;
+    }
+  }
+}
+
+.modelContent {
+  :global {
+    .quanta-descriptions-item-content {
+      width: calc(100% - 105px);
+    }
+    .quanta-table-content {
+      overflow-x: scroll;
+      &::-webkit-scrollbar-corner,
+      &::-webkit-scrollbar:hover,
+      &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+.configText {
+  margin-left: 8px;
+  color: #b7b7b7;
+}

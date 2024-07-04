@@ -1,0 +1,244 @@
+@import '~@/variable.less';
+
+.editorWrap {
+  position: relative;
+  height: calc(100vh - 50px);
+  margin-top: -58px;
+  padding: 16px 20px;
+  overflow: auto;
+  background-color: #282f41;
+  .spin {
+    position: absolute;
+    top: 216px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: @primary-color;
+  }
+  .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+  }
+  .iconCenter {
+    display: flex;
+    align-items: center;
+  }
+  .title {
+    color: @white-color-title;
+    font-weight: @font-weight-blod;
+    font-size: @font-size-4;
+  }
+  .body {
+    display: flex;
+    margin-top: 16px;
+    .left {
+      flex: 1 0 auto;
+      width: 240px;
+      padding: 20px 0;
+      background-color: #1f273a;
+      .active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      .title {
+        padding: 0 20px;
+        font-size: @font-size-3;
+      }
+      .modelName {
+        padding: 9px 32px;
+        color: @white-color-primary;
+        font-size: @font-size-2;
+        transition: all 300ms;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.05);
+        }
+      }
+      .subTitle {
+        padding: 9px 20px;
+        color: @white-color-title;
+        font-weight: @font-weight-blod;
+        font-size: @font-size-2;
+      }
+      .subModelName {
+        padding: 9px 32px;
+        color: @white-color-primary;
+        font-size: @font-size-2;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.05);
+        }
+      }
+    }
+    .middle {
+      flex: auto;
+      width: 1040px;
+      margin: 0 12px;
+      .detail {
+        padding: 7px 20px;
+        color: @white-color-primary;
+        font-size: @font-size-2;
+        text-align: right;
+        background-color: #232733;
+      }
+    }
+    .right {
+      display: flex;
+      flex: 1 0 auto;
+      flex-direction: column;
+      width: 312px;
+      height: calc(100vh - 128px);
+      padding-right: 16px;
+      overflow: scroll;
+      .title {
+        margin-bottom: 20px;
+        font-size: @font-size-3;
+      }
+      .subTitle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 14px;
+        margin-bottom: 8px;
+        color: @white-color-title;
+        font-size: @font-size-2;
+      }
+      .button {
+        color: rgba(255, 255, 255, 0.7);
+        border-color: rgba(255, 255, 255, 0.7);
+      }
+      .ghostBtn {
+        margin-right: 8px;
+        color: rgba(255, 255, 255, 0.9);
+        border-color: rgba(255, 255, 255, 0.9);
+        &:hover {
+          color: rgba(255, 255, 255, 0.7);
+          border-color: rgba(255, 255, 255, 0.7);
+        }
+      }
+      .emptyParams {
+        padding-top: 14px;
+        color: @text-color-disabled;
+        text-align: center;
+      }
+      .output {
+        height: 227px;
+        padding: 5px 12px;
+        overflow: scroll;
+        color: @white-color-disabled;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        &::-webkit-scrollbar-corner,
+        &::-webkit-scrollbar:hover,
+        &::-webkit-scrollbar {
+          width: 4px;
+          height: 4px;
+          background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: rgba(29, 181, 244, 0.1);
+          border-radius: 2px;
+        }
+
+        pre {
+          height: auto;
+          margin-bottom: 0;
+          overflow: visible;
+        }
+      }
+      .btnGroup {
+        margin-top: auto;
+        margin-left: auto;
+        padding-top: 24px;
+      }
+    }
+  }
+  :global {
+    .quanta-btn[disabled] {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    .quanta-select-disabled {
+      background-color: rgba(255, 255, 255, 0.1);
+      .quanta-select-selector {
+        border-color: rgba(255, 255, 255, 0.1) !important;
+      }
+    }
+    .quanta-input,
+    .quanta-select:not(.quanta-select-customize-input) .quanta-select-selector {
+      color: @white-color-primary;
+      background-color: transparent;
+      //border-color: #d0d0d0;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .quanta-input:hover,
+    .quanta-select:not(.quanta-select-customize-input) .quanta-select-selector:hover {
+      border-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .quanta-input::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.3);
+    }
+    .quanta-input::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: rgba(255, 255, 255, 0.3);
+    }
+    .quanta-input::-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+.drawerTitle {
+  color: @text-color-title;
+  font-size: @font-size-3;
+}
+
+.freshTxt {
+  padding: 3px 10px;
+  cursor: pointer;
+
+  .freshIcon {
+    margin-right: 8px;
+    vertical-align: bottom;
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.modelSelect {
+  color: rgba(255, 255, 255, 0.7);
+  background: #1f273a;
+  box-shadow: 0 3px 6px -4px rgba(31, 31, 31, 0.12), 0 6px 12px rgba(31, 31, 31, 0.08),
+    0 8px 24px 8px rgba(31, 31, 31, 0.06);
+
+  :global {
+    .quanta-select-item-option {
+      color: rgba(255, 255, 255, 0.7);
+      background: #1f273a;
+      box-shadow: 0 3px 6px -4px rgba(31, 31, 31, 0.12), 0 6px 12px rgba(31, 31, 31, 0.08),
+        0 8px 24px 8px rgba(31, 31, 31, 0.06);
+    }
+    .quanta-select-item-option-active:not(.quanta-select-item-option-disabled) {
+      color: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+.textRight {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.emptyBox {
+  color: #888;
+}

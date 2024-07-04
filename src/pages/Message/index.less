@@ -1,0 +1,144 @@
+@import '~@/variable.less';
+
+.message {
+  :global {
+    .quanta-control-page-header {
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.tableFilterWrap {
+  padding: 60px;
+  background: #fff;
+
+  :global {
+    .quanta-form-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.contentWrap {
+  width: 86%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+}
+
+.wrap {
+  position: fixed;
+  top: 50px;
+  right: 92px;
+  z-index: 3000 !important;
+  width: 320px;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(31, 31, 31, 0.08), 0 9px 28px rgba(31, 31, 31, 0.05),
+    0 12px 48px rgba(31, 31, 31, 0.05);
+}
+
+.content {
+  max-height: 384px;
+  overflow-y: scroll;
+}
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.cardTitle {
+  text-align: center;
+}
+
+.cardFooter {
+  height: 36px;
+  margin-top: 13px;
+  color: #888;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.list {
+  padding: 0;
+}
+
+.emptyBody {
+  display: flex;
+  padding-top: 35px;
+  padding-left: 97px;
+}
+
+.emptyImg {
+  display: inline-block;
+  padding-right: 5px;
+  text-align: center;
+}
+
+.emptyData {
+  display: inline-block;
+  padding-top: 5px;
+  color: #b7b7b7;
+  font-size: 14px;
+}
+
+.tableContainer {
+  color: #292929;
+  font-size: 14px;
+}
+
+.titleItem {
+  .titleText {
+    cursor: pointer;
+  }
+}
+
+.detailItem {
+  :global {
+    div.ant-typography,
+    .ant-typography p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.typeItem {
+  text-align: center;
+}
+
+.typeCol {
+  width: 270px;
+  margin-right: 28px;
+}
+
+.timeCol {
+  width: 395px;
+  margin-right: 16px;
+}
+
+.iconItem {
+  margin-right: 9px;
+  vertical-align: middle;
+}
+
+.check {
+  margin-left: 12px;
+}
+
+.fontColor {
+  color: #292929;
+}
+
+:global {
+  .operate {
+    margin-right: 24px;
+  }
+  .disabled-text {
+    color: @disabled-color;
+  }
+  .ant-card-head {
+    margin-bottom: 0;
+  }
+}

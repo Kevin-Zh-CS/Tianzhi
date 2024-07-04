@@ -1,0 +1,1207 @@
+.projectInfo {
+  //background: linear-gradient(90deg, rgba(36, 84, 255, 0.1) 5.02%, rgba(0, 118, 217, 0) 72.76%);
+  background: linear-gradient(90deg, rgba(36, 84, 255, 0.1) 5.02%, rgb(255, 255, 255) 72.76%);
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+
+  .crossProjectInfoContent,
+  .verticalProjectInfoContent {
+    width: 100%;
+    height: 100%;
+    padding: 20px 32px;
+    padding-bottom: 4px;
+    background-image: url('../../../../../assets/qfl/vertical.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: auto 190px;
+  }
+
+  .verticalProjectInfoContent {
+    background-image: url('../../../../../assets/qfl/cross.png');
+  }
+
+  .desc {
+    width: 800px;
+    margin-top: 10px;
+    color: #888;
+  }
+
+  .divide {
+    margin: 16px 0;
+  }
+
+  :global {
+    .quanta-descriptions-view {
+      padding-left: 0;
+    }
+  }
+}
+
+.projectTitle {
+  display: flex;
+  justify-content: space-between;
+
+  .tag {
+    display: flex;
+    align-items: center;
+  }
+  .title {
+    margin-right: 8px;
+    color: @text-color-primary;
+    font-weight: @font-weight-blod;
+    font-size: @font-size-4;
+    line-height: @font-line-height-4;
+  }
+}
+
+.canvasContainer {
+  position: relative;
+  display: flex;
+  min-height: 650px;
+  margin-top: 12px;
+
+  :global {
+    .iconfont {
+      font-size: 20px;
+    }
+  }
+
+  .orgContainer {
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    width: 290px;
+    min-height: 610px;
+
+    .body {
+      box-sizing: border-box;
+      width: 270px;
+      padding: 20px 16px;
+      background: #f9f9f9;
+
+      .addBtn {
+        display: block;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 20px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        width: 240px;
+        //margin-bottom: 40px;
+
+        &Item {
+          margin-bottom: 20px;
+          padding: 12px 12px 20px 12px;
+          background: #fff;
+          border: 1px solid #d0d0d0;
+        }
+
+        .org {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          margin-bottom: 12px;
+          padding-bottom: 8px;
+          border-bottom: 1px solid #d0d0d0;
+          .orgCard {
+            position: relative;
+            width: 160px;
+            min-height: 20px;
+            margin-left: 8px;
+
+            .title,
+            .activeTitle,
+            .deleteTitle {
+              display: block;
+              width: 150px;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+
+            .orgDelete,
+            .orgDeleteActive,
+            .disabledOrgDelete {
+              position: absolute;
+              top: 0;
+              right: -20px;
+              z-index: 10;
+              width: 32px;
+              height: 32px;
+              line-height: 32px;
+              text-align: center;
+              background: #fff;
+              border: 1px solid #d0d0d0;
+              border-radius: 50%;
+              box-shadow: 0 3px 6px rgba(31, 31, 31, 0.12), 0 6px 12px rgba(31, 31, 31, 0.08),
+                0 8px 24px rgba(31, 31, 31, 0.06);
+
+              :global {
+                .iconshanchu {
+                  color: #888;
+                }
+              }
+            }
+
+            .orgDeleteActive {
+              background: #fcebec;
+              border-color: @highlight-color;
+
+              :global {
+                .iconshanchu {
+                  color: #e53b43;
+                }
+              }
+            }
+
+            .disabledOrgDelete {
+              background: #f6f6f6;
+              border-color: #e7e7e7;
+
+              :global {
+                .iconshanchu {
+                  color: #b7b7b7;
+                }
+              }
+            }
+          }
+
+          .title,
+          .activeTitle,
+          .deleteTitle {
+            color: @text-color-secondary;
+            font-weight: @font-weight-blod;
+            font-size: @font-size-3;
+          }
+          .activeTitle {
+            color: @primary-color;
+          }
+          .deleteTitle {
+            color: @highlight-color;
+          }
+          .subTitle {
+            display: block;
+            width: 200px;
+            color: @text-color-tertiary;
+          }
+        }
+        .buttonWrap {
+          display: flex;
+          .button {
+            width: 270px;
+            margin: 12px 0;
+            text-align: center;
+            &:nth-child(1) {
+              margin-right: 20px;
+            }
+          }
+        }
+        .subBox {
+          position: relative;
+          display: flex;
+          width: 214px;
+          height: 48px;
+          margin-bottom: 12px;
+          line-height: 48px;
+          background-color: #fff;
+          border-radius: 2px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+
+          .subBoxTag {
+            display: flex;
+            justify-content: space-between;
+
+            .subBoxTxt {
+              width: 114px;
+              padding-right: 5px;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+          }
+
+          &::after {
+            display: block;
+            width: 4px;
+            margin-left: auto;
+            background: rgba(0, 118, 217, 0.4);
+            content: '';
+          }
+
+          :global {
+            .quanta-icon {
+              margin: 14px 8px 0 12px;
+            }
+
+            .iconbendishuju {
+              margin: 0 8px 0 12px;
+            }
+          }
+
+          .stepOneDelete,
+          .stepOneDeleteActive {
+            position: absolute;
+            top: 7px;
+            left: -16px;
+            z-index: 10;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            background: #fff;
+            border: 1px solid #d0d0d0;
+            border-radius: 50%;
+            box-shadow: 0 3px 6px rgba(31, 31, 31, 0.12), 0 6px 12px rgba(31, 31, 31, 0.08),
+              0 8px 24px rgba(31, 31, 31, 0.06);
+
+            :global {
+              .iconshanchu {
+                color: #888;
+              }
+            }
+          }
+
+          .stepOneDeleteActive {
+            background: #fcebec;
+            border-color: @highlight-color;
+
+            :global {
+              .iconshanchu {
+                color: #e53b43;
+              }
+            }
+          }
+        }
+
+        .active {
+          background-color: #e5f1fb;
+          box-shadow: 0 3px 6px rgba(31, 31, 31, 0.12), 0 6px 12px rgba(31, 31, 31, 0.08),
+            0 8px 24px rgba(31, 31, 31, 0.06);
+
+          &::after {
+            background: #0076d9;
+          }
+        }
+
+        .activeDelete {
+          background-color: #fcebec;
+          box-shadow: 0 3px 6px rgba(31, 31, 31, 0.12), 0 6px 12px rgba(31, 31, 31, 0.08),
+            0 8px 24px rgba(31, 31, 31, 0.06);
+
+          &::after {
+            background: @highlight-color;
+          }
+        }
+
+        .addBtnBox {
+          width: 218px;
+          text-align: center;
+        }
+      }
+
+      .lineWrap {
+        position: absolute;
+        top: 0;
+        right: 2px;
+        z-index: 101;
+      }
+    }
+
+    .inputWrap {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      margin-top: -6px;
+    }
+
+    .add {
+      position: absolute;
+      right: -5px;
+      z-index: 105;
+      width: 32px;
+      height: 32px;
+      color: #fff;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      background: #0076d9;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .addLine {
+      position: absolute;
+      right: 0;
+      z-index: 104;
+    }
+  }
+
+  .canvas {
+    position: absolute;
+    left: 290px;
+  }
+
+  .stepItemContent {
+    position: relative;
+  }
+  .stepFourItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .stepItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .stepThreeItemContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .stepItem {
+      justify-content: start;
+    }
+  }
+
+  //.innerStepItem {
+  //  margin-bottom: 8px;
+  //}
+
+  .stepThreeItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stepItem .innerStepItem:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.dataItem {
+  position: absolute;
+  left: 290px;
+  //z-index: 90;
+  display: flex;
+  width: 290px;
+  min-height: 610px;
+
+  .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 270px;
+    padding: 20px 16px;
+    background: #f9f9f9;
+
+    .emptyContainer {
+      color: #b7b7b7;
+      text-align: center;
+      img {
+        width: 96px;
+        height: 96px;
+      }
+    }
+  }
+
+  .bodyItem {
+    box-sizing: border-box;
+    width: 270px;
+    padding: 20px 16px;
+    background: #f9f9f9;
+
+    .preLineWrap {
+      position: absolute;
+      top: 0;
+      left: -10px;
+    }
+
+    .threeLineWrap {
+      position: absolute;
+      top: 0;
+      right: -60px;
+      z-index: 101;
+    }
+
+    .threeFourLineWrap {
+      position: absolute;
+      top: 0;
+      right: -346px;
+      z-index: 101;
+    }
+  }
+}
+
+.drawer {
+  .close {
+    text-align: right;
+  }
+  .title {
+    display: flex;
+    justify-content: space-between;
+    color: @text-color-title;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .subTitle {
+    padding: 20px 0;
+    color: @text-color-tertiary;
+  }
+}
+
+.drawerFooter {
+  text-align: right;
+
+  .confirm {
+    margin-left: 12px;
+  }
+
+  button,
+  button:hover {
+    border: 0;
+  }
+}
+
+.dataCanvasItem {
+  position: relative;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  width: 237px;
+  height: 66px;
+  //margin-bottom: 40px;
+  background: #e5f1fb;
+  box-shadow: 0 3px 6px rgba(31, 31, 31, 0.12), 0 6px 12px rgba(31, 31, 31, 0.08),
+    0 8px 24px rgba(31, 31, 31, 0.06);
+
+  .itemIcon {
+    position: absolute;
+    top: 17px;
+    left: -16px;
+    width: 32px;
+    height: 32px;
+    line-height: 28px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(31, 31, 31, 0.12), 0 6px 12px rgba(31, 31, 31, 0.08),
+      0 8px 24px rgba(31, 31, 31, 0.06);
+
+    &:hover {
+      background: #fafafa;
+    }
+    &:focus,
+    &:active {
+      background: #e7e7e7;
+      //box-shadow: 0 3px 6px rgba(31, 31, 31, 0.12), 0 6px 12px rgba(31, 31, 31, 0.08),
+      //0 8px 24px rgba(31, 31, 31, 0.06);
+    }
+
+    :global {
+      .quanta-icon {
+        vertical-align: middle;
+      }
+      .iconfont {
+        color: #888;
+      }
+    }
+  }
+  .refreshIcon {
+    top: -2px;
+  }
+  .closeIcon {
+    top: 36px;
+
+    :global {
+      .iconfont {
+        color: #e53b43;
+      }
+    }
+  }
+
+  .line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border: 1px solid #000;
+  }
+
+  .icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 12px;
+  }
+
+  .textContent {
+    flex: 1;
+    width: 153px;
+    padding-right: 12px;
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    color: #595959;
+    font-weight: 600;
+    .t {
+      width: 141px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .warn {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 12px;
+      color: #fff;
+      background: #0076d9;
+      border-radius: 50%;
+      transform: scale(0.75);
+    }
+
+    .success {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .subTitle {
+    overflow: hidden;
+    color: rgba(89, 89, 89, 0.7);
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    :global {
+      .ant-progress-show-info .ant-progress-outer {
+        margin-right: -38px;
+        padding-right: 38px;
+      }
+    }
+  }
+
+  &::before {
+    display: block;
+    width: 4px;
+    height: 100%;
+    //margin-left: auto;
+    background: #0076d9;
+    content: '';
+  }
+
+  .addBtn {
+    position: absolute;
+    top: 17px;
+    right: -16px;
+    z-index: 105;
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    background: #0076d9;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+.activeDelete {
+  background-color: #fcebec;
+  box-shadow: 0 3px 6px rgba(31, 31, 31, 0.12), 0 6px 12px rgba(31, 31, 31, 0.08),
+    0 8px 24px rgba(31, 31, 31, 0.06);
+
+  &::before {
+    background: @highlight-color;
+  }
+
+  .closed,
+  .closeIcon,
+  .failIcon {
+    background: #fcebec;
+    border-color: @highlight-color;
+  }
+
+  &:hover {
+    .closeIcon,
+    .failIcon {
+      background: #fcebec;
+      border-color: @highlight-color;
+    }
+  }
+}
+
+.activeItem {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+
+  &::before {
+    display: block;
+    width: 4px;
+    height: 100%;
+    //margin-left: auto;
+    background: rgba(0, 118, 217, 0.4);
+    content: '';
+  }
+}
+.pathActive {
+  box-shadow: 0 0 4px #0076d9;
+}
+
+.descriptions {
+  :global {
+    .quanta-descriptions-item-container .quanta-descriptions-item-label {
+      display: inline-block;
+      width: 105px;
+    }
+  }
+}
+
+.drawerResolve {
+  background: url('../../../../../assets/qfl/data-detail-resolve-bg.png') no-repeat top right;
+  background-size: 148px;
+}
+
+.outputDescription {
+  .totalNum {
+    margin-bottom: 8px;
+    color: #888;
+  }
+
+  .stepTwoTabs,
+  .stepOneTabs {
+    margin-bottom: 4px;
+    :global {
+      .quanta-tabs-top > .quanta-tabs-nav {
+        margin-bottom: 10px;
+      }
+      .quanta-tabs-nav .quanta-tabs-tab-active::after {
+        height: 0;
+      }
+      .quanta-tabs-card > .quanta-tabs-nav .quanta-tabs-tab,
+      .quanta-tabs-card > div > .quanta-tabs-nav .quanta-tabs-tab,
+      .quanta-tabs-top > .quanta-tabs-nav::before {
+        border: 0;
+      }
+
+      .quanta-tabs-card > .quanta-tabs-nav .quanta-tabs-tab {
+        height: 30px;
+        background: #f6f6f6;
+        border-bottom: 1px solid #e7e7e7;
+      }
+
+      .quanta-tabs-card.quanta-tabs-top > .quanta-tabs-nav .quanta-tabs-tab-active {
+        border-color: #fff;
+      }
+    }
+  }
+
+  .stepOneTabs {
+    padding: 0 12px;
+  }
+
+  .stepTwoTabs {
+    :global {
+      .quanta-tabs-card > .quanta-tabs-nav {
+        margin-bottom: 10px;
+      }
+    }
+
+    .multiDescription {
+      :global {
+        .quanta-descriptions-view {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  :global {
+    .quanta-tabs-nav .quanta-tabs-tab {
+      height: 52px;
+      line-height: 52px;
+    }
+    .quanta-tabs-nav .quanta-tabs-tab-active::after {
+      left: 38%;
+    }
+    .quanta-descriptions-item-content {
+      width: calc(100% - 96px);
+      padding-right: 12px;
+    }
+    .quanta-spin-container {
+      width: 100%;
+      overflow: scroll;
+    }
+
+    .react-codemirror2 {
+      min-height: 500px;
+    }
+  }
+}
+
+:global {
+  .canvasContainer {
+    height: 470px;
+    padding: 20px;
+    padding-bottom: 0;
+    border: 1px solid @text-color-border;
+  }
+
+  .canvasContainerChart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-top: 0;
+    border: 1px solid @text-color-border;
+  }
+  .color-progress,
+  .color-progress2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 368px;
+    //height: 10vh
+    .rc-slider-rail {
+      height: 6px;
+    }
+    .rc-slider {
+      margin: 0.7vh 0 1vh;
+    }
+    .rc-slider-rail,
+    .rc-slider-track {
+      height: 6px;
+    }
+    .rc-slider-handle-3 {
+      display: none;
+    }
+    .rc-slider-handle {
+      top: 6px;
+      box-sizing: border-box;
+      width: 12px;
+      height: 12px;
+      border: 2px solid #0076d9;
+    }
+
+    .rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging {
+      border-color: #0076d9;
+      box-shadow: none;
+    }
+
+    .color-slider-contain {
+      display: flex;
+      width: 100%;
+      height: 22px;
+      //margin-bottom: 8px;
+      color: @text-color-tertiary;
+
+      .color-slider-label {
+        //display: flex;
+        //align-items: center;
+        text-align: center;
+      }
+    }
+
+    .colorContent {
+      display: flex;
+      justify-content: end;
+      width: 100%;
+    }
+
+    .colorItem {
+      margin-left: 20px;
+    }
+    .colorTxt {
+      margin-left: 8px;
+      color: @text-color-tertiary;
+    }
+
+    .colorBox {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+    }
+
+    .color1 {
+      background: #0076d9;
+    }
+    .color2 {
+      background: #08cb94;
+    }
+    .color3 {
+      background: #ffad32;
+    }
+  }
+
+  .color-progress2 .rc-slider-handle-2 {
+    display: none;
+  }
+
+  .detail-progress {
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    &-range {
+      width: 368px;
+    }
+    .colorContent {
+      align-items: start;
+      justify-content: start;
+      width: 368px;
+    }
+  }
+  .drawerStep {
+    .horizontal-slider {
+      width: 100%;
+      height: 6px;
+      background: #0076d9;
+    }
+    .quanta-form-item-extra {
+      color: @text-color-tertiary;
+    }
+    .close {
+      text-align: right;
+    }
+    .title {
+      display: flex;
+      justify-content: space-between;
+      color: @text-color-title;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .subTitle {
+      padding: 20px 0;
+      color: @text-color-tertiary;
+    }
+    .drawerFooter {
+      text-align: right;
+
+      .confirm {
+        margin-left: 12px;
+      }
+
+      button,
+      button:hover {
+        border: 0;
+      }
+    }
+    .drawerStepTwo {
+      background: url('../../../../../assets/qfl/special-data-bg.png') no-repeat top right;
+      background-size: 148px;
+    }
+
+    .drawerStepThree {
+      background: url('../../../../../assets/qfl/data-safe-bg.png') no-repeat top right;
+      background-size: 148px;
+    }
+    .subModalTitle {
+      padding-bottom: 20px;
+      color: @text-color-tertiary;
+    }
+    .quanta-modal-body {
+      padding-top: 20px;
+    }
+
+    .descriptionsItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding: 8px 12px;
+      background: #fafafa;
+
+      .item {
+        display: flex;
+        align-items: center;
+        width: 50%;
+
+        .label {
+          width: 100px;
+          color: @text-color-tertiary;
+        }
+
+        .value {
+          margin-left: 20px;
+          color: @text-color-primary;
+        }
+      }
+    }
+  }
+}
+.basicMsg {
+  margin-top: 20px;
+  background-size: 148px;
+}
+
+.column {
+  min-width: 80px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tableContent {
+  width: 714px;
+
+  :global {
+    .quanta-descriptions-item-content {
+      width: 714px;
+    }
+    .quanta-spin-container {
+      width: 100%;
+      overflow: scroll;
+    }
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+}
+
+.formListHeader {
+  display: flex;
+  height: 48px;
+  font-weight: 600;
+  line-height: 48px;
+  background: #fafafa;
+
+  &Item {
+    width: 50%;
+    padding: 0 12px;
+  }
+}
+
+.formList {
+  :global {
+    .ant-space-item {
+      width: 50%;
+      padding: 0 12px;
+    }
+  }
+}
+
+.formList2,
+.formList {
+  :global {
+    .ant-space {
+      width: 100%;
+    }
+  }
+}
+
+.spaceContainer {
+  margin-top: 8px;
+  padding: 0 14px;
+  border-bottom: 1px solid #e7e7e7;
+
+  :global {
+    .quanta-form-item {
+      margin-bottom: 8px;
+    }
+    .ant-space-item {
+      padding: 0;
+    }
+
+    .label-name {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.plusItem {
+  width: 36px;
+  margin-top: 3px;
+  text-align: center;
+
+  :global {
+    .quanta-icon {
+      vertical-align: -3px;
+    }
+  }
+}
+
+.formList2 {
+  .spaceContainer {
+    padding: 0;
+    .plusItem {
+      width: 32px;
+    }
+  }
+}
+
+.formList3 {
+  .spaceContainer {
+    margin-top: 20px;
+    padding: 0;
+    border: 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  :global {
+    .ant-space {
+      display: block;
+    }
+  }
+}
+
+.tagBox {
+  display: inline-block;
+  height: 20px;
+  margin-left: 4px;
+  padding: 0 8px;
+  color: #fff;
+  line-height: 20px;
+}
+
+.errorTag {
+  background: #e53b43;
+}
+
+.warningTag {
+  background: #ffad32;
+}
+
+.infoTag {
+  background: #08cb94;
+}
+
+.debugTag {
+  background: #0076d9;
+}
+
+.configText {
+  margin-left: 8px;
+  color: #b7b7b7;
+}
+
+.itemTitle {
+  display: flex;
+  align-items: center;
+  width: 487px;
+  height: 32px;
+  margin-bottom: 12px;
+  color: #121212;
+  font-weight: 600;
+  line-height: 32px;
+  background: #f2f8fd;
+
+  &Content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 8px;
+  }
+
+  &::before {
+    display: block;
+    width: 4px;
+    height: 100%;
+    background: #0076d9;
+    content: '';
+  }
+}
+
+.stepTwoBin {
+  &Title {
+    margin-bottom: 12px;
+    padding-left: 12px;
+    color: #121212;
+    font-weight: 600;
+  }
+}
+
+.emptyButton {
+  width: 100%;
+  height: 24px;
+}
+
+.breakWord {
+  word-break: break-all;
+}
+
+.dividerLine {
+  margin: 20px 12px;
+  border-top: 1px dashed #e7e7e7;
+}
+
+.detailDescriptions {
+  :global {
+    .color-progress,
+    .color-progress2 {
+      flex-direction: row;
+      .colorContent {
+        justify-content: start;
+      }
+    }
+  }
+}
+
+.jobImg img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.configContent {
+  .formItem {
+    display: flex;
+
+    .extra {
+      padding-top: 4px;
+      color: @text-color-primary;
+    }
+
+    :global {
+      .quanta-form-item-control {
+        .quanta-form-item-control-input {
+          width: 140px;
+          margin-right: 14px;
+        }
+      }
+    }
+  }
+}
+
+.statisticsItem {
+  margin-top: 12px;
+  padding-top: 12px;
+  background: #f2f8fd;
+  border: 1px solid #0076d9;
+  :global {
+    .quanta-descriptions-item-content {
+      color: #0076d9;
+      font-weight: 600;
+    }
+  }
+}

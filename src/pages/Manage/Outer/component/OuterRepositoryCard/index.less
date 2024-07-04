@@ -1,0 +1,160 @@
+@import '~@/variable.less';
+
+.actionOpt {
+  display: inline-block;
+  padding: 5px 20px;
+  color: @text-color-tertiary;
+  svg {
+    margin-right: 8px;
+    margin-bottom: 2px;
+    vertical-align: text-bottom;
+  }
+
+  &:hover {
+    color: #595959;
+    background: #f6f6f6;
+
+    svg {
+      color: #292929;
+    }
+  }
+
+  &:active,
+  &:focus {
+    color: #595959;
+    background: #e7e7e7;
+
+    svg {
+      color: #292929;
+    }
+  }
+}
+
+.create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 291px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 291px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 8px 24px 8px rgba(31, 31, 31, 0.06), 0 6px 12px 0 rgba(31, 31, 31, 0.08),
+      0 3px 6px -4px rgba(31, 31, 31, 0.12);
+  }
+
+  :global {
+    .disabled-style {
+      cursor: not-allowed;
+      &:hover {
+        color: #b7b7b7;
+
+        :global {
+          .quanta-icon {
+            cursor: not-allowed;
+            svg {
+              color: #b7b7b7;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .titleFirst {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .titlePrimary {
+      width: 180px;
+      height: 24px;
+      overflow: hidden;
+      color: @text-color;
+      font-size: 16px;
+      line-height: 24px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .titleIcon {
+      flex: 1 0 56px;
+      width: 56px;
+      height: 20px;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+  .titleSecond {
+    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+    height: 40px;
+    margin-top: 9px;
+    margin-bottom: 29px;
+    overflow: hidden; /** 隐藏超出的内容 **/
+    color: @text-color-tertiary;
+    font-size: 12px;
+    line-height: 20px;
+    // word-break: break-all;
+    text-overflow: ellipsis;
+
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 2; /** 显示的行数 **/
+  }
+
+  .contentWrap {
+    display: flex;
+    flex-direction: column;
+    .statistics {
+      display: flex;
+      justify-content: space-between;
+      color: #292929;
+      font-size: 12px;
+      line-height: 20px;
+    }
+    .rate {
+      display: flex;
+      margin-top: 4px;
+      margin-bottom: 13px;
+      .block {
+        display: inline-block;
+        height: 8px;
+      }
+      .blank {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+    .badges {
+      .tip {
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        margin-right: 2px;
+        line-height: 20px;
+        vertical-align: middle;
+      }
+
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      color: #888;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}

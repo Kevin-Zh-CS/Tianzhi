@@ -1,0 +1,37 @@
+@import '~@/variable.less';
+
+.appInfo {
+  padding: 8px 12px;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0 40px 0;
+    color: @text-color-title;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: 1px dashed @text-color-divider;
+  }
+  .subTitle {
+    margin: 20px 0 16px 0;
+    color: @text-color-title;
+    font-weight: 600;
+  }
+  .body {
+    color: @text-color-primary;
+    border-bottom: 1px dashed @text-color-divider;
+    img {
+      width: 400px;
+      height: 210px;
+    }
+    img+img {
+      margin-left: 20px;
+    }
+  }
+  .explain {
+    .desc {
+      color: @text-color-tertiary;
+    }
+  }
+}

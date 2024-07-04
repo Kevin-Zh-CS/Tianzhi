@@ -1,0 +1,50 @@
+@import '~@/variable.less';
+
+.stepOne {
+  .item {
+    display: flex;
+    margin-top: 24px;
+    margin-left: 48px;
+    color: @text-color-primary;
+  }
+  .tips {
+    margin-bottom: 24px;
+    margin-left: 132px;
+    color: @text-color-tertiary;
+  }
+  .uploadBox {
+    position: absolute;
+    top: 160px;
+    left: 156px;
+    width: 300px;
+  }
+}
+.stepTwo {
+  .loading {
+    margin: 0 44px;
+    text-align: center;
+    .text {
+      display: flex;
+      align-items: center;
+      color: @primary-color;
+      svg {
+        margin-right: 8px;
+        fill: @primary-color;
+      }
+      .label {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+.stepThr {
+  .desc {
+    margin-left: 20px;
+    color: @text-color-primary;
+  }
+  .error {
+    color: @error-color;
+  }
+}

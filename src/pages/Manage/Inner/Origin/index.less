@@ -1,0 +1,78 @@
+@import '~@/variable.less';
+
+.tableFilterWrap {
+  padding: 16px 20px 0 30px;
+  background: #fff;
+
+  :global {
+    .quanta-form-item {
+      margin-bottom: 16px;
+    }
+  }
+}
+.contentWrap {
+  margin: 0 20px;
+  // margin-top: 12px;
+  padding: 20px;
+  padding-bottom: 40px;
+  background: #fff;
+
+  :global {
+    .operate {
+      margin-right: 24px;
+    }
+  }
+}
+
+.emptyData {
+  color: #888;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.btnContainer {
+  display: flex;
+  margin-left: auto;
+  padding-right: -3px;
+  padding-bottom: 20px;
+  text-align: right;
+}
+
+.contextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 248px;
+  padding: 8px;
+}
+
+.contextItem {
+  display: flex;
+  align-items: center;
+  color: #121212;
+  font-size: 24px;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  i {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  :global {
+    .iconPostgreSQL {
+      color: rgb(66, 102, 141);
+    }
+    .iconOracle1 {
+      color: rgb(201, 36, 39);
+    }
+    .iconMongoDB {
+      color: rgb(68, 156, 52);
+    }
+    .iconMySQL {
+      color: rgb(2, 104, 152);
+    }
+  }
+}

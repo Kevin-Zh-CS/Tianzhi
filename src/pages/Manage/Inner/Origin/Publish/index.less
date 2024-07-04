@@ -1,0 +1,211 @@
+@import '~@/variable.less';
+
+.stepWrap {
+  padding: 20px;
+  padding-bottom: 40px;
+  background: #fff;
+  // position: relative;
+}
+.companyWrap {
+  display: flex;
+  margin-top: 10px;
+
+  .company {
+    margin-right: 4px;
+    padding: 2px 8px;
+    color: #595959;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    background: #f6f6f6;
+    border: 1px solid #d0d0d0;
+  }
+}
+
+.table {
+  padding: 15px;
+}
+
+.contentWrap {
+  padding: 20px;
+  padding-bottom: 40px;
+  background: #fff;
+
+  .funcItemWrap {
+    width: 816px;
+
+    .funcName {
+      display: flex;
+      align-items: center;
+      width: 816px;
+      height: 44px;
+      padding-left: 23px;
+      background: #f6f6f6;
+      cursor: pointer;
+
+      &.open {
+        :global {
+          .quanta-icon {
+            transform: rotate(45deg);
+          }
+        }
+      }
+
+      :global {
+        .quanta-icon {
+          transition: all 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+        }
+      }
+    }
+  }
+
+  .paramTable {
+    .tableThead {
+      height: 48px;
+      color: #121212;
+      background: #fafafa;
+      border-bottom: 1px solid #e7e7e7;
+    }
+    .tableTr {
+      padding: 13px 0;
+      color: #121212;
+      border-bottom: 1px solid #e7e7e7;
+    }
+    :global {
+      .quanta-col {
+        padding-right: 8px;
+      }
+    }
+  }
+}
+
+.floatModal {
+  position: fixed;
+  top: 108px;
+  right: 20px;
+  z-index: 998;
+  width: 40vw;
+  height: calc(100vh - 168px);
+  overflow-y: scroll;
+  background: #fff;
+  border-top: 4px solid @primary-color;
+  box-shadow: 0 6px 16px rgba(31, 31, 31, 0.08), 0 9px 28px rgba(31, 31, 31, 0.05),
+    0 12px 48px rgba(31, 31, 31, 0.05);
+  opacity: 1;
+  transition: transform 0.3s cubic-bezier(0.7, 0.3, 0.1, 1),
+    box-shadow 0.3s cubic-bezier(0.7, 0.3, 0.1, 1), opacity 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+  // -webkit-transform .3s cubic-bezier(.7,.3,.1,1),
+  // -webkit-box-shadow .3s cubic-bezier(.7,.3,.1,1);
+  // -webkit-opacity .3s cubic-bezier(.7,.3,.1,1);
+
+  &.hidden {
+    transform: translate(calc(40vw - 20px), calc(168px - 100vh));
+    opacity: 0;
+  }
+
+  .btn {
+    position: absolute;
+    top: 24px;
+    right: 14px;
+    display: flex;
+    align-items: center;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    .horizontal {
+      width: 14px;
+      height: 2px;
+      background-color: #888;
+    }
+  }
+
+  .title {
+    padding: 28px 0 0 32px;
+    color: #121212;
+    font-size: 18px;
+  }
+
+  .nameWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    padding: 0 32px;
+  }
+
+  .codeWrap {
+    height: calc(100% - 140px);
+    margin-top: 12px;
+    padding: 0 32px;
+  }
+}
+
+.priceContainer {
+  display: flex;
+  width: 620px;
+  height: 48px;
+  margin-bottom: 8px;
+  padding: 0 14px;
+  color: #121212;
+  line-height: 48px;
+  background: #fafafa;
+
+  .plusItem {
+    width: 30px;
+  }
+  .priceItem {
+    width: 280px;
+  }
+}
+
+.input {
+  //width: 176px;
+  width: 100%;
+  margin-right: 8px;
+}
+
+.boldTxt {
+  font-weight: 600;
+}
+
+.stepOnePage {
+  :global {
+    .quanta-descriptions-item-label {
+      width: 105px;
+      color: rgba(0, 0, 0, 0.85);
+    }
+  }
+
+  .spaceContainer {
+    display: flex;
+    width: 620px;
+    margin-top: 8px;
+    padding: 0 14px;
+    border-bottom: 1px solid #e7e7e7;
+
+    :global {
+      .quanta-form-item {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+.approveRadioCard {
+  display: flex;
+  .disabledCard {
+    :global {
+      .antd-pro-pages-federate-components-radio-card-index-RadioCard {
+        background: #f6f6f6;
+
+        .antd-pro-pages-federate-components-radio-card-index-title {
+          color: #888;
+        }
+      }
+    }
+  }
+  :global {
+    .antd-pro-pages-federate-components-radio-card-index-RadioCard {
+      width: 180px;
+    }
+  }
+}

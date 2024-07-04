@@ -1,0 +1,39 @@
+@import '~@/variable.less';
+
+.unpublishedPage {
+  :global {
+    .quanta-page-header-heading-extra > * {
+      margin-left: 8px;
+    }
+  }
+}
+
+.contentWrap {
+  // height: calc(100vh - 168px);
+  padding: 20px;
+  padding-bottom: 40px;
+  background: #fff;
+}
+
+.fileContent {
+  :global {
+    .quanta-descriptions-item-container .quanta-descriptions-item-content {
+      overflow: scroll;
+      background: #f6f6f6;
+      &::-webkit-scrollbar-corner,
+      &::-webkit-scrollbar:hover,
+      &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 2px;
+      }
+      pre {
+        overflow: visible;
+      }
+    }
+  }
+}

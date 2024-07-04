@@ -1,0 +1,93 @@
+.contentWrap {
+  min-height: calc(100vh - 246px);
+  margin: 0 20px;
+  margin-top: 12px;
+  background: #fff;
+
+  .tabPaneWrap {
+    padding: 0 20px;
+    .baseInfoWrap {
+      border-bottom: 1px dashed #e7e7e7;
+    }
+    .overviewWrap {
+      padding-top: 20px;
+      .modulesWrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -20px;
+      }
+    }
+    .btnWrap {
+      overflow: hidden;
+      .btnSearch {
+        float: right;
+      }
+    }
+  }
+
+  :global {
+    .quanta-tabs-tab {
+      padding: 15px 20px 14px;
+    }
+    .quanta-tabs-top > .quanta-tabs-nav,
+    .quanta-tabs-bottom > .quanta-tabs-nav,
+    .quanta-tabs-top > div > .quanta-tabs-nav,
+    .quanta-tabs-bottom > div > .quanta-tabs-nav {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.itemWrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  > div {
+    // display: flex;
+    // &:nth-child(1) {
+    //   flex: 1;
+    // }
+    // &:nth-child(2) {
+    //   flex: 2;
+    // }
+
+    span {
+      display: inline-block;
+      &:nth-child(1) {
+        width: 90px;
+        color: #888;
+      }
+      &:nth-child(2) {
+        color: #292929;
+      }
+    }
+  }
+  :global {
+    .icontongyongxing_gengduo_shuipingx {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      color: #888;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: center;
+      border: 1px solid #d0d0d0;
+
+      &:hover {
+        color: #292929;
+        background: #fafafa;
+      }
+    }
+  }
+}
+
+.resourceInfoDropdown {
+  height: 40px;
+  :global {
+    .quanta-btn {
+      width: 100% !important;
+      padding: 0 !important;
+      border: none;
+    }
+  }
+}

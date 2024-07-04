@@ -1,0 +1,143 @@
+.repositoryWrap {
+  // width: 100%
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -12px;
+
+  :global {
+    .quanta-card-body {
+      padding-bottom: 0;
+    }
+
+    .quanta-card-actions > li {
+      margin: 9px 0;
+    }
+  }
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 291px;
+  height: 200px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+  img {
+    margin-bottom: 22px;
+  }
+}
+
+.detailPage {
+  .parameters {
+    display: flex;
+  }
+
+  :global {
+    .quanta-form-item-label > label {
+      color: #888;
+    }
+  }
+}
+
+.docPage {
+  .parameters {
+    margin-top: 20px;
+  }
+}
+
+.parameters {
+  .boldTxt,
+  .text {
+    width: 76px;
+    //margin-bottom: 6px;
+    margin-left: 12px;
+    padding-top: 10px;
+    color: #888;
+  }
+  .text {
+    padding-top: 0;
+  }
+  .codeBox {
+    width: 760px;
+  }
+  .paramTable {
+    width: 760px;
+    margin-top: 6px;
+
+    .tableThead {
+      height: 48px;
+      color: #121212;
+      font-weight: 600;
+      background: #fafafa;
+      border-bottom: 1px solid #e7e7e7;
+    }
+    .tableTr {
+      height: 48px;
+      color: #121212;
+      border-bottom: 1px solid #e7e7e7;
+    }
+
+    :global {
+      .quanta-form-item {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .input {
+    width: 168px;
+  }
+
+  .outputItem {
+    width: 183px;
+  }
+}
+
+.priceContainer {
+  display: flex;
+  width: 760px;
+  height: 48px;
+  margin-bottom: 8px;
+  padding: 0 14px;
+  color: #121212;
+  line-height: 48px;
+  background: #fafafa;
+
+  .plusItem {
+    width: 30px;
+    margin-right: 8px;
+  }
+  .priceItem {
+    width: 285px;
+  }
+}
+
+.btnContainer {
+  margin-top: 25px;
+  padding-left: 88px;
+
+  .cancelBtn {
+    margin-left: 12px;
+  }
+}
+.spaceContainer {
+  display: flex;
+  width: 760px;
+  margin-top: 8px;
+  padding: 0 14px;
+  border-bottom: 1px solid #e7e7e7;
+
+  :global {
+    .quanta-form-item {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.emptyBox {
+  padding-top: 55px;
+  padding-bottom: 40px;
+}

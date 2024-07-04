@@ -1,0 +1,96 @@
+@import '~@/variable.less';
+
+.unpublishedPage {
+  :global {
+    .quanta-page-header-heading-extra > * {
+      margin-left: 8px;
+    }
+  }
+}
+
+.contentWrap {
+  height: calc(100vh - 168px);
+  padding: 20px;
+  padding-bottom: 40px;
+  overflow-y: scroll;
+  background: #fff;
+
+  .ant-collapse-icon-position-left {
+    background-color: #fff;
+  }
+
+  .infoContent {
+    width: 846px;
+  }
+
+  .codeEditorWrap {
+    width: 50vw;
+    height: calc(100% - 230px);
+    margin-top: 8px;
+    margin-left: 98px;
+  }
+}
+
+.parameters {
+  .intro {
+    margin-bottom: 8px;
+    color: #888;
+  }
+  .desc {
+    margin-bottom: 2px;
+    color: #888;
+  }
+  .sub_intro {
+    margin-bottom: 6px;
+    color: #292929;
+  }
+  .paramTable {
+    margin-bottom: 12px;
+    .tableThead {
+      height: 48px;
+      color: #121212;
+      font-weight: 600;
+      background: #fafafa;
+      border-bottom: 1px solid #e7e7e7;
+    }
+    .tableTr {
+      padding: 13px 0;
+      color: #121212;
+      border-bottom: 1px solid #e7e7e7;
+    }
+    :global {
+      .quanta-col {
+        padding-right: 8px;
+      }
+    }
+  }
+}
+.luaPanel {
+  margin-bottom: 20px;
+}
+.editButton {
+  margin-bottom: 14px;
+}
+.topicWrap {
+  display: flex;
+
+  .topic {
+    margin-right: 10px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+.companyWrap {
+  display: flex;
+
+  .company {
+    margin-right: 4px;
+    padding: 2px 8px;
+    color: #595959;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    background: #f6f6f6;
+    border: 1px solid #d0d0d0;
+  }
+}

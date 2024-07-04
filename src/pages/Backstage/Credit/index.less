@@ -1,0 +1,285 @@
+@import '~@/variable.less';
+
+.infoHeader {
+  background: linear-gradient(
+      249.49deg,
+      rgba(255, 186, 60, 0.2) 6.33%,
+      rgba(255, 186, 60, 0) 68.35%
+    ),
+    #fff;
+
+  &Bg {
+    padding: 20px;
+    background: url('../../../assets/blacklist/bx_bg.png') no-repeat right top;
+    background-size: 255px auto;
+  }
+}
+.infoHeaderContext {
+  padding: 0 12px;
+  .context {
+    display: flex;
+    flex: auto;
+    align-items: center;
+    .number {
+      display: block;
+      margin-top: 8px;
+      color: @warning-color-default;
+      font-weight: @font-weight-bolder;
+      font-size: @font-size-7;
+    }
+    .label {
+      :global {
+        .quanta-icon {
+          vertical-align: -6px;
+        }
+      }
+    }
+
+    .numberContext {
+      color: @text-color-tertiary;
+      font-size: 12px;
+    }
+
+    .bottom,
+    .extra {
+      display: flex;
+    }
+
+    .extra {
+      margin-left: 20px;
+      padding: 8px 20px;
+      font-size: @alert-font-size;
+      background: linear-gradient(89.95deg, #fff9e7 1.62%, rgba(255, 251, 239, 0.54) 98.12%);
+    }
+    .extraRight {
+      margin-left: 20px;
+    }
+    .extraValue {
+      color: @text-color-primary;
+    }
+  }
+}
+
+.tableFilterWrap,
+.tableWrap {
+  margin-top: 12px;
+  padding: 20px 20px 0 20px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+
+  .btnContainer {
+    margin-left: auto;
+  }
+
+  :global {
+    .quanta-form-item {
+      //margin-right: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.tableWrap {
+  padding-bottom: 20px;
+
+  .button {
+    margin-bottom: 16px;
+    text-align: right;
+  }
+}
+
+.settleHeader {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    317.07deg,
+    rgba(36, 84, 255, 0.1) 20.27%,
+    rgba(0, 118, 217, 0) 102.05%
+  );
+
+  &Bg {
+    padding: 20px 32px;
+    padding-bottom: 8px;
+
+    &::before {
+      position: absolute;
+      top: 5px;
+      right: -30px;
+      width: 160px;
+      height: 160px;
+      background: url('../../../assets/bx_default_bg.png') no-repeat right top;
+      background-size: 160px auto;
+      opacity: 0.2;
+      content: '';
+    }
+  }
+
+  :global {
+    .quanta-divider-horizontal {
+      margin-top: 23px;
+      margin-bottom: 16px;
+    }
+
+    .quanta-descriptions-view {
+      padding-left: 0;
+    }
+  }
+}
+
+.settleHeaderTop,
+.settleOrgTop {
+  display: flex;
+  justify-content: space-between;
+  //opacity: 1;
+  .title {
+    margin-right: 8px;
+    font-weight: @font-weight-bolder;
+    font-size: @font-size-4;
+  }
+
+  .normalTitle {
+    margin-right: 8px;
+    font-weight: @font-weight-bolder;
+  }
+
+  .companyTitle {
+    margin-right: 8px;
+    font-weight: @font-weight-bolder;
+  }
+
+  .tag {
+    display: inline-block;
+    line-height: 26px;
+
+    :global {
+      .quanta-tag {
+        vertical-align: 1px;
+      }
+    }
+  }
+
+  .totalTxt {
+    margin-right: 12px;
+    color: @text-color-tertiary;
+  }
+
+  .totalPrice {
+    margin-right: 12px;
+    color: @success-color-default;
+    font-weight: @font-weight-bolder;
+    font-size: @font-size-6;
+  }
+
+  .normalPrice {
+    margin-right: 12px;
+    color: @success-color-default;
+    font-weight: @font-weight-bolder;
+    font-size: @font-size-5;
+  }
+}
+
+.settleOrgTop {
+  padding: 10px 20px;
+  background: @text-color-background;
+}
+
+.warning,
+.success {
+  color: @success-color-default;
+  img {
+    width: 20px;
+    margin-right: 4px;
+    vertical-align: -5px;
+  }
+}
+
+.warning {
+  color: @warning-color-default;
+}
+
+.error {
+  color: #e53b43;
+}
+
+.itemTitleExtra {
+  display: flex;
+
+  .label {
+    margin-left: 20px;
+    color: @text-color-tertiary;
+  }
+}
+
+.orgDetail {
+  .settleStat {
+    display: flex;
+    margin-top: 12px;
+    padding: 0;
+    background: #fff;
+  }
+
+  .settleStatItem {
+    width: 50%;
+    padding: 12px 20px;
+
+    img {
+      width: 20px;
+      margin-right: 10px;
+      vertical-align: -3px;
+    }
+
+    .totalLabel {
+      color: @text-color-secondary;
+    }
+
+    .totalValue {
+      margin-left: 8px;
+      color: @text-color-primary;
+      font-size: 16px;
+    }
+  }
+
+  .warningItem {
+    margin-right: 10px;
+    background: @error-color-tag-bg;
+    box-shadow: inset 0 4px 0 @error-color-default;
+  }
+
+  .successItem {
+    margin-left: 10px;
+    background: @success-color-tag-bg;
+    box-shadow: inset 0 4px 0 @success-color-default;
+  }
+}
+
+.selectRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  padding: 9px 12px;
+  color: @text-color-primary;
+  background: @primary-color-tag-border;
+  border: 1px solid @primary-color-default;
+
+  .cancel,
+  .confirm {
+    color: @primary-color-default;
+    cursor: pointer;
+  }
+
+  .confirm {
+    margin-left: 20px;
+  }
+}
+
+.emptyData {
+  color: #888;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.iconItem {
+  margin-right: 10px;
+}

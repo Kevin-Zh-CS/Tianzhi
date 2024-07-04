@@ -1,0 +1,182 @@
+@import '~@/variable.less';
+
+.wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 1160px;
+  min-height: 590px;
+  margin: auto;
+  transition: all 300ms;
+  .card {
+    min-width: 270px;
+    min-height: 590px;
+    border: 1px dashed @disabled-color;
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 48px;
+      padding: 13px 12px;
+      background-color: @primary-color-tag-bg;
+      border-bottom: 1px solid @border-color-base;
+    }
+    .body {
+      display: flex;
+      flex-direction: column;
+      padding: 12px 16px;
+    }
+  }
+  .taskListWrap {
+    position: absolute;
+    top: 114px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+  }
+}
+
+.chiefModelContainer {
+  display: flex;
+  align-items: center;
+}
+
+.chiefModel {
+  width: 100%;
+  padding: 20px 12px 8px 16px;
+  background: @primary-color-tag-bg;
+  border-left: 4px solid @primary-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+
+  &:hover {
+    box-shadow: 0 3px 6px -4px rgba(31, 31, 31, 0.12), 0 8px 24px 8px rgba(31, 31, 31, 0.06);
+    filter: drop-shadow(0 6px 12px rgba(31, 31, 31, 0.08));
+  }
+
+  img {
+    display: inline-block;
+  }
+  .modelTitle {
+    margin-left: 17px;
+    color: @text-color-primary;
+    font-weight: @font-weight-blod;
+    font-size: @font-size-3;
+  }
+  .modelFooter {
+    display: flex;
+    text-align: center;
+    .modelFooterOpt {
+      display: inline-block;
+      padding: 5px 20px;
+      color: @text-color-tertiary;
+
+      svg {
+        margin-right: 4px;
+        margin-bottom: 2px;
+        color: #888;
+        vertical-align: text-bottom;
+      }
+
+      &:hover {
+        color: #292929;
+        background: rgba(0, 118, 217, 0.06);
+
+        svg {
+          color: #292929;
+        }
+      }
+
+      &:active,
+      &:focus {
+        color: #595959;
+        background: rgba(0, 118, 217, 0.1);
+
+        svg {
+          color: #292929;
+        }
+      }
+    }
+  }
+
+  :global {
+    .quanta-divider-horizontal {
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
+  }
+}
+.modalTitle {
+  display: inline-block;
+  max-width: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: sub;
+}
+
+.taskInfo {
+  padding: 20px 32px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+  :global {
+    .quanta-descriptions-view {
+      padding-left: 0;
+    }
+  }
+}
+.taskTitle {
+  display: flex;
+  justify-content: space-between;
+  .tag {
+    display: flex;
+    align-items: center;
+  }
+  .title {
+    margin-right: 8px;
+    color: @text-color-primary;
+    font-weight: @font-weight-blod;
+    font-size: @font-size-4;
+    line-height: @font-line-height-4;
+  }
+}
+
+.txt {
+  width: 190px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dataName {
+  display: flex;
+  align-items: center;
+  i {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  :global {
+    .iconweizhiwenjian {
+      color: rgb(183, 183, 183);
+    }
+    .iconPostgreSQL {
+      color: rgb(66, 102, 141);
+    }
+    .iconOracle {
+      color: rgb(201, 36, 39);
+    }
+    .iconMongoDB {
+      color: rgb(68, 156, 52);
+    }
+    .iconMySQL {
+      color: rgb(2, 104, 152);
+    }
+  }
+}
+
+.svgWrap {
+  position: absolute;
+  top: 0;
+  right: -40px;
+  z-index: 0;
+}

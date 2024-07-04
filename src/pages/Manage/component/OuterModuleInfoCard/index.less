@@ -1,0 +1,44 @@
+@import '~@/variable.less';
+
+.wrap {
+  display: flex;
+  align-items: center;
+  width: calc((100% - 80px) / 4);
+  max-width: 275px;
+  height: 100px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+  background: #fafafa;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+
+  .iconWrap {
+    position: relative;
+    width: 40px;
+    margin: 0 20px;
+    .iconBackground {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    :global {
+      .quanta-icon {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+    }
+  }
+
+  .contentWrap {
+    > div {
+      span {
+        &:nth-child(1) {
+          color: #888;
+        }
+        &:nth-child(2) {
+          color: #292929;
+        }
+      }
+    }
+  }
+}

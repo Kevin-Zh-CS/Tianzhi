@@ -1,0 +1,46 @@
+@import '~@/variable.less';
+
+.container {
+  display: flex;
+  overflow: auto;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  padding-bottom: 4px;
+}
+
+.title {
+  margin-bottom: 18px;
+  color: @text-color-title;
+  font-weight: @font-weight-bold;
+  font-size: @font-size-3;
+  line-height: @font-line-height-3;
+}
+
+.button {
+  width: 96px;
+  margin-top: auto;
+  margin-left: auto;
+}
+
+.appList {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.appItem {
+  flex: 0 1 49%;
+  margin-bottom: 12px;
+  &:nth-child(2n) {
+    flex-grow: 1;
+    margin-left: 12px;
+  }
+}

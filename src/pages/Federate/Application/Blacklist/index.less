@@ -1,0 +1,288 @@
+@import '~@/variable.less';
+
+@decoration-padding: 11px;
+@button-padding: @decoration-padding + 24px;
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 50px);
+  min-height: 810px;
+  margin-top: -58px;
+  overflow-x: hidden;
+  .spin {
+    position: absolute;
+    top: 216px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.centerBox {
+  width: 1440px;
+  transform-origin: center;
+}
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.backImg {
+  width: 100%;
+  height: 100%;
+}
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 739px;
+}
+.backMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 58px;
+}
+.backTitle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.titleText {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  width: 209px;
+  height: 23px;
+  transform: translateX(-50%);
+}
+.backLeft {
+  position: absolute;
+  top: 50%;
+  left: @decoration-padding;
+  width: 329px;
+  height: 92%;
+  transform: translateY(-47%);
+}
+.backRight {
+  position: absolute;
+  top: 50%;
+  right: @decoration-padding;
+  width: 329px;
+  height: 92%;
+  transform: translateY(-47%);
+}
+.backBottom {
+  position: absolute;
+  bottom: @decoration-padding;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.leftButton {
+  position: absolute;
+  top: 50%;
+  left: @button-padding;
+  z-index: 99;
+  cursor: pointer;
+}
+.rightButton {
+  position: absolute;
+  top: 50%;
+  right: @button-padding * 2 - 3;
+  z-index: 99;
+  cursor: not-allowed;
+}
+
+.time {
+  position: absolute;
+  top: 22px;
+  left: 32px;
+  color: #1db5f4;
+  font-weight: 600;
+  font-size: @font-size-2;
+  font-family: Orbitron, sans-serif;
+  line-height: @font-line-height-2;
+}
+
+.icon {
+  position: absolute;
+  top: 22px;
+  z-index: 99;
+  color: #176383;
+  cursor: pointer;
+  svg {
+    font-size: 24px;
+  }
+}
+.fullScreen {
+  right: 64px;
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+.smallScreen {
+  right: 40px;
+}
+.exit {
+  right: 32px;
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.blacklist {
+  :global {
+    // Tabs组件样式覆盖
+    .quanta-tabs-tab.quanta-tabs-tab-active .quanta-tabs-tab-btn {
+      color: #1db5f4;
+    }
+    .quanta-tabs-nav .quanta-tabs-tab-active {
+      background: transparent !important;
+      &:hover {
+        background: transparent !important;
+      }
+    }
+    .quanta-tabs-nav .quanta-tabs-tab {
+      color: #176383;
+      &:hover,
+      &:active {
+        color: #1db5f4;
+        background: transparent;
+      }
+      .quanta-tabs-tab-btn:focus {
+        color: #1db5f4;
+      }
+    }
+    .quanta-tabs-ink-bar-animated {
+      width: 20px !important;
+      background: #1db5f4;
+      transform: translateX(60px);
+    }
+    .quanta-tabs-top > .quanta-tabs-nav::before {
+      border-color: #1db5f4;
+      opacity: 0.1;
+    }
+
+    .quanta-icon-close {
+      color: #176383;
+      &:hover {
+        color: #1a84b0;
+      }
+      &:active {
+        color: #154356;
+      }
+    }
+
+    // Table 组件样式覆盖
+    .quanta-table {
+      color: #bbe9fc;
+      background: transparent;
+      svg {
+        fill: #1a84b0;
+      }
+    }
+    .quanta-table-thead > tr > th {
+      color: #1db5f4;
+      background: rgba(29, 181, 244, 0.1);
+      border-color: rgba(29, 181, 244, 0.1);
+    }
+    .quanta-table-tbody > tr > td {
+      border-color: rgba(29, 181, 244, 0.1);
+    }
+    td.quanta-table-column-sort {
+      background: transparent;
+    }
+    .quanta-table-thead th.quanta-table-column-has-sorters:hover {
+      background: rgba(29, 181, 244, 0.2);
+    }
+    .quanta-table-tbody > tr.quanta-table-row:hover > td {
+      color: #e8f8fe;
+      background: rgba(29, 181, 244, 0.06);
+    }
+    .quanta-pagination {
+      position: relative;
+      color: #bbe9fc;
+      .quanta-pagination-slash {
+        color: rgba(29, 181, 244, 0.1);
+      }
+      .quanta-pagination-simple-pager input {
+        background-color: transparent;
+        border: 1px solid #1a84b0;
+        &:hover {
+          border-color: #154356;
+        }
+        &:active,
+        &:focus {
+          border-color: #1a84b0 !important;
+        }
+      }
+      svg {
+        fill: #1a84b0;
+      }
+    }
+    .quanta-pagination-disabled {
+      svg {
+        fill: #154356;
+      }
+    }
+    // 排序小按钮
+    .quanta-table-column-sorter-inner {
+      .active {
+        svg {
+          fill: #1db5f4;
+        }
+      }
+    }
+    .quanta-pagination-prev:not(.quanta-pagination-disabled):hover .quanta-pagination-item-link,
+    .quanta-pagination-next:not(.quanta-pagination-disabled):hover .quanta-pagination-item-link {
+      background-color: rgba(29, 181, 244, 0.08);
+    }
+    .quanta-pagination-prev:not(.quanta-pagination-disabled):active .quanta-pagination-item-link,
+    .quanta-pagination-next:not(.quanta-pagination-disabled):active .quanta-pagination-item-link {
+      background-color: rgba(29, 181, 244, 0.1);
+    }
+    // 表格为空 hover 背景
+    .quanta-table-tbody > tr.quanta-table-placeholder:hover > td {
+      background-color: transparent;
+    }
+    // Step 组件样式覆盖
+    .quanta-steps-vertical {
+      .quanta-steps-item {
+        padding: 0 0 6px 0;
+      }
+      .quanta-steps-item-description {
+        padding-bottom: 0;
+      }
+    }
+    .quanta-steps-item-title {
+      margin-bottom: 6px;
+    }
+    .quanta-steps-item-wait .quanta-steps-item-icon,
+    .quanta-steps-item-process .quanta-steps-item-icon,
+    .quanta-steps-item-finish .quanta-steps-item-icon {
+      background-color: #176383;
+      .quanta-steps-icon {
+        color: #1db5f4;
+      }
+    }
+    .quanta-steps-item-process .quanta-steps-item-icon,
+    .quanta-steps-item-wait .quanta-steps-item-icon {
+      border-color: #1db5f4;
+    }
+    .quanta-steps-item-container > .quanta-steps-item-tail::after {
+      background-color: #176383;
+    }
+    // 步骤数字 border-top 不显示，下调位置
+    .quanta-steps-item-icon {
+      margin-top: 1px;
+    }
+    // 滚动条样式
+  }
+}

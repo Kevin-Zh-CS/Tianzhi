@@ -1,0 +1,89 @@
+@import '~@/variable.less';
+
+.orderInfo {
+  .dataInfo {
+    margin-bottom: 10px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+
+    .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 14px;
+      font-weight: 700;
+      font-size: 18px;
+
+      span {
+        margin-right: 12px;
+      }
+    }
+  }
+  .descriptions {
+    padding-left: 38px;
+  }
+
+  .descriptionsPrice {
+    :global {
+      .quanta-descriptions-header {
+        margin-bottom: 12px;
+      }
+      .quanta-descriptions-view {
+        padding-top: 10px;
+        background: #f6f6f6;
+      }
+    }
+  }
+  .note {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: #e5f1fb;
+    .img {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+    }
+  }
+
+  .applyInfo {
+    margin-bottom: 10px;
+
+    :global {
+      .quanta-form-item {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .mark {
+    width: 90px;
+    height: 90px;
+    margin-left: 90%;
+  }
+}
+.txTotal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16px 32px;
+  .label {
+    margin-right: 20px;
+    color: #888;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .count {
+    color: #ffad32;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+}
+
+.other {
+  :global {
+    .quanta-form-item-explain-error {
+      padding-left: 8px;
+    }
+  }
+}

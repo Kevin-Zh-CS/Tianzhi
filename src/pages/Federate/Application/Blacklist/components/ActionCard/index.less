@@ -1,0 +1,47 @@
+@import '~@/variable.less';
+
+.actionContainer {
+  position: relative;
+  margin-top: 20px;
+  margin-left: 782px;
+  img {
+    width: 448px;
+    height: 74px;
+  }
+  .actionCard {
+    position: absolute;
+    top: 0;
+    width: 360px;
+    height: 56px;
+    margin: 5px 3px 5px 81px;
+    overflow: hidden;
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      padding: 8px 16px;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      //height: 56px;
+      margin-top: 2px;
+      color: #176383;
+      font-size: 12px;
+      line-height: 18px;
+      .company {
+        color: #1db5f4;
+      }
+    }
+    .slider {
+      position: relative;
+
+      :global {
+        .slick-arrow {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

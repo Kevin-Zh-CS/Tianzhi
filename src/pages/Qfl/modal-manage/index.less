@@ -1,0 +1,213 @@
+.tableFilterWrap {
+  padding: 16px 12px 0 20px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+
+  :global {
+    .quanta-form-item {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.contentWrap {
+  min-height: calc(100vh - 258px);
+  margin-top: 2px;
+  padding: 20px;
+  padding-bottom: 40px;
+  background: #fff;
+
+  :global {
+    .rowSelectionWrap {
+      margin: 12px 0;
+    }
+  }
+}
+
+.uploadWrap {
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+}
+
+.stepOnePage {
+  :global {
+    .ant-upload-list-text {
+      width: 400px;
+    }
+  }
+}
+
+.upload {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pageTwoTable,
+.contentWrap {
+  width: 100%;
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+    :global {
+      .quanta-select {
+        width: 95px;
+      }
+    }
+  }
+
+  .column {
+    min-width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  :global {
+    .quanta-form-item-control,
+    .quanta-descriptions-item-content {
+      width: calc(100% - 125px);
+    }
+    .ant-table-wrapper,
+    .quanta-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+    }
+    .quanta-form-item-control-input {
+      overflow-y: hidden;
+    }
+  }
+
+  .emptyBox {
+    color: #888;
+  }
+}
+
+.titleItem {
+  display: flex;
+  align-items: center;
+  width: 270px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.drawer {
+  :global {
+    .ant-drawer-body {
+      padding: 24px 0 0 0;
+    }
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    .title {
+      color: #121212;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+  .body {
+    margin-top: 29px;
+    .timelineItem {
+      padding: 14px 28px 0 28px;
+      .itemTop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 26.24px;
+        padding: 2px 0 0 4px;
+        .title {
+          color: #333;
+          font-weight: 500;
+          .current {
+            color: #888;
+            font-weight: 400;
+          }
+        }
+        .op {
+          display: none;
+          :global {
+            .iconfont {
+              color: #888;
+              font-size: 20px;
+            }
+            .iconfont:hover {
+              color: #292929;
+            }
+            .iconfont + .iconfont {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+      .itemBottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 9px;
+        color: #888;
+        font-size: 12px;
+        .author {
+          display: flex;
+          align-items: center;
+          .avatar {
+            width: 20px;
+            height: 20px;
+          }
+          .name {
+            width: 48px;
+            margin-left: 4px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+      :global {
+        .quanta-timeline-item {
+          padding-bottom: 0;
+        }
+        .quanta-timeline-item-tail {
+          height: calc(100% + 4px);
+        }
+      }
+      &:hover {
+        background: rgba(0, 118, 217, 0.1);
+        .op {
+          display: block;
+        }
+      }
+    }
+    .timelineItem:nth-last-of-type(1) {
+      :global {
+        .quanta-timeline-item-tail {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.dropdown {
+  :global {
+    .quanta-dropdown-menu-item {
+      width: 120px;
+      height: 32px;
+    }
+    .quanta-btn {
+      width: 100% !important;
+      height: 100% !important;
+      padding: 0 !important;
+      line-height: 1;
+      text-align: left;
+      border: none;
+    }
+  }
+}

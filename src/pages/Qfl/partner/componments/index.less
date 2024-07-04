@@ -1,0 +1,33 @@
+:global {
+  .qfl-descriptions .quanta-descriptions-item-container .quanta-descriptions-item-label {
+    display: inline-block;
+    width: 105px;
+  }
+}
+
+.step2 {
+  :global {
+    .quanta-descriptions-item-content {
+      width: calc(100% - 96px);
+    }
+    .quanta-spin-container {
+      width: 100%;
+      overflow: auto;
+    }
+  }
+
+  .column {
+    min-width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+}

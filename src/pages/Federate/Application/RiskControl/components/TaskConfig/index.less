@@ -1,0 +1,98 @@
+.taskConfig {
+  position: relative;
+  z-index: 2;
+  width: 600px;
+  margin-left: 20px;
+  padding-top: 39px;
+  padding-bottom: 20px;
+  background: url('@/assets/riskControl/taskConfig/bg.png') 0 0 no-repeat;
+  background-size: 100% 99%;
+
+  :global {
+    .quanta-btn-primary {
+      padding: 5px 20px;
+      background: #7d6b3c;
+      border: none;
+
+      &:hover {
+        background: rgba(125, 107, 60, 0.8);
+      }
+    }
+
+    .quanta-btn-text {
+      color: #b3af99;
+      background: transparent;
+      border: none;
+
+      &:hover {
+        color: #e5e0c4;
+        background: rgba(254, 249, 218, 0.05);
+      }
+    }
+
+    .quanta-form-item {
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 234px;
+    height: 38px;
+    transform: translate(-50%, -50%);
+  }
+
+  .description {
+    margin: 0 20px;
+    padding: 8px 12px;
+    line-height: 1.5;
+    background: linear-gradient(87.72deg,
+    rgba(34, 32, 27, 0.25) 4.53%,
+    rgba(128, 122, 107, 0.227216) 52.75%,
+    rgba(27, 25, 19, 0.2025) 105.07%);
+    border: 1px solid rgba(253, 233, 204, 0.11);
+
+    div:nth-child(1) {
+      color: #b3af99;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    div:nth-last-child(1) {
+      margin-top: 10px;
+      color: #e5e0c4;
+    }
+  }
+
+  .btnAdd {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+    padding-right: 27px;
+
+    :global {
+      .quanta-btn-primary {
+        display: flex;
+        align-items: center;
+        width: 120px;
+        height: 32px;
+        font-size: 14px;
+
+        .iconfont {
+          color: #fff;
+          font-size: 20px;
+        }
+
+        span {
+          margin: 2px 0 0 4px;
+        }
+      }
+    }
+  }
+}

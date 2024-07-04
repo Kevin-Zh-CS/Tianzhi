@@ -1,0 +1,140 @@
+/*
+ * Created By Chris Su on 2019-03-01 14:29:05
+ */
+@import '~@/variable.less';
+
+:global {
+  .md-html {
+    color: #111;
+    // line-height: 2.1;
+
+    h2 {
+      margin-top: -10px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: @text-color;
+    }
+
+    p {
+      line-height: 28px;
+    }
+
+    a {
+      color: @primary-color;
+
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    ul {
+      list-style-type: disc;
+    }
+
+    ol li {
+      list-style-position: outside;
+      list-style-type: decimal;
+    }
+
+    li {
+      img:first-of-type {
+        margin-top: 1em;
+      }
+
+      table:first-of-type {
+        margin-top: 1em;
+      }
+    }
+
+    pre {
+      color: #ccc;
+    }
+
+    blockquote {
+      padding: 0 15px;
+      color: #666;
+      background-color: #f7f7f7;
+      border-left: 4px solid #b5b5b5;
+    }
+
+    blockquote > :first-child {
+      margin-top: 0;
+    }
+
+    blockquote > :last-child {
+      margin-bottom: 0;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      overflow: auto;
+
+      thead {
+        tr {
+          background-color: #f6f8fa;
+        }
+      }
+
+      th {
+        font-weight: 600;
+      }
+
+      th,
+      td {
+        padding: 6px 13px;
+        border: 1px solid @border-color-base;
+      }
+
+      tr {
+        background-color: #fff;
+        border-top: 1px solid @border-color-base;
+      }
+
+      // tr:nth-child(2n) {
+      //   background-color: #f6f8fa;
+      // }
+    }
+
+    img {
+      max-width: 100%;
+      margin-bottom: 1em;
+    }
+
+    pre[class*='language-'],
+    pre {
+      // white-space: pre-wrap;
+      // word-wrap: break-word;
+
+      padding: 1em;
+      background: #2d2d2d;
+    }
+
+    // code[class*='language-'],
+    // code {
+    //   color: #ccc;
+    //   white-space: pre-wrap;
+    //   word-wrap: break-word;
+    // }
+
+    .pre,
+    .code {
+      max-width: 100%;
+      white-space: pre;
+      word-wrap: normal;
+      word-break: normal;
+      word-spacing: normal;
+    }
+
+    .img-center {
+      text-align: center;
+    }
+  }
+}

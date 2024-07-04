@@ -1,0 +1,193 @@
+@import '~@/variable.less';
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  color: #1db5f4;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.blackModal {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  z-index: 100;
+  width: 720px;
+  height: 274px;
+  padding: 28px 32px;
+  transform: translateX(-50%);
+  a {
+    color: #1db5f4;
+  }
+  .back {
+    position: absolute;
+    top: -28px;
+    left: -48px;
+  }
+  .titleItem {
+    margin-bottom: 12px;
+    font-size: 18px;
+    .title {
+      position: relative;
+      font-weight: 600;
+    }
+  }
+  .item {
+    position: relative;
+    display: flex;
+    margin-top: 30px;
+    color: #176383;
+  }
+  .loading {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .text {
+      position: absolute;
+      bottom: 0;
+      left: 12px;
+      line-height: 32px;
+      .icon {
+        margin-right: 8px;
+        vertical-align: text-top;
+        svg {
+          fill: currentColor;
+        }
+      }
+    }
+    .progress {
+      width: 400px;
+      margin-top: 27px;
+      :global {
+        .ant-progress-inner {
+          border-radius: 0;
+        }
+        .ant-progress-bg {
+          border-radius: 0;
+          &::before {
+            border-radius: 0 !important;
+          }
+        }
+      }
+    }
+  }
+  .closeIcon {
+    position: absolute;
+    top: 28px;
+    right: 12px;
+  }
+  .uploadBox {
+    position: relative;
+    bottom: 26px;
+    left: 74px;
+    width: 300px;
+  }
+  .button {
+    color: #1db5f4;
+    background: rgba(29, 181, 244, 0.1);
+    border: 1px solid #1a84b0;
+    svg {
+      fill: #1db5f4;
+    }
+    &:hover,
+    &:focus {
+      color: #1a84b0;
+      background: rgba(29, 181, 244, 0.08);
+      border-color: #1a84b0;
+      svg {
+        fill: #1a84b0;
+      }
+    }
+    &:active {
+      color: #154356;
+      background: rgba(0, 118, 217, 0.1);
+      border-color: #154356;
+      svg {
+        fill: #154356;
+      }
+    }
+  }
+  // 上传后文件名&图标颜色
+  :global {
+    .ant-upload-list-item {
+      color: #bbe9fc;
+      svg {
+        fill: #bbe9fc;
+      }
+      &:hover .ant-upload-list-item-info {
+        background-color: transparent;
+      }
+    }
+  }
+  .buttonGroup {
+    position: absolute;
+    right: 32px;
+    bottom: 20px;
+    :global {
+      .quanta-btn:not(.quanta-btn-primary) {
+        color: #1db5f4;
+        background-color: transparent;
+        border: none;
+        &:hover {
+          color: #1a84b0;
+        }
+      }
+    }
+  }
+}
+.sheet {
+  top: 10%;
+  height: 642px;
+  padding-top: 24px;
+  .error {
+    color: #e63b43;
+    opacity: 0.8;
+  }
+  .back {
+    top: -36px;
+  }
+  .box {
+    position: relative;
+    margin: 16px 0;
+  }
+  .subTitle {
+    color: #176383;
+  }
+  .desc {
+    color: #bbe9fc;
+  }
+  :global {
+    .quanta-tabs-tab {
+      border-bottom: none;
+    }
+    .quanta-tabs-ink-bar-animated {
+      transform: translateX(38px) !important;
+    }
+    .quanta-alert-info {
+      background-color: rgba(0, 118, 217, 0.1);
+      .quanta-alert-message {
+        color: #8edaf9;
+      }
+    }
+    .quanta-table-tbody > tr.quanta-table-placeholder:hover > td {
+      background-color: transparent;
+    }
+    .quanta-tabs-ink-bar{
+      display: none;
+    }
+    .quanta-btn[disabled]{
+      color: #154356;
+      background: rgba(0, 118, 217, 0.1);
+      border: 1px solid #154356;
+    }
+    .quanta-btn-primary[disabled], .quanta-btn-primary[disabled]:hover, .quanta-btn-primary[disabled]:focus, .quanta-btn-primary[disabled]:active{
+      background: rgba(0, 118, 217, 0.1);
+      border: 1px solid #154356;
+    }
+  }
+}

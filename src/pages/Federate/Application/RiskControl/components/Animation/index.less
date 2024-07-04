@@ -1,0 +1,409 @@
+.animationContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 770px;
+  height: 680px;
+  margin-left: 10px;
+  .bank {
+    position: absolute;
+    z-index: 8;
+    width: 42px;
+  }
+  .bankTop {
+    top: 340px;
+    left: 350px;
+  }
+
+  .bankLeft {
+    top: 380px;
+    left: 170px;
+  }
+
+  .bankRight {
+    top: 390px;
+    left: 530px;
+  }
+
+  .bankBottom {
+    top: 434px;
+    left: 340px;
+  }
+
+  // 动效
+  .bankTopStart {
+    animation: shrink 200ms linear forwards, bankTopTranslate 400ms linear 200ms forwards;
+  }
+  .bankRightStart {
+    animation: shrink 200ms linear forwards, bankRightTranslate 400ms linear 200ms forwards;
+  }
+  .bankBottomStart {
+    animation: shrink 200ms linear forwards, bankBottomTranslate 400ms linear 200ms forwards;
+  }
+  .bankLeftStart {
+    animation: shrink 200ms linear forwards, bankLeftTranslate 400ms linear 200ms forwards;
+  }
+  .bankTopEnd {
+    animation: bankTopTranslate1 400ms linear forwards, enlarge 200ms linear 400ms forwards;
+  }
+  .bankRightEnd {
+    animation: bankRightTranslate1 400ms linear forwards, enlarge 200ms linear 400ms forwards;
+  }
+  .bankBottomEnd {
+    animation: bankBottomTranslate1 400ms linear forwards, enlarge 200ms linear 400ms forwards;
+  }
+  .bankLeftEnd {
+    animation: bankLeftTranslate1 400ms linear forwards, enlarge 200ms linear 400ms forwards;
+  }
+  @keyframes shrink {
+    0% {
+      width: 2.916vw;
+    }
+    100% {
+      width: 2.638vw;
+    }
+  }
+  @keyframes bankTopTranslate {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(3.611vw, -15.416vw);
+    }
+  }
+  @keyframes bankRightTranslate {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-1.388vw, -5.972vw);
+    }
+  }
+  @keyframes bankBottomTranslate {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-0.972vw, -1.527vw);
+    }
+  }
+  @keyframes bankLeftTranslate {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(3.611vw, -10.694vw);
+    }
+  }
+  @keyframes enlarge {
+    0% {
+      width: 2.638vw;
+    }
+    100% {
+      width: 2.916vw;
+    }
+  }
+  @keyframes bankTopTranslate1 {
+    0% {
+      transform: translate(3.611vw, -15.416vw);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes bankRightTranslate1 {
+    0% {
+      transform: translate(-1.388vw, -5.972vw);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes bankBottomTranslate1 {
+    0% {
+      transform: translate(-0.972vw, -1.527vw);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes bankLeftTranslate1 {
+    0% {
+      transform: translate(3.611vw, -10.694vw);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+}
+
+.animation {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 600px;
+  background: url("@/assets/riskControl/animation/bg1.png") center 90% no-repeat,
+  url("@/assets/riskControl/animation/bg2.png") 48% 66% no-repeat,
+  url("@/assets/riskControl/animation/bg3.png") center 28% no-repeat;
+  background-size: 556px 171px, 415px 120px, 580px 364px;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .result {
+    position: relative;
+    z-index: 2;
+    display: none;
+    width: 400px;
+    height: 259px;
+    margin: 0 auto;
+    padding: 40px 20px 0 20px;
+    background: url("@/assets/riskControl/animation/resultBg.png") -20px -20px no-repeat;
+    background-size: 110% 116%;
+
+    .cardTitle {
+      display: flex;
+      align-items: center;
+      width: 194px;
+      height: 32px;
+      padding-left: 20px;
+      color: #FEF9DA;
+      font-size: 16px;
+      background: url("@/assets/riskControl/cardTitleBg.png") 0 0 no-repeat;
+      background-size: 100% 100%;
+
+      i {
+        font-size: 20px;
+      }
+
+      span {
+        margin-left: 8px;
+      }
+    }
+
+    .rule {
+      height: 50px;
+      margin-top: 12px;
+      background: rgba(69, 64, 56, 0.2);
+
+      .ruleTitle {
+        height: 20px;
+        color: #827E6D;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        background: #36322A;
+      }
+
+      .ruleContainer {
+        display: flex;
+        margin-top: 4px;
+        padding-left: 4px;
+
+        .ruleItem {
+          width: 130px;
+          line-height: normal;
+
+          span:nth-child(1) {
+            color: #827E6D;
+          }
+
+          span:nth-last-child(1) {
+            color: #E5E0C4;
+          }
+        }
+
+        .ruleItem + .ruleItem {
+          margin-left: 14px;
+        }
+      }
+    }
+
+    .riskNum {
+      height: 56px;
+      margin-top: 12px;
+      padding-left: 51px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 56px;
+
+      & > span {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .num {
+        margin: 0 10px 0 4px;
+        color: #FC5757;
+        font-weight: 500;
+        font-size: 32px;
+        font-family: Orbitron;
+        text-shadow: 0 0 1.62602px rgba(245, 109, 109, 0.6);
+      }
+    }
+
+    .detail {
+      position: absolute;
+      right: 16px;
+      bottom: 0;
+    }
+
+    :global {
+      .quanta-btn-text {
+        color: #B3AF99;
+        background: transparent;
+        border: none;
+        &:hover {
+          color: #E5E0C4;
+          background: transparent;
+        }
+      }
+
+      .quanta-btn {
+        padding: 0;
+      }
+    }
+  }
+
+  .descriptionBg {
+    width: 400px;
+    margin: 40px auto 0 auto;
+    padding: 38px 12px 12px 12px;
+    color: #E5E0C4;
+    line-height: 1.7;
+    background: url("@/assets/riskControl/animation/descriptionBg.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .privacy {
+    position: absolute;
+
+    .name {
+      position: absolute;
+      top: -56px;
+      left: -100px;
+      width: 145px;
+      height: 98px;
+      color: #B3AF99;
+
+      p {
+        display: flex;
+        height: 21.3px;
+        margin: -2px 0 0 -20px;
+        transform: scale(.72);
+
+        :global {
+          .iconfont {
+            margin-left: 4px;
+            color: #B3AF99;
+            font-size: 22px;;
+          }
+        }
+      }
+    }
+  }
+
+  .privacyTop {
+    top: 300px;
+    left: 350px;
+
+    .name {
+      background: url("@/assets/riskControl/animation/promptTop.png") 0 0 no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  .privacyLeft {
+    top: 340px;
+    left: 170px;
+
+    .name {
+      background: url("@/assets/riskControl/animation/promptLeft.png") 0 0 no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  .privacyRight {
+    top: 350px;
+    left: 530px;
+
+    .name {
+      background: url("@/assets/riskControl/animation/promptRight.png") 0 0 no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  .privacyBottom {
+    top: 394px;
+    left: 340px;
+
+    .name {
+      background: url("@/assets/riskControl/animation/promptBottom.png") 0 0 no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  .layer2 {
+    position: absolute;
+    top: 304px;
+    left: 560px;
+    width: 174px;
+    height: 68px;
+  }
+
+  .layer1 {
+    position: absolute;
+    top: 440px;
+    left: 560px;
+    z-index: 2;
+    width: 174px;
+    height: 68px;
+  }
+
+  .blockChain {
+    position: absolute;
+    top: 440px;
+    left: 80px;
+    width: 600px;
+  }
+
+  .grid {
+    position: absolute;
+    top: -140px;
+    left: -300px;
+    z-index: -1;
+    width: 1440px;
+    height: 810px;
+  }
+
+  // 动效
+  .resultClip {
+    animation: clipath 500ms linear forwards;
+  }
+  .blockChainBubble {
+    animation: bubble 1000ms linear 1;
+  }
+  @keyframes clipath {
+    0% {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  @keyframes bubble {
+    0% {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@import '~@/variable.less';
+
+.inputContainer {
+  position: relative;
+  margin-left: 115px;
+  .inputCard {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    display: flex;
+    width: 440px;
+    height: 40px;
+    .upload {
+      button {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        color: #176383;
+        background: rgba(29, 181, 244, 0.1);
+        border: 1px solid #1a84b0;
+        svg {
+          fill: currentColor;
+        }
+        &:not([disabled]):hover {
+          background: rgba(29, 181, 244, 0.08);
+          border: 1px solid #1a84b0;
+          svg {
+            fill: #1a84b0;
+          }
+        }
+        &:not([disabled]):active {
+          svg {
+            fill: #154356;
+          }
+        }
+      }
+    }
+    .input {
+      width: 280px;
+      color: #bbe9fc;
+      background: #072130;
+      border: 1px solid #176383;
+      border-right: none;
+      border-left: none;
+      input {
+        font-size: 14px;
+      }
+      &:hover {
+        border-color: #1A84B0;
+      }
+      // &:not(*-disabled):active,
+      // &:not(*-disabled):focus {
+      //   border-color: #1a84b0;
+      // }
+    }
+    :global {
+      .quanta-btn[disabled] {
+        color: #154356;
+        background: rgba(0, 118, 217, 0.1);
+        border: 1px solid #154356;
+      }
+      .quanta-input-clear-icon {
+        svg {
+          fill: #176383;
+        }
+        &:hover {
+          svg {
+            fill: #1a84b0;
+          }
+        }
+        &:active {
+          svg {
+            fill: #154356;
+          }
+        }
+      }
+      .quanta-input {
+        color: #bbe9fc;
+        background: transparent;
+      }
+      .quanta-input::placeholder {
+        color: #154356;
+      }
+      .quanta-input-affix-wrapper-focused {
+        border-color: #1a84b0;
+        &:hover {
+          border-color: #1a84b0;
+        }
+      }
+      .quanta-input-affix-wrapper-disabled {
+        background: rgba(0, 118, 217, 0.1);
+        border-color: #154356;
+        &:active,
+        &:focus {
+          border-color: #154356;
+        }
+        input {
+          color: #154356;
+        }
+      }
+      .quanta-form-item-has-error :not(.quanta-input-disabled):not(.quanta-input-borderless).quanta-input, .quanta-form-item-has-error :not(.quanta-input-affix-wrapper-disabled):not(.quanta-input-affix-wrapper-borderless).quanta-input-affix-wrapper, .quanta-form-item-has-error :not(.quanta-input-disabled):not(.quanta-input-borderless).quanta-input:hover, .quanta-form-item-has-error :not(.quanta-input-affix-wrapper-disabled):not(.quanta-input-affix-wrapper-borderless).quanta-input-affix-wrapper:hover{
+        background: transparent;
+        border-color: #176383;
+      }
+      .quanta-input-disabled {
+        color: #154356;
+      }
+      .quanta-input-clear-icon-hidden {
+        visibility: hidden;
+      }
+      .antd-pro-pages-federate-application-blacklist-components-input-card-index-input {
+        height: 40px;
+        padding: 8px 12px;
+        font-size: 16px;
+      }
+    }
+    .button {
+      width: 120px;
+      height: 40px;
+    }
+  }
+}
+.tooltip {
+  :global {
+    .quanta-tooltip-inner {
+      color: #8edaf9;
+      background-color: rgba(21, 67, 86, 0.9);
+    }
+    .quanta-tooltip-arrow-content {
+      background-color: rgba(21, 67, 86, 0.9);
+    }
+  }
+}
+:global {
+  .ant-form-item-explain {
+    color: #e53b43 !important;
+  }
+}

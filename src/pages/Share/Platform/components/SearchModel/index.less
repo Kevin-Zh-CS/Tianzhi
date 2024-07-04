@@ -1,0 +1,74 @@
+@import '~@/variable.less';
+
+.container {
+  position: relative;
+  margin: -20px -20px 20px -20px;
+  padding: 4px 20px 4px 20px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.1);
+}
+
+.platform {
+  display: flex;
+  justify-content: space-between;
+  .iconContainer {
+    display: flex;
+  }
+  .img {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    padding-left: 40px;
+  }
+  .divider {
+    width: 1px;
+    height: 40px;
+    margin: 36px 16px 0 16px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .itemFont {
+    margin-top: 36px;
+    color: #595959;
+    font-size: 12px;
+    line-height: 20px;
+    p {
+      margin-bottom: 2px;
+    }
+  }
+  .search {
+    //width: 74%;
+    flex: 1;
+    margin-left: 70px;
+    .input {
+      width: 67.57% !important;
+      margin-top: 24px;
+      input {
+        height: 40px !important;
+        font-size: 16px;
+        border: 1px solid #0076d9;
+      }
+      button {
+        height: 40px !important;
+        padding: 24px;
+        font-size: 16px;
+      }
+    }
+    .font2 {
+      color: #595959;
+      font-size: 14px;
+      line-height: 22px;
+      span {
+        margin-right: 24px;
+      }
+    }
+  }
+  .option {
+    margin-right: 20px;
+    color: @text-color-secondary;
+    cursor: pointer;
+  }
+  .selected {
+    color: @primary-color-hover;
+    font-weight: 600;
+  }
+}
